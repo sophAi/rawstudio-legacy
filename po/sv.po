@@ -1,0 +1,2443 @@
+# English translation for Rawstudio.
+# Copyright (C) 2006-2008 Anders Brander <anders@brander.dk> and Anders Kvist <akv@lnxbx.dk>
+# This file is distributed under the same license as the Rawstudio package.
+#
+# Simone Contini <s.contini@oltrelinux.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: Rawstudio 2.0\n"
+"Report-Msgid-Bugs-To: rawstudio-dev@rawstudio.org\n"
+"POT-Creation-Date: 2011-12-29 20:46+0100\n"
+"PO-Revision-Date: 2011-03-22 20:56+0100\n"
+"Last-Translator: MArtin <jox@nidingen.com>\n"
+"Language-Team: Rawstudio development <rawstudio-dev@rawstudio.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+
+#: librawstudio/rs-lens-db-editor.c:358
+msgid "All lenses"
+msgstr "Alla objektiv"
+
+#: librawstudio/rs-lens-db-editor.c:364
+msgid "Deselect"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:570
+msgid "Error updating lensfun database"
+msgstr "Fel vid öppnande av lensfun-databas"
+
+#: librawstudio/rs-lens-db-editor.c:572
+#, fuzzy
+msgid "LensFun database updated"
+msgstr "Lensfun-databas uppdaterad"
+
+#: librawstudio/rs-lens-db-editor.c:632
+msgid "Rawstudio Lens Library"
+msgstr "Rawstudio Objektivbibliotek"
+
+#: librawstudio/rs-lens-db-editor.c:658
+msgid "Lens make"
+msgstr "Objektivmärke"
+
+#: librawstudio/rs-lens-db-editor.c:662
+msgid "Lens model"
+msgstr "Objektivmodell"
+
+#: librawstudio/rs-lens-db-editor.c:666
+msgid "Focal"
+msgstr "Brännvidd"
+
+#: librawstudio/rs-lens-db-editor.c:670 librawstudio/rs-lens-db-editor.c:1049
+#: src/rs-actions.c:1539
+msgid "Aperture"
+msgstr "Bländare"
+
+#: librawstudio/rs-lens-db-editor.c:674
+msgid "Camera make"
+msgstr "Kameramärke"
+
+#: librawstudio/rs-lens-db-editor.c:678
+msgid "Camera model"
+msgstr "Kameramodell"
+
+#: librawstudio/rs-lens-db-editor.c:682
+msgid "Enabled"
+msgstr "Aktiverad"
+
+#: librawstudio/rs-lens-db-editor.c:687
+msgid "Defish"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:725
+msgid "Update lensfun database"
+msgstr "Uppdatera lensfun-databas"
+
+#: librawstudio/rs-lens-db-editor.c:812
+msgid "Could not create temporary directory."
+msgstr "Kunde inte skapa temporärkatalog"
+
+#: librawstudio/rs-lens-db-editor.c:825
+#, c-format
+msgid "Could not fetch list of files from %s."
+msgstr "Kunde inte hämta fillista från %s."
+
+#: librawstudio/rs-lens-db-editor.c:865
+#, c-format
+msgid "Could not fetch file from %s or write it to %s."
+msgstr "Kunde inte hämta fil från %s eller skriva den till %s."
+
+#: librawstudio/rs-lens-db-editor.c:874
+#, c-format
+msgid "Could not create datadir for lensfun - %s"
+msgstr "Kunde inte skapa katalog för lensfun - %s"
+
+#: librawstudio/rs-lens-db-editor.c:890
+#, c-format
+msgid "Error copying file %s to %s\n"
+msgstr "Fel vid kopiering av fil %s till %s\n"
+
+#: librawstudio/rs-lens-db-editor.c:1026
+msgid "Rawstudio Lens Editor"
+msgstr "Rawstudio objektiveditor"
+
+#: librawstudio/rs-lens-db-editor.c:1037
+msgid "Lens Make"
+msgstr "Objektivmärle"
+
+#: librawstudio/rs-lens-db-editor.c:1041
+msgid "Lens Model"
+msgstr "Objetivmodell"
+
+#: librawstudio/rs-lens-db-editor.c:1045
+msgid "Focal Length"
+msgstr "Brännvidd"
+
+#: librawstudio/rs-lens-db-editor.c:1053
+msgid "Camera Make"
+msgstr "Kameramärke"
+
+#: librawstudio/rs-lens-db-editor.c:1057
+msgid "Camera Model"
+msgstr "Kameramodell"
+
+#: librawstudio/rs-lens-db-editor.c:1082
+msgid "Enable this lens"
+msgstr "Aktivera detta objetiv"
+
+#: librawstudio/rs-lens-db-editor.c:1083
+#, fuzzy
+msgid "Enable Defish"
+msgstr "Aktivera detta objetiv"
+
+#: librawstudio/rs-lens-db-editor.c:1087
+msgid "Set lens"
+msgstr "Ställ in objektiv"
+
+#. FIXME: Put lensfun update button in editor - for this to work, we cannot close the window when updating
+#. GtkWidget *button_update_lensfun = gtk_button_new_with_label(_("Update lensfun database"));
+#. g_signal_connect(button_update_lensfun, "clicked", G_CALLBACK(update_lensfun), NULL);
+#. gtk_dialog_add_action_widget (GTK_DIALOG (editor), button_update_lensfun, GTK_RESPONSE_NONE);
+#: librawstudio/rs-lens-db-editor.c:1144
+msgid "Lens Library"
+msgstr "Objektivbilbiotek"
+
+#: librawstudio/rs-library.c:254
+#, c-format
+msgid "Could not open database %s"
+msgstr "Kunde inte öppna databas %s"
+
+#: librawstudio/rs-library.c:814
+msgid "wideangle"
+msgstr "vidvinkel"
+
+#: librawstudio/rs-library.c:816
+msgid "telephoto"
+msgstr "Telefoto"
+
+#: librawstudio/rs-library.c:832
+msgid "January"
+msgstr "Januari"
+
+#: librawstudio/rs-library.c:835
+msgid "February"
+msgstr "Februari"
+
+#: librawstudio/rs-library.c:838
+msgid "March"
+msgstr "Mars"
+
+#: librawstudio/rs-library.c:841
+msgid "April"
+msgstr "April"
+
+#: librawstudio/rs-library.c:844
+msgid "May"
+msgstr "Maj"
+
+#: librawstudio/rs-library.c:847
+msgid "June"
+msgstr "Juni"
+
+#: librawstudio/rs-library.c:850
+msgid "July"
+msgstr "Juli"
+
+#: librawstudio/rs-library.c:853
+msgid "August"
+msgstr "Augusti"
+
+#: librawstudio/rs-library.c:856
+msgid "September"
+msgstr "September"
+
+#: librawstudio/rs-library.c:859
+msgid "October"
+msgstr "Oktober"
+
+#: librawstudio/rs-library.c:862
+msgid "November"
+msgstr "November"
+
+#: librawstudio/rs-library.c:865
+msgid "December"
+msgstr "December"
+
+#: librawstudio/rs-metadata.c:545
+#, c-format
+msgid "%dmm "
+msgstr "%dmm "
+
+#: librawstudio/rs-metadata.c:547
+#, c-format
+msgid "%.1fs "
+msgstr "%.1fs "
+
+#: librawstudio/rs-metadata.c:549
+#, c-format
+msgid "1/%.0fs "
+msgstr "1/%.0fs "
+
+#: librawstudio/rs-metadata.c:551
+#, c-format
+msgid "F/%.1f "
+msgstr "F/%.1f "
+
+#: librawstudio/rs-metadata.c:553
+#, c-format
+msgid "%+.1fEV "
+msgstr ""
+
+#: librawstudio/rs-metadata.c:555
+#, c-format
+msgid "ISO%d"
+msgstr "ISO%d"
+
+#: librawstudio/rs-profile-selector.c:238
+msgid "Add profile ..."
+msgstr "Lägg till profil..."
+
+#: librawstudio/rs-profile-selector.c:242
+msgid "Embedded Profile"
+msgstr "Medföljande profil"
+
+#: librawstudio/rs-profile-selector.c:244
+msgid "(Select Profile)"
+msgstr "Välj färgprofil"
+
+#. @TRANSLATORS: "Expos" is short version of "Exposure". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:80
+msgid "Expos"
+msgstr "Exponering"
+
+#: librawstudio/rs-settings.c:80
+msgid "Exposure Compensation"
+msgstr "Exponeringskompensation"
+
+#. @TRANSLATORS: "Satur" is short version of "Saturation". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:86
+msgid "Satur"
+msgstr "Färgmättnad"
+
+#: librawstudio/rs-settings.c:86 src/rs-actions.c:465
+msgid "Saturation"
+msgstr "Mättnad"
+
+#. @TRANSLATORS: You cannot use more than 5 characters for "Hue"
+#: librawstudio/rs-settings.c:92 src/rs-actions.c:466
+msgid "Hue"
+msgstr "Färgmättnad"
+
+#: librawstudio/rs-settings.c:92
+msgid "Hue Shift"
+msgstr "Tonskifte"
+
+#. @TRANSLATORS: "Contr" is short version of "Contrast". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:98
+msgid "Contr"
+msgstr "Kontrast"
+
+#: librawstudio/rs-settings.c:98 src/rs-actions.c:467
+msgid "Contrast"
+msgstr "Konstrast"
+
+#. @TRANSLATORS: "Temp" is short version of "Temperature". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:104 librawstudio/rs-settings.c:116
+msgid "Temp"
+msgstr "Temp"
+
+#: librawstudio/rs-settings.c:104 librawstudio/rs-settings.c:116
+msgid "Temperature"
+msgstr "Temperatur"
+
+#. @TRANSLATORS: You cannot use more than 5 characters for "Tint"
+#: librawstudio/rs-settings.c:110 librawstudio/rs-settings.c:122
+msgid "Tint"
+msgstr "Nyans"
+
+#: librawstudio/rs-settings.c:110 librawstudio/rs-settings.c:122
+msgid "Tint Shift"
+msgstr "Nyanskifte"
+
+#: librawstudio/rs-settings.c:127
+msgid "WBAscii"
+msgstr "WBAscii"
+
+#. @TRANSLATORS: "Sharp" is short version of "Sharpen". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:133
+msgid "Sharp"
+msgstr "Skärp"
+
+#: librawstudio/rs-settings.c:133
+msgid "Sharpen Amount"
+msgstr "Skärpemängd"
+
+#. @TRANSLATORS: "Denoi" is short version of "Denoise". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:139
+msgid "Denoi"
+msgstr "Brusreducering"
+
+#: librawstudio/rs-settings.c:139
+msgid "Light Denoising"
+msgstr "Luminansbrus-reducering"
+
+#. @TRANSLATORS: "ColDn" is short version of "Colour Denoise". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:145
+msgid "ColDn"
+msgstr "FärgBR"
+
+#: librawstudio/rs-settings.c:145
+msgid "Colour Denoising"
+msgstr "Färgbrus-reducering"
+
+#. @TRANSLATORS: "CA R" is short version of "Chromatic Aberration Red". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:151
+msgid "CA R"
+msgstr "CA R"
+
+#: librawstudio/rs-settings.c:151
+msgid "Red Chromatic Aberration Correction"
+msgstr "Korrigering för röd kromatisk aberration"
+
+#. @TRANSLATORS: "CA B" is short version of "Chromatic Aberration Blue". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:157
+msgid "CA B"
+msgstr "CA B"
+
+#: librawstudio/rs-settings.c:157
+msgid "Blue Chromatic Aberration Correction"
+msgstr "Korrigering för blå kromatisk aberration"
+
+#. @TRANSLATORS: "Vign" is short version of "Vignetting". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:163
+msgid "Vign"
+msgstr "Vignettering"
+
+#: librawstudio/rs-settings.c:163
+msgid "Vignetting Correction"
+msgstr "Vignetteringskorrektion"
+
+#. @TRANSLATORS: You cannot use more than 5 characters for "Red"
+#: librawstudio/rs-settings.c:169
+msgid "Red"
+msgstr "Röd"
+
+#: librawstudio/rs-settings.c:169
+msgid "Red Amount Adjustment"
+msgstr "Korrigering av rött"
+
+#. @TRANSLATORS: You cannot use more than 5 characters for "Green"
+#: librawstudio/rs-settings.c:175
+msgid "Green"
+msgstr "Grön"
+
+#: librawstudio/rs-settings.c:175
+msgid "Green Amount Adjustment"
+msgstr "Korrigering av grönt"
+
+#. @TRANSLATORS: You cannot use more than 5 characters for "Blue"
+#: librawstudio/rs-settings.c:181
+msgid "Blue"
+msgstr "Blå"
+
+#: librawstudio/rs-settings.c:181
+msgid "Blue Amount Adjustment"
+msgstr "Korrigering av blått"
+
+#: plugins/colorspace-adobergb/colorspace-adobergb.c:62
+msgid "Print friendly color space, compatible with Adobe RGB (1998)"
+msgstr "Skrivarvänlig färgrymd, kompatibel med Adobe RGB (1998)"
+
+#: plugins/colorspace-prophoto/colorspace-prophoto.c:62
+msgid "Large gamut color space"
+msgstr "Färgrymd med stort tonomfång"
+
+#: plugins/output-facebook/output-facebook.c:106
+#: plugins/output-flickr/output-flickr.c:106
+#: plugins/output-jpegfile/output-jpegfile.c:95
+#: plugins/output-picasa/output-picasa.c:100
+msgid "JPEG Quality"
+msgstr "JPEG-kvalitet"
+
+#: plugins/output-facebook/output-facebook.c:113
+msgid "Caption"
+msgstr "Bildtext"
+
+#: plugins/output-facebook/output-facebook.c:132
+msgid "Upload photo to Facebook"
+msgstr "Ladda upp foto till Facebook"
+
+#: plugins/output-facebook/output-facebook.c:257
+#: plugins/output-flickr/output-flickr.c:381
+msgid "Step 1:"
+msgstr "Steg 1:"
+
+#: plugins/output-facebook/output-facebook.c:258
+#: plugins/output-flickr/output-flickr.c:382
+msgid "Step 2:"
+msgstr "Steg 2:"
+
+#: plugins/output-facebook/output-facebook.c:260
+#: plugins/output-flickr/output-flickr.c:384
+msgid "Authenticate Rawstudio"
+msgstr "Verifiera Rawstudio"
+
+#: plugins/output-facebook/output-facebook.c:303
+msgid "Unhandled error from Facebook"
+msgstr "Ohanterat fel från Facebook"
+
+#: plugins/output-facebook/output-facebook.c:329
+msgid ""
+"Rawstudio needs to be authenticated before it will be able to upload photos "
+"to your Facebook account."
+msgstr ""
+"Rawstudio behöver verifieras innan det kan ladda upp foton till Ditt "
+"Facebook-konto."
+
+#: plugins/output-facebook/output-facebook.c:471
+#: plugins/output-picasa/output-picasa.c:366
+msgid "Albums"
+msgstr "Album"
+
+#: plugins/output-facebook/output-facebook.c:474
+#: plugins/output-picasa/output-picasa.c:369
+msgid "Create album"
+msgstr "Skapa album"
+
+#: plugins/output-flickr/output-flickr.c:113
+msgid "Title"
+msgstr "Titel"
+
+#: plugins/output-flickr/output-flickr.c:121
+msgid "Description"
+msgstr "Beskrivning"
+
+#: plugins/output-flickr/output-flickr.c:127
+msgid "Tags"
+msgstr "Taggar"
+
+#: plugins/output-flickr/output-flickr.c:134
+msgid "Public (everyone can see this)"
+msgstr "Publik (alla kan se detta)"
+
+#: plugins/output-flickr/output-flickr.c:140
+msgid "Visible to Friends"
+msgstr "Synligt för vänner."
+
+#: plugins/output-flickr/output-flickr.c:146
+msgid "Visible to Family"
+msgstr "Synligt för familjen."
+
+#: plugins/output-flickr/output-flickr.c:157
+msgid "Upload photo to Flickr"
+msgstr "Ladda upp foto till Flickr"
+
+#: plugins/output-flickr/output-flickr.c:303
+msgid "We recieved an error during authentication. Please try again."
+msgstr "Ett fel uppstod vid verifiering. Vänligen försök igen."
+
+#: plugins/output-flickr/output-flickr.c:306
+msgid ""
+"Rawstudio were not able to upload the photo cause the authentication has "
+"been revoked. Please re-authenticate Rawstudio to upload to Flickr."
+msgstr ""
+"Rawstudio kunde inte ladda upp fotot eftersom verifieringen blivit "
+"återkallad. Vänligen verifiera Rawstudio igen för att ladda upp till Flickr."
+
+#: plugins/output-flickr/output-flickr.c:309
+msgid ""
+"It seems like rawstudio lost its authentication to upload to your account, "
+"please re-authenticate."
+msgstr ""
+"Det verkar som om Rawstudio förlorade sin verifiering. För att ladda upp "
+"till Ditt konto, vänligen verifiera Rawstudion igen."
+
+#: plugins/output-flickr/output-flickr.c:313
+#, c-format
+msgid ""
+"%s\n"
+"\n"
+"<b>Note: This error isn't catched by Rawstudio. Please let us know that you "
+"found it and how to reproduce it so we can make a more useful errormessage. "
+"Thanks!</b>"
+msgstr ""
+"%s\n"
+"\n"
+"<b>OBS! Detta fel fångades inte av Rawstudio. Vänligen låt oss veta att Du "
+"hittade det och hur man kan återskapa det så att vi kan skapa ett mer "
+"användbart felmeddelande. Tack!</b>"
+
+#: plugins/output-flickr/output-flickr.c:315
+msgid "Flickr error"
+msgstr "Flickr-fel"
+
+#: plugins/output-flickr/output-flickr.c:374
+msgid ""
+"Rawstudio needs to be authenticated before it will be able to upload photos "
+"to your Flickr account."
+msgstr ""
+"Rawstudio behöver verifieras innan det kan ladda upp foton till Ditt Flickr-"
+"konto."
+
+#: plugins/output-jpegfile/output-jpegfile.c:89
+#: plugins/output-pngfile/output-pngfile.c:80
+#: plugins/output-tifffile/output-tifffile.c:79
+#, fuzzy
+msgid "Full export path"
+msgstr "Fil exporterad"
+
+#: plugins/output-jpegfile/output-jpegfile.c:101
+#: plugins/output-pngfile/output-pngfile.c:85
+#: plugins/output-tifffile/output-tifffile.c:102
+msgid "Color space used for saving"
+msgstr ""
+
+#: plugins/output-jpegfile/output-jpegfile.c:107
+#: plugins/output-tifffile/output-tifffile.c:96
+#, fuzzy
+msgid "Copy Exif metadata"
+msgstr "Kopiera EXIF-metadata"
+
+#: plugins/output-jpegfile/output-jpegfile.c:113
+msgid "JPEG (Joint Photographic Experts Group)"
+msgstr "JPEG (Joint Photographic Experts Group)"
+
+#: plugins/output-picasa/output-picasa.c:119
+#, fuzzy
+msgid "Retain Exif metadata"
+msgstr "Behåll EXIF-metadata"
+
+#: plugins/output-picasa/output-picasa.c:123
+msgid "Upload photo to Picasa"
+msgstr "Ladda upp foto till Picasa"
+
+#: plugins/output-picasa/output-picasa.c:196
+msgid "Unhandled error from Picasa"
+msgstr "Ohanterat fel från Picasa"
+
+#: plugins/output-picasa/output-picasa.c:286
+#: plugins/output-picasa/output-picasa.c:288
+msgid "Current User: "
+msgstr "Nuvarande användare:"
+
+#: plugins/output-picasa/output-picasa.c:286
+msgid " (Logged in succesfully)"
+msgstr "(Loggade in med framgång)"
+
+#: plugins/output-picasa/output-picasa.c:288
+msgid " (Cannot log in)"
+msgstr "(Kan inte logga in)"
+
+#: plugins/output-picasa/output-picasa.c:293
+msgid "(No user entered)"
+msgstr "(Användare ej specificerad)"
+
+#: plugins/output-picasa/output-picasa.c:382
+msgid "Switch User"
+msgstr "Växla användare"
+
+#. Cancel pressed, or no info entered
+#: plugins/output-picasa/rs-picasa-client.c:53
+#, c-format
+msgid "Cannot log in"
+msgstr "Kan inte logga in"
+
+#: plugins/output-picasa/rs-picasa-client.c:165
+msgid "Retry Operation?"
+msgstr "Försök igen?"
+
+#: plugins/output-picasa/rs-picasa-client.c:171
+msgid "An error was returned when communicating with the Picasa web service:"
+msgstr "Ett fel uppstod under kommunikation med Picasas webbservice"
+
+#: plugins/output-picasa/rs-picasa-client.c:179
+msgid "Would you like to Retry the operation?"
+msgstr "Vill du försöka utföra operationen igen?"
+
+#: plugins/output-picasa/rs-picasa-client.c:221
+msgid "Picasa Webalbum Authentification"
+msgstr "Verifiering för Picasa-webbalbum"
+
+#: plugins/output-picasa/rs-picasa-client.c:227
+msgid "Please type in your username and password for Picasa Web Albums."
+msgstr "Vänligen skriv in Ditt användarnamn och lösenord för Picasa-webbalbum"
+
+#: plugins/output-picasa/rs-picasa-client.c:234
+msgid "Username: "
+msgstr "Användarnamn:"
+
+#: plugins/output-picasa/rs-picasa-client.c:235
+msgid "Password: "
+msgstr "Lösenord:"
+
+#: plugins/output-pngfile/output-pngfile.c:90
+msgid "Save 16 bit linear PNG"
+msgstr "Spara 16-bitars linjär PNG"
+
+#: plugins/output-pngfile/output-pngfile.c:95
+#, fuzzy
+msgid "Copy Exif metadata to XMP"
+msgstr "Kopiera EXIF-metadata till XMP"
+
+#: plugins/output-pngfile/output-pngfile.c:101
+msgid "PNG (Portable Network Graphics)"
+msgstr "PNG (Portable Network Graphics)"
+
+#: plugins/output-tifffile/output-tifffile.c:85
+msgid "Save uncompressed TIFF"
+msgstr "Spara i okomprimerad TIFF"
+
+#: plugins/output-tifffile/output-tifffile.c:91
+msgid "Save 16 bit TIFF"
+msgstr "Spara 16-bitars TIFF"
+
+#: plugins/output-tifffile/output-tifffile.c:108
+msgid "TIFF (Tagged Image File Format)"
+msgstr "TIFF (Tagged Image File Format)"
+
+#: src/filename.c:379
+#, fuzzy, c-format
+msgid "%f - Original Filename"
+msgstr "%f - Ursprungligt filnamn"
+
+#: src/filename.c:380
+#, fuzzy, c-format
+msgid "%p - Path of Original File"
+msgstr "%p - Filens ursprungliga sökväg"
+
+#: src/filename.c:381
+#, fuzzy, c-format
+msgid "%2c - Incremental Counter"
+msgstr "%2c - Ökande räknare"
+
+#: src/filename.c:382
+#, fuzzy, c-format
+msgid "%s - Setting ID (A, B or C)"
+msgstr "%s - Inställning (A, B eller C)"
+
+#: src/filename.c:383
+#, fuzzy, c-format
+msgid "%d - Date from Exif (YYYY-MM-DD)"
+msgstr "%d - Datum från EXIF (YYYY-MM_DD)"
+
+#: src/filename.c:384
+#, fuzzy
+msgid "%DY - Year from Exif (YYYY)"
+msgstr "%DY - Årtal från EXIF (YYYY)"
+
+#: src/filename.c:385
+#, fuzzy
+msgid "%Dy - Year from Exif (YY)"
+msgstr "%Dy - Årtal från EXIF (YY)"
+
+#: src/filename.c:386
+#, fuzzy
+msgid "%Dm - Month from Exif (MM)"
+msgstr "%Dm - Månad från EXIF (MM)"
+
+#: src/filename.c:387
+#, fuzzy
+msgid "%DM - Month from Exif (Text)"
+msgstr "%DM - Månad från EXIF (text)"
+
+#: src/filename.c:388
+#, fuzzy
+msgid "%Dd - Date from Exif (DD)"
+msgstr "%Dd - Datum från EXIF (DD)"
+
+#: src/filename.c:389
+#, fuzzy
+msgid "%DD - Day of Week from Exif"
+msgstr "%DD - Veckodag från EXIF"
+
+#: src/filename.c:390
+msgid "%t - Time from EXIF (HH:MM:SS)"
+msgstr "%t - Tidpunkt från EXIF (HH:MM:SS)"
+
+#: src/filename.c:391
+msgid "%w - Week Number from Exif (Start Sunday)"
+msgstr ""
+
+#: src/filename.c:392
+msgid "%W - Week Number from Exif (Start Monday)"
+msgstr ""
+
+#: src/filename.c:393
+msgid "%Mi - ISO Value of Image"
+msgstr ""
+
+#: src/filename.c:394
+msgid "%Ma - Aperture (2.8)"
+msgstr ""
+
+#: src/filename.c:395
+msgid "%Ms - Shutter Time in Seconds (0.008)"
+msgstr ""
+
+#: src/filename.c:396
+msgid "%MS - Inverted Shutter Time (125)"
+msgstr ""
+
+#: src/filename.c:397
+msgid "%Mf - Focal Length in mm (70)"
+msgstr ""
+
+#: src/gtk-interface.c:210
+msgid "Width"
+msgstr "Bredd"
+
+#: src/gtk-interface.c:210
+msgid "Height"
+msgstr "Höjd"
+
+#: src/gtk-interface.c:285
+msgid "Opening photo ..."
+msgstr "Öppnar foto ..."
+
+#: src/gtk-interface.c:310
+msgid "Couldn't open photo"
+msgstr "Kunde inte öppna foto"
+
+#: src/gtk-interface.c:315
+msgid "Image opened"
+msgstr "Bild öppnad"
+
+#: src/gtk-interface.c:394
+#, c-format
+msgid "Changed photo priority (*)"
+msgstr "Bildprioritet ändrad (*)"
+
+#: src/gtk-interface.c:396
+#, c-format
+msgid "Changed photo priority (D)"
+msgstr "Bildprioritet ändrad (D)"
+
+#: src/gtk-interface.c:398
+#, c-format
+msgid "Changed photo priority (%d)"
+msgstr "Bildprioritet ändrad (%d)"
+
+#: src/gtk-interface.c:492
+msgid "Unable to locate screen for fullscreen preview"
+msgstr "Kan inte hitta skärm för fullskärmsförhandsgranskning."
+
+#. Add something to the preview area
+#: src/gtk-interface.c:512
+msgid "Press F10 to return preview to this window"
+msgstr "Tryck F10 för att återställa förhandsgranskning till detta fönster."
+
+#: src/gtk-interface.c:645
+msgid "Unable to detect more than one monitor. Cannot open fullscreen preview"
+msgstr ""
+"Kan inte hitta mer än en skärm. Kan inte visa fullskärmsförhandsgranskning."
+
+#: src/gtk-interface.c:661
+msgid "Select screen to open fullscreen preview"
+msgstr "Välj skärm för att öppna fullskärmsförhandsgranskning"
+
+#: src/gtk-interface.c:677
+msgid "Select Screen for fullscreen preview"
+msgstr "Välj skärm för fullskärmsförhandsgranskning"
+
+#: src/gtk-interface.c:686
+msgid "Select OK to use this screen for fullscreen preview"
+msgstr "Tryck OK för att välja denna skärm för fullskärmsförhandsgranskning"
+
+#: src/gtk-interface.c:847
+msgid "Directory:"
+msgstr "Katalog:"
+
+#: src/gtk-interface.c:849 src/rs-batch.c:1068
+#, fuzzy
+msgid "Choose Output Directory"
+msgstr "Välj destinationskatalog"
+
+#: src/gtk-interface.c:865 src/rs-batch.c:1079
+#, fuzzy
+msgid "Filename Template:"
+msgstr "Filnamnsmall:"
+
+#: src/gtk-interface.c:878
+#, fuzzy
+msgid "Filename Example:"
+msgstr "Filnamnsexampel:"
+
+#: src/gtk-interface.c:889
+#, fuzzy
+msgid "File Type:"
+msgstr "Filtyp:"
+
+#. Add preferences box
+#: src/gtk-interface.c:953 src/rs-tethered-shooting.c:1157
+msgid "Preferences"
+msgstr "Egenskaper"
+
+#: src/gtk-interface.c:966
+#, fuzzy
+msgid "Preview Background Color:"
+msgstr "Förhandsgranska bakgrundsfärger:"
+
+#: src/gtk-interface.c:981
+#, fuzzy
+msgid "Histogram Height:"
+msgstr "Histogramhöjd:"
+
+#: src/gtk-interface.c:991
+#, fuzzy
+msgid "Use System Theme"
+msgstr "Använd systemtema"
+
+#: src/gtk-interface.c:996
+#, fuzzy
+msgid "Place Cache in Home Directory"
+msgstr "Mellanlagra i hemkatalogen"
+
+#: src/gtk-interface.c:1000
+msgid "Display Colorspace:"
+msgstr "Visa färgprofil"
+
+#: src/gtk-interface.c:1013
+msgid "Histogram, Curve & Exp. Mask:"
+msgstr ""
+
+#: src/gtk-interface.c:1086
+msgid "General"
+msgstr "Allmän"
+
+#. gtk_notebook_append_page(GTK_NOTEBOOK(notebook), batch_page, gtk_label_new(_("Batch")));
+#: src/gtk-interface.c:1088 src/rs-tethered-shooting.c:1151
+#, fuzzy
+msgid "Quick Export"
+msgstr "_Snabbexportering"
+
+#: src/gtk-interface.c:1408
+msgid "Opening directory..."
+msgstr "Öppnar katalog..."
+
+#: src/gtk-interface.c:1435
+msgid "Rawstudio"
+msgstr "Rawstudio"
+
+#: src/gtk-interface.c:1532
+#, fuzzy
+msgid "Open Recursive"
+msgstr "Öppna rekursivt"
+
+#: src/gtk-interface.c:1540
+msgid "Directory"
+msgstr "Katalog"
+
+#: src/gtk-interface.c:1543
+#, fuzzy
+msgid "Tag Search"
+msgstr "Sök taggar"
+
+#: src/gtk-interface.c:1549
+msgid "Tools"
+msgstr "Verktyg"
+
+#: src/gtk-interface.c:1550
+msgid "Batch"
+msgstr "Processering"
+
+#: src/gtk-interface.c:1551
+msgid "Open"
+msgstr "Öppna"
+
+#: src/gtk-interface.c:1590
+msgid "Ready"
+msgstr "Färdig"
+
+#. Construct this to load dcp profiles early
+#: src/gtk-interface.c:1674
+msgid "Rawstudio: Loading Color Profiles"
+msgstr ""
+
+#: src/gtk-progress.c:63 src/gtk-progress.c:100 src/gtk-progress.c:123
+msgid "Progress"
+msgstr "Framgång"
+
+#: src/rs-actions.c:173
+msgid "Open directory"
+msgstr "Öppna katalog"
+
+#: src/rs-actions.c:253 src/rs-batch.c:543
+msgid "Could not create output directory."
+msgstr "Kunde inte skapa utdata-katalog."
+
+#: src/rs-actions.c:257
+msgid "Exporting..."
+msgstr "Exporterar..."
+
+#: src/rs-actions.c:265
+msgid "File exported"
+msgstr "Fil exporterad"
+
+#: src/rs-actions.c:270 src/rs-actions.c:293
+msgid "Export failed"
+msgstr "Export misslyckades"
+
+#: src/rs-actions.c:300
+msgid "Exporting to GIMP..."
+msgstr "Exporterar till GIMP..."
+
+#: src/rs-actions.c:305
+msgid "Error exporting"
+msgstr "Misslyckad export"
+
+#: src/rs-actions.c:306
+msgid "Error exporting photo to gimp."
+msgstr "Misslyckades exportera foto till gimp."
+
+#: src/rs-actions.c:331 src/rs-actions.c:349
+msgid "Deleting photos"
+msgstr "Raderar foton"
+
+#: src/rs-actions.c:332
+msgid "Your files will be <b>permanently</b> deleted!"
+msgstr "Dina filer kommer raderas <b>permanent</b>!"
+
+#: src/rs-actions.c:334
+msgid "Delete photos"
+msgstr "Radera foton"
+
+#: src/rs-actions.c:401
+msgid "Waiting for jobs to finish"
+msgstr "Väntar på att uppgifter slutförs"
+
+#: src/rs-actions.c:420
+msgid "Copying image to clipboard"
+msgstr "Kopierar bild till minne"
+
+#: src/rs-actions.c:425
+msgid "Image copied to clipboard"
+msgstr "Bild kopierad till minne"
+
+#: src/rs-actions.c:427
+msgid "ERROR: Could not copy image to clipboard"
+msgstr "FEL: Kunde inte kopiera bild till minne"
+
+#. Build GUI
+#: src/rs-actions.c:463
+msgid "Profile"
+msgstr "Profil"
+
+#: src/rs-actions.c:464
+msgid "Exposure"
+msgstr "Exponering"
+
+#: src/rs-actions.c:468
+#, fuzzy
+msgid "White Balance"
+msgstr "Vit_balans"
+
+#: src/rs-actions.c:469
+msgid "Sharpen"
+msgstr "Mer skärpa"
+
+#: src/rs-actions.c:470
+msgid "Denoise"
+msgstr "Brus-reducera"
+
+#: src/rs-actions.c:471
+#, fuzzy
+msgid "Color Denoise"
+msgstr "Färgbrus-reducering"
+
+#: src/rs-actions.c:472 src/rs-toolbox.c:808
+msgid "Channel Mixer"
+msgstr "Kanalmixer"
+
+#: src/rs-actions.c:473
+msgid "TCA"
+msgstr ""
+
+#: src/rs-actions.c:474
+msgid "Vignetting"
+msgstr "Vignettering"
+
+#: src/rs-actions.c:475 src/rs-toolbox.c:810
+msgid "Curve"
+msgstr "Kurva"
+
+#: src/rs-actions.c:476
+msgid "Select All/None"
+msgstr "Välj alla/ingen"
+
+#: src/rs-actions.c:498
+#, fuzzy
+msgid "Select Settings to Copy"
+msgstr "Välj inställning att kopiera"
+
+#: src/rs-actions.c:577
+msgid "Copied settings"
+msgstr "Inställningar kopierade"
+
+#: src/rs-actions.c:587
+msgid "Pasting settings to images"
+msgstr "Klistrar in inställningar till bilder"
+
+#: src/rs-actions.c:657
+msgid "Pasted settings"
+msgstr "Inklistrad inställning"
+
+#: src/rs-actions.c:660
+msgid "Nothing to paste"
+msgstr "Inget att klistra in"
+
+#: src/rs-actions.c:663
+msgid "Buffer empty"
+msgstr "Buffert tom"
+
+#: src/rs-actions.c:699
+#, c-format
+msgid "Settings saved as default for %s %s"
+msgstr ""
+
+#: src/rs-actions.c:782
+msgid "Adjusting to auto white balance"
+msgstr "Justerar till automatisk vitbalans"
+
+#: src/rs-actions.c:797
+msgid "No white balance to set from"
+msgstr "No white balance to set from"
+
+#: src/rs-actions.c:800
+msgid "Adjusting to camera white balance"
+msgstr "Justerar till kamerans vitbalans"
+
+#: src/rs-actions.c:935
+msgid "Tags, separated by spaces:"
+msgstr "Taggar, åtskilja av blanksteg:"
+
+#: src/rs-actions.c:940
+#, fuzzy
+msgid "Add Tags to Selected Photo(s)."
+msgstr "Lägg till taggar till valda foto(n)"
+
+#: src/rs-actions.c:1047
+msgid "Showing exposure mask"
+msgstr "Visar exponeringsmask"
+
+#: src/rs-actions.c:1049
+msgid "Hiding exposure mask"
+msgstr "Döljer exponeringsmask"
+
+#: src/rs-actions.c:1076
+msgid "Adding images to batch queue"
+msgstr "Lägg till bilder i processeringskö"
+
+#: src/rs-actions.c:1093 src/rs-actions.c:1176
+#, c-format
+msgid "%d photos added to batch queue"
+msgstr "%d foton tillagda i processeringskön"
+
+#: src/rs-actions.c:1110 src/rs-batch.c:210
+msgid "A"
+msgstr "A"
+
+#: src/rs-actions.c:1111 src/rs-batch.c:213
+msgid "B"
+msgstr "B"
+
+#: src/rs-actions.c:1112 src/rs-batch.c:216
+msgid "C"
+msgstr "C"
+
+#: src/rs-actions.c:1134
+msgid ""
+"Select which settings to\n"
+"add to batch queue"
+msgstr ""
+"Välj vilken inställning som\n"
+"ska gälla för processeringkön"
+
+#: src/rs-actions.c:1197
+msgid "Removing images from batch queue"
+msgstr "Tar bort bilder från processeringkö"
+
+#: src/rs-actions.c:1212
+#, c-format
+msgid "%d photos removed from batch queue"
+msgstr "%d foton borttagna från processeringskön"
+
+#. Not in any menu (yet)
+#: src/rs-actions.c:1263 src/rs-actions.c:1514
+msgid "Add Profile ..."
+msgstr "Lägg till profil..."
+
+#: src/rs-actions.c:1275
+msgid "All Profiles"
+msgstr "Alla profiler"
+
+#: src/rs-actions.c:1285
+msgid "Camera Profiles (DCP)"
+msgstr "Kameraprofiler (DCP)"
+
+#: src/rs-actions.c:1291
+msgid "Color Profiles (ICC and ICM)"
+msgstr "Färgprofiler (ICC och ICM)"
+
+#: src/rs-actions.c:1298
+msgid "All files"
+msgstr "Alla filer"
+
+#: src/rs-actions.c:1408
+msgid "A raw image converter for GTK+/GNOME"
+msgstr "En råfilskonvertering för GTK+/GNOME"
+
+#: src/rs-actions.c:1445
+msgid "_File"
+msgstr "_Fil"
+
+#: src/rs-actions.c:1446
+msgid "_Edit"
+msgstr "_Redigera"
+
+#: src/rs-actions.c:1447
+msgid "_Photo"
+msgstr "_Foto"
+
+#: src/rs-actions.c:1448
+msgid "_Set Priority"
+msgstr "_Sätt prioritet"
+
+#: src/rs-actions.c:1449
+msgid "_White Balance"
+msgstr "Vit_balans"
+
+#: src/rs-actions.c:1450
+msgid "_View"
+msgstr "_Visa"
+
+#: src/rs-actions.c:1451
+msgid "_Sort by"
+msgstr "_Sortera på"
+
+#: src/rs-actions.c:1452
+msgid "_Batch"
+msgstr "_Processeringskö"
+
+#: src/rs-actions.c:1453
+msgid "_Help"
+msgstr "_Hjälp"
+
+#: src/rs-actions.c:1455
+msgid "_Snapshot"
+msgstr ""
+
+#. File menu
+#: src/rs-actions.c:1458
+msgid "_Open Directory"
+msgstr "_Öppna katalog"
+
+#: src/rs-actions.c:1459
+msgid "_Quick Export"
+msgstr "_Snabbexportering"
+
+#: src/rs-actions.c:1460
+msgid "_Export As"
+msgstr "_Exportera som"
+
+#: src/rs-actions.c:1461
+msgid "_Export to Gimp"
+msgstr "_Exportera till Gimp"
+
+#: src/rs-actions.c:1462
+msgid "_Copy Image to Clipboard"
+msgstr "_Kopiera bild till minne"
+
+#: src/rs-actions.c:1463
+msgid "_Reload directory"
+msgstr "_Läs om katalog"
+
+#: src/rs-actions.c:1464
+#, fuzzy
+msgid "_Delete Flagged Photos"
+msgstr "_Radera markerade foton"
+
+#: src/rs-actions.c:1465
+msgid "_Quit"
+msgstr "_Avsluta"
+
+#. Edit menu
+#: src/rs-actions.c:1468
+#, fuzzy
+msgid "_Revert Settings"
+msgstr "_Återställ inställningar"
+
+#: src/rs-actions.c:1469
+#, fuzzy
+msgid "_Copy Settings"
+msgstr "_Kopiera inställningar"
+
+#: src/rs-actions.c:1470
+#, fuzzy
+msgid "_Paste Settings"
+msgstr "_Klistra in inställningar"
+
+#: src/rs-actions.c:1471
+#, fuzzy
+msgid "_Reset Settings"
+msgstr "_Nollställ inställningar"
+
+#: src/rs-actions.c:1472
+#, fuzzy
+msgid "_Save Camera Default Settings"
+msgstr "_Spara kamerans standardinställningar"
+
+#: src/rs-actions.c:1473
+msgid "_Preferences"
+msgstr "_Egenskaper"
+
+#. Photo menu
+#: src/rs-actions.c:1476
+#, fuzzy
+msgid "_Flag Photo for Deletion"
+msgstr "_Märk foto för radering"
+
+#: src/rs-actions.c:1477
+msgid "_1"
+msgstr "_1"
+
+#: src/rs-actions.c:1478
+msgid "_2"
+msgstr "_2"
+
+#: src/rs-actions.c:1479
+msgid "_3"
+msgstr "_3"
+
+#: src/rs-actions.c:1480
+#, fuzzy
+msgid "_Remove Priority"
+msgstr "_Ta bort prioritet"
+
+#: src/rs-actions.c:1481
+msgid "_Auto"
+msgstr "_Autojustera"
+
+#: src/rs-actions.c:1482
+msgid "_Camera"
+msgstr "_Kamera"
+
+#: src/rs-actions.c:1483
+msgid "_Crop"
+msgstr "_Beskär"
+
+#: src/rs-actions.c:1484
+msgid "_Uncrop"
+msgstr "_Beskär inte"
+
+#: src/rs-actions.c:1485
+msgid "_Straighten"
+msgstr "_Rätta upp"
+
+#: src/rs-actions.c:1486
+msgid "_Unstraighten"
+msgstr "_Rätta inte upp"
+
+#: src/rs-actions.c:1487
+msgid "_Group"
+msgstr "_Gruppera"
+
+#: src/rs-actions.c:1488
+msgid "_Ungroup"
+msgstr "_Gruppera inte"
+
+#: src/rs-actions.c:1489
+#, fuzzy
+msgid "_Auto Group"
+msgstr "_Gruppera automatiskt"
+
+#: src/rs-actions.c:1490
+msgid "_Tag Photo..."
+msgstr "_Tagga foto"
+
+#: src/rs-actions.c:1491
+msgid "Rotate Clockwise"
+msgstr "Rotera medurs"
+
+#: src/rs-actions.c:1492
+#, fuzzy
+msgid "Rotate Counterclockwise"
+msgstr "Rotera moturs"
+
+#: src/rs-actions.c:1493
+msgid "Flip"
+msgstr "Flippa"
+
+#: src/rs-actions.c:1494
+msgid "Mirror"
+msgstr "Spegelvänd"
+
+#. View menu
+#: src/rs-actions.c:1497
+#, fuzzy
+msgid "_Previous Photo"
+msgstr "_Föregående foto"
+
+#: src/rs-actions.c:1498
+msgid "_Next Photo"
+msgstr "_Efterföljande foto"
+
+#: src/rs-actions.c:1499
+msgid "_Lens Library"
+msgstr "_Objektivbibliotek"
+
+#: src/rs-actions.c:1500
+msgid "_Tethered Shooting"
+msgstr ""
+
+#. Batch menu
+#: src/rs-actions.c:1503
+#, fuzzy
+msgid "_Add to Batch Queue"
+msgstr "_Lägg i processeringskö"
+
+#: src/rs-actions.c:1504
+#, fuzzy
+msgid "_Add View to Queue..."
+msgstr "_Lägg till vy till kö..."
+
+#: src/rs-actions.c:1505
+#, fuzzy
+msgid "_Remove from Batch Queue"
+msgstr "_Ta bort från processeringskö"
+
+#: src/rs-actions.c:1506
+msgid "_Start"
+msgstr "_Starta"
+
+#. help menu
+#: src/rs-actions.c:1509
+msgid "_Online Documentation"
+msgstr ""
+
+#: src/rs-actions.c:1510
+msgid "_About"
+msgstr "_Om"
+
+#: src/rs-actions.c:1519
+#, fuzzy
+msgid "_Zoom to Fit"
+msgstr "_Anpassad zoom"
+
+#: src/rs-actions.c:1520
+msgid "_Iconbox"
+msgstr "_Ikonlåda"
+
+#: src/rs-actions.c:1521
+msgid "_Toolbox"
+msgstr "_Verktygslåda"
+
+#: src/rs-actions.c:1522
+msgid "_Fullscreen"
+msgstr "_Fullskärm"
+
+#: src/rs-actions.c:1523
+#, fuzzy
+msgid "_Show Photo on Secondary Monitor"
+msgstr "_Visa foto på sekundärskärm"
+
+#: src/rs-actions.c:1524
+msgid "Show Filenames in Iconbox"
+msgstr "Visa filnamn i ikonvy"
+
+#: src/rs-actions.c:1525
+msgid "Load non-RAW images"
+msgstr "Läs in icke-RAW-filer"
+
+#: src/rs-actions.c:1526
+msgid "Do not Load Selected Images"
+msgstr "Läs inte in valda bilder"
+
+#: src/rs-actions.c:1527
+#, fuzzy
+msgid "_Exposure Mask"
+msgstr "_Exponeringsmask"
+
+#: src/rs-actions.c:1528
+msgid "_Split"
+msgstr "_Dela"
+
+#: src/rs-actions.c:1530
+msgid "_Lights Out"
+msgstr ""
+
+#: src/rs-actions.c:1536
+msgid "Name"
+msgstr "Namn"
+
+#: src/rs-actions.c:1537
+msgid "Timestamp"
+msgstr "Tidsstämpel"
+
+#: src/rs-actions.c:1538
+msgid "ISO"
+msgstr "ISO"
+
+#: src/rs-actions.c:1540
+msgid "Focallength"
+msgstr "Brännvidd"
+
+#: src/rs-actions.c:1541
+msgid "Shutterspeed"
+msgstr "Slutarhastighet"
+
+#. Snapshot labels
+#: src/rs-actions.c:1546 src/rs-toolbox.c:208 src/rs-toolbox.c:1265
+msgid " A "
+msgstr " A "
+
+#: src/rs-actions.c:1547 src/rs-toolbox.c:209 src/rs-toolbox.c:1266
+msgid " B "
+msgstr " B "
+
+#: src/rs-actions.c:1548 src/rs-toolbox.c:210 src/rs-toolbox.c:1267
+msgid " C "
+msgstr " C "
+
+#: src/rs-batch.c:460
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: src/rs-batch.c:465
+msgid "Last image:"
+msgstr "Sista bild:"
+
+#: src/rs-batch.c:491
+#, c-format
+msgid "Time left: %dh %dm %ds"
+msgstr "Återstående tid: %dh %dm %ds"
+
+#: src/rs-batch.c:492
+#, c-format
+msgid "Processing Image %d/%d"
+msgstr "Behandlar bild %d/%d"
+
+#: src/rs-batch.c:496
+msgid "Time left: ..."
+msgstr "Återstående tidt: ..."
+
+#: src/rs-batch.c:497
+#, c-format
+msgid "Processing Image 1/%d."
+msgstr "Behandlar bild 1/%d."
+
+#: src/rs-batch.c:511
+#, c-format
+msgid "Loading %s ..."
+msgstr "Läser  %s ..."
+
+#: src/rs-batch.c:587
+#, c-format
+msgid "Saving %s ..."
+msgstr "Sparar %s ..."
+
+#: src/rs-batch.c:636
+msgid "Could not export photo."
+msgstr "Kunde inte exportera foto"
+
+#: src/rs-batch.c:696
+msgid "Icon"
+msgstr "Ikon"
+
+#: src/rs-batch.c:703
+msgid "Filename"
+msgstr "Filnamn"
+
+#: src/rs-batch.c:710
+msgid "Setting"
+msgstr "Inställning"
+
+#: src/rs-batch.c:803
+msgid "Start"
+msgstr "Starta"
+
+#: src/rs-batch.c:806
+msgid "Remove"
+msgstr "Radera"
+
+#: src/rs-batch.c:809
+#, fuzzy
+msgid "Remove All"
+msgstr "Radera alla"
+
+#: src/rs-batch.c:919 src/rs-batch.c:1090
+#, fuzzy
+msgid "Edit Output Settings"
+msgstr "Ändra utskriftsinställningar"
+
+#: src/rs-batch.c:955
+#, fuzzy
+msgid "Photo Size"
+msgstr "Fotostorlek"
+
+#: src/rs-batch.c:963
+#, fuzzy
+msgid "Constant Scale"
+msgstr "Konstant skalning"
+
+#: src/rs-batch.c:964
+#, fuzzy
+msgid "Constant Width"
+msgstr "Konstant bredd"
+
+#: src/rs-batch.c:965
+#, fuzzy
+msgid "Constant Height"
+msgstr "Konstant höjd"
+
+#: src/rs-batch.c:966
+#, fuzzy
+msgid "Maximum Size"
+msgstr "Maximal storlek"
+
+#: src/rs-batch.c:979
+#, fuzzy
+msgid "Photo Width:"
+msgstr "Fotobredd:"
+
+#: src/rs-batch.c:981
+#, fuzzy
+msgid "Pixels"
+msgstr "pixels"
+
+#: src/rs-batch.c:988
+#, fuzzy
+msgid "Photo Height:"
+msgstr "Fotohöjd:"
+
+#: src/rs-batch.c:990
+msgid "pixels"
+msgstr "pixels"
+
+#: src/rs-batch.c:997
+#, fuzzy
+msgid "Photo Scale:"
+msgstr "Fotoskala:"
+
+#: src/rs-batch.c:999
+msgid "%"
+msgstr "%"
+
+#: src/rs-batch.c:1035
+#, fuzzy, c-format
+msgid ""
+"Constant Width:\n"
+"%d"
+msgstr ""
+"Konstant bredd:\n"
+"%d"
+
+#: src/rs-batch.c:1038
+#, fuzzy, c-format
+msgid ""
+"Constant Height:\n"
+"%d"
+msgstr ""
+"Konstant höjd:\n"
+"%d"
+
+#: src/rs-batch.c:1041
+#, c-format
+msgid ""
+"Constant Scale:\n"
+"%d"
+msgstr ""
+"Konstant skala:\n"
+"%d"
+
+#: src/rs-batch.c:1045
+#, fuzzy, c-format
+msgid ""
+"Maximum Size:\n"
+"%d x %d"
+msgstr ""
+"Maximal storlek:\n"
+"%d x %d"
+
+#: src/rs-batch.c:1075
+#, fuzzy
+msgid "Output Directory:"
+msgstr "Destinationskatalog:"
+
+#: src/rs-batch.c:1099
+msgid "Change"
+msgstr "Ändra"
+
+#: src/rs-batch.c:1104
+#, fuzzy
+msgid "Export Dimensions"
+msgstr "Exportera dimensioner"
+
+#: src/rs-cache.c:58
+msgid ""
+"WARNING: Failed to save image settings! Check you have sufficient rights, "
+"and free space on your device."
+msgstr ""
+
+#: src/rs-camera-db.c:437
+msgid "Camera defaults editor"
+msgstr "Editor för kamerans standardinställningar"
+
+#: src/rs-camera-db.c:459
+msgid "Model"
+msgstr "Modell"
+
+#: src/rs-preview-widget.c:650
+msgid "Display Navigation"
+msgstr "Visa navigering"
+
+#: src/rs-preview-widget.c:962
+msgid "Light out mode not available"
+msgstr ""
+
+#: src/rs-preview-widget.c:963
+msgid ""
+"Your setup doesn't seem to support RGBA visuals and/or compositing. Consult "
+"your operating system manual for enabling RGBA visuals and compositing."
+msgstr ""
+
+#: src/rs-preview-widget.c:1199
+msgid "Size"
+msgstr "Storlek"
+
+#: src/rs-preview-widget.c:1207
+msgid "-"
+msgstr "-"
+
+#: src/rs-preview-widget.c:1213
+msgid "Grid"
+msgstr "Rutnät"
+
+#: src/rs-preview-widget.c:1218
+msgid "None"
+msgstr "Ingen"
+
+#: src/rs-preview-widget.c:1219
+msgid "Golden sections"
+msgstr "Gyllene snittet"
+
+#: src/rs-preview-widget.c:1220
+msgid "Rule of thirds"
+msgstr "Tredjedels-regeln"
+
+#: src/rs-preview-widget.c:1221
+msgid "Golden triangles #1"
+msgstr "Gyllene trianglar #1"
+
+#: src/rs-preview-widget.c:1222
+msgid "Golden triangles #2"
+msgstr "Gyllene trianglar #2"
+
+#: src/rs-preview-widget.c:1223
+msgid "Harmonious triangles #1"
+msgstr "Harmoniska trianglar #1"
+
+#: src/rs-preview-widget.c:1224
+msgid "Harmonious triangles #2"
+msgstr "Harmoniska trianglar #2"
+
+#: src/rs-preview-widget.c:1233
+msgid "Aspect"
+msgstr "Förhållande"
+
+#: src/rs-preview-widget.c:1238
+msgid "Freeform"
+msgstr "Friform"
+
+#: src/rs-preview-widget.c:1239
+msgid "Original Aspect"
+msgstr "Ursprungligt sidoförhållande"
+
+#: src/rs-preview-widget.c:1240
+msgid "ISO paper (A4)"
+msgstr "ISO-papper (A4)"
+
+#: src/rs-preview-widget.c:1241
+msgid "3:2 (35mm)"
+msgstr "3:2 (35mm)"
+
+#: src/rs-preview-widget.c:1242
+msgid "4:3"
+msgstr "4:3"
+
+#: src/rs-preview-widget.c:1243
+msgid "10:8 (SXGA)"
+msgstr "10:8 (SXGA)"
+
+#: src/rs-preview-widget.c:1244
+msgid "16:10 (Wide XGA)"
+msgstr "16:10 (Wide XGA)"
+
+#: src/rs-preview-widget.c:1245
+msgid "16:9 (HDTV)"
+msgstr "16:9 (HDTV)"
+
+#: src/rs-preview-widget.c:1246
+msgid "8:3 (Dualhead XGA)"
+msgstr "8:3 (Dualhead XGA)"
+
+#: src/rs-preview-widget.c:1247
+msgid "1:1"
+msgstr "1:1"
+
+#: src/rs-preview-widget.c:1248
+msgid "Golden rectangle"
+msgstr "Gyllene retangel"
+
+#: src/rs-preview-widget.c:1256 src/rs-preview-widget.c:1267
+msgid "Crop"
+msgstr "Beskär"
+
+#: src/rs-preview-widget.c:1258
+msgid "Don't crop"
+msgstr "Beskär inte"
+
+#. Help text for cropping
+#: src/rs-preview-widget.c:1281
+msgid ""
+"Crop: Drag to select cropped area. Right Mouse Button inside cropped area: "
+"Apply Crop; Outside: Cancel crop"
+msgstr ""
+"Beskär: Dra för att välja område. Höger musknapp inom valt område beskär "
+"bilden. Utanför valt område avbryter."
+
+#: src/rs-preview-widget.c:1314
+msgid ""
+"Straighten: Draw a line in the image that should be horizontal or vertical. "
+"Right Mouse Button cancels."
+msgstr ""
+"Räta upp: Dra en linje som skall vara horisontell eller vertikal. Höger "
+"musknapp avbryter."
+
+#. FIXME: Calculate some sensible size - maybe even remember user resizes
+#: src/rs-save-dialog.c:98 src/rs-toolbox.c:529
+msgid "Export File"
+msgstr "Exportera Fil"
+
+#: src/rs-save-dialog.c:282
+msgid "File not saved!"
+msgstr "Fil ej sparad!"
+
+#: src/rs-save-dialog.c:299
+#, c-format
+msgid "Exporting to %s"
+msgstr "Exporterar till %s"
+
+#: src/rs-save-dialog.c:357
+#, c-format
+msgid ""
+"Could not save file: %s\n"
+"\n"
+"Check that you have write permissions to this folder."
+msgstr ""
+"Kunde inte spara fil %s\n"
+"\n"
+"Kontrollera att du har skrivrättigheter i denna katalog."
+
+#: src/rs-save-dialog.c:383
+msgid "Overwrite File?"
+msgstr "Skriv över fil?"
+
+#: src/rs-save-dialog.c:384
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"\n"
+"Do you want to overwrite the file?"
+msgstr ""
+"Filen '%s' existerar redan.\n"
+"\n"
+"Vill du skriva över den?"
+
+#: src/rs-save-dialog.c:497
+msgid "Keep aspect"
+msgstr "Behåll höjd-breddförhållandet"
+
+#: src/rs-save-dialog.c:515
+msgid "Width:"
+msgstr "Bredd:"
+
+#: src/rs-save-dialog.c:517
+msgid "Height:"
+msgstr "Höjd:"
+
+#: src/rs-save-dialog.c:519
+msgid "Percent:"
+msgstr "Procent:"
+
+#. All
+#: src/rs-store.c:300 src/rs-store.c:994
+#, c-format
+msgid "* <small>(%d)</small>"
+msgstr "* <small>(%d)</small>"
+
+#: src/rs-store.c:301
+msgid "All photos (excluding deleted)"
+msgstr "Alla foton (förutom raderade)"
+
+#. 1
+#: src/rs-store.c:304 src/rs-store.c:995
+#, c-format
+msgid "1 <small>(%d)</small>"
+msgstr "1 <small>(%d)</small>"
+
+#: src/rs-store.c:305
+msgid "Priority 1 photos"
+msgstr "Prioritet 1 foton"
+
+#. 2
+#: src/rs-store.c:308 src/rs-store.c:996
+#, c-format
+msgid "2 <small>(%d)</small>"
+msgstr "2 <small>(%d)</small>"
+
+#: src/rs-store.c:309
+msgid "Priority 2 photos"
+msgstr "Prioritet 2 foton"
+
+#. 3
+#: src/rs-store.c:312 src/rs-store.c:997
+#, c-format
+msgid "3 <small>(%d)</small>"
+msgstr "3 <small>(%d)</small>"
+
+#: src/rs-store.c:313
+msgid "Priority 3 photos"
+msgstr "Prioritet 3 foton"
+
+#. Unsorted
+#: src/rs-store.c:316 src/rs-store.c:998
+#, c-format
+msgid "U <small>(%d)</small>"
+msgstr "U <small>(%d)</small>"
+
+#: src/rs-store.c:317
+msgid "Unprioritized photos"
+msgstr "Oprioriterade foton"
+
+#. Deleted
+#: src/rs-store.c:320 src/rs-store.c:999
+#, c-format
+msgid "D <small>(%d)</small>"
+msgstr "D <small>(%d)</small>"
+
+#: src/rs-store.c:321
+msgid "Deleted photos"
+msgstr "Raderade foton"
+
+#. Due to popular demand, I will now add a very nice GTK+ label to the left
+#. of the notebook. We hope this will give our users an even better
+#. understanding of our interface. I was thinking about adding a button instead
+#. that said "ROCK ON!" to instantly play "AC/DC - Highway to Hell", but I
+#. believe this will be better for the end user
+#: src/rs-store.c:356
+msgid "Priorities"
+msgstr "Prioriteter"
+
+#: src/rs-store.c:504
+msgid ""
+"NOTE: Iconview Update Disabled. New files will not be loaded! Press <Pause> "
+"to re-enable."
+msgstr ""
+
+#: src/rs-store.c:666
+#, c-format
+msgid ""
+"<big>%s</big>\n"
+"\n"
+msgstr ""
+
+#: src/rs-store.c:669
+#, c-format
+msgid "<b>Make</b>: %s\n"
+msgstr "<b>Märke</b>: %s\n"
+
+#: src/rs-store.c:671
+#, c-format
+msgid "<b>Model</b>: %s\n"
+msgstr "<b>Modell</b>: %s\n"
+
+#: src/rs-store.c:674
+#, fuzzy, c-format
+msgid "<b>Focal Length</b>: %dmm\n"
+msgstr "<b>Brännvidd</b>: %dmm\n"
+
+#: src/rs-store.c:677
+#, fuzzy, c-format
+msgid "<b>Shutter Speed</b>: %.1fs\n"
+msgstr "<b>Slutarhastighet</b>: %.1fs\n"
+
+#: src/rs-store.c:679
+#, fuzzy, c-format
+msgid "<b>Shutter Speed</b>: 1/%.0fs\n"
+msgstr "<b>Slutarhastighet</b>: 1/%.0fs\n"
+
+#: src/rs-store.c:682
+#, c-format
+msgid "<b>Aperture</b>: F/%.01f\n"
+msgstr "<b>Bländare</b>: F/%.01f\n"
+
+#: src/rs-store.c:685
+#, c-format
+msgid "<b>ISO</b>: %u\n"
+msgstr "<b>ISO</b>: %u\n"
+
+#: src/rs-store.c:688
+#, fuzzy, c-format
+msgid "<b>Exposure Compensation</b>: %+.1fEV\n"
+msgstr "Exponeringskompensation"
+
+#: src/rs-store.c:691
+#, c-format
+msgid "<b>Time</b>: %s"
+msgstr "<b>Tid</b>: %s"
+
+#: src/rs-store.c:1410
+msgid "* <small>(-)</small>"
+msgstr "* <small>(-)</small>"
+
+#: src/rs-store.c:1411
+msgid "1 <small>(-)</small>"
+msgstr "1 <small>(-)</small>"
+
+#: src/rs-store.c:1412
+msgid "2 <small>(-)</small>"
+msgstr "2 <small>(-)</small>"
+
+#: src/rs-store.c:1413
+msgid "3 <small>(-)</small>"
+msgstr "3 <small>(-)</small>"
+
+#: src/rs-store.c:1414
+msgid "U <small>(-)</small>"
+msgstr "U <small>(-)</small>"
+
+#: src/rs-store.c:1415
+msgid "D <small>(-)</small>"
+msgstr "D <small>(-)</small>"
+
+#: src/rs-tag-gui.c:65
+#, c-format
+msgid "Tag search [%s]"
+msgstr "Tagg-sökning [%s]"
+
+#: src/rs-tethered-shooting.c:122
+msgid "Gphoto2 reported Context Error:\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:272
+#, c-format
+msgid ""
+"ERROR: Gphoto2 returned error value %d\n"
+"Error message is: %s\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:326
+msgid "Enabling capture mode for Canon cameras.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:350
+msgid "Enabling capture mode for Nikon cameras.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:357
+msgid "Capture Enabled.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:391
+#, c-format
+msgid "The port you specified ('%s') can not be found."
+msgstr "Porten Du specificerade ('%s') kunde inte hittas."
+
+#: src/rs-tethered-shooting.c:455
+msgid "Moving file to current directory failed!\n"
+msgstr "Flyttning av fil till nuvarande katalog misslyckades!\n"
+
+#: src/rs-tethered-shooting.c:480
+msgid "Downloading and adding image.\n"
+msgstr "Laddar ner och lägger till bild.\n"
+
+#: src/rs-tethered-shooting.c:493
+msgid "Could not open temporary file on disk for writing"
+msgstr "Kunde inte öppna temporär katalog för skrivning."
+
+#: src/rs-tethered-shooting.c:573
+msgid "Could not open image!\n"
+msgstr "Kunde inte öppna bild!\n"
+
+#: src/rs-tethered-shooting.c:603
+msgid "Capturing.\n"
+msgstr "Fångar.\n"
+
+#: src/rs-tethered-shooting.c:638
+#, c-format
+msgid ""
+"Monitor recieved error %d, while waiting for camera.\n"
+"Error text is: %s\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:649
+#, c-format
+msgid ""
+"Recieved error %d, while downloading image from camera.\n"
+"Error text is: %s\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:653
+msgid "File Downloaded Succesfully.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:657
+msgid "Camera monitor shutting down.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:675 src/rs-tethered-shooting.c:848
+#, c-format
+msgid ""
+"Recieved error %d, while capturing image.\n"
+"Error text is: %s\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:686
+#, c-format
+msgid ""
+"Warning: It took longer time to capture the image than the set interval\n"
+"It took %.1f seconds to download the image.\n"
+"Consider increasing the interval.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:688
+msgid "Waiting for next image.\n"
+msgstr "Väntar på nästa bild.\n"
+
+#: src/rs-tethered-shooting.c:716 src/rs-tethered-shooting.c:1123
+msgid "Start Shooting"
+msgstr "Börja fotografera"
+
+#: src/rs-tethered-shooting.c:717
+msgid "Interval shooting shutting down.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:728
+msgid "Disconnecting current camera\n"
+msgstr "Kopplar från nuvarande kamera\n"
+
+#: src/rs-tethered-shooting.c:752
+#, c-format
+msgid "Camera %s on port %s failed to open\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:758
+#, c-format
+msgid ""
+"ERROR: Init camera returned %d.\n"
+"Error text is:%s\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:795
+msgid "Shutting down asynchronous thread\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:808 src/rs-tethered-shooting.c:1212
+#, c-format
+msgid "Found %d cameras\n"
+msgstr "Hittade %d kameror\n"
+
+#: src/rs-tethered-shooting.c:826
+msgid "No camera selected - Cannot connect!\n"
+msgstr "Ingen kamera vald - kan ej ansluta!\n"
+
+#: src/rs-tethered-shooting.c:841
+msgid "Shutting down running thread to enable remote capture.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:886
+msgid "Shutting down already running thread.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:892
+msgid "Starting Monitor Thread.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:897
+msgid "Monitor Thread already running.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:928
+msgid "Shutting down interval capture thread.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:939
+msgid "No camera connected.\n"
+msgstr "Ingen kamera ansluten.\n"
+
+#: src/rs-tethered-shooting.c:959
+msgid "Staring Interval Shooting Thread.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:962
+msgid "Stop Shooting"
+msgstr "Sluta fotografera"
+
+#: src/rs-tethered-shooting.c:996
+msgid "Select camera:"
+msgstr "Välj kamera:"
+
+#: src/rs-tethered-shooting.c:1027
+msgid "Take Photo"
+msgstr "Ta foto"
+
+#: src/rs-tethered-shooting.c:1032
+msgid "Monitor Camera"
+msgstr "Övervaka kamera"
+
+#: src/rs-tethered-shooting.c:1037
+msgid "Disconnect Camera"
+msgstr "Koppla ifrån kamera"
+
+#. Status window
+#: src/rs-tethered-shooting.c:1046
+msgid "Status:"
+msgstr "Status:"
+
+#. Add main box
+#: src/rs-tethered-shooting.c:1061
+msgid "Master Control"
+msgstr "Huvudkontroll"
+
+#: src/rs-tethered-shooting.c:1068
+msgid "Filename template:"
+msgstr "Filnamnsmall:"
+
+#: src/rs-tethered-shooting.c:1081
+msgid "Filename example:"
+msgstr "Filnamnsexampel:"
+
+#: src/rs-tethered-shooting.c:1093
+msgid "Tags for new images:"
+msgstr "Taggar för nya bilder:"
+
+#. Add filename& tags box
+#: src/rs-tethered-shooting.c:1106
+msgid "Filename &amp; Tags"
+msgstr "Filnamn &amp; Taggar"
+
+#: src/rs-tethered-shooting.c:1112
+msgid "Seconds between each shot:"
+msgstr "Antal sekunder mellan bilder:"
+
+#. Add interval shooting box
+#: src/rs-tethered-shooting.c:1131
+msgid "Interval Shooting"
+msgstr "Intervallfotografering"
+
+#: src/rs-tethered-shooting.c:1138
+msgid "Minimize this window after capture"
+msgstr "Förminska detta fönster efter exponering"
+
+#: src/rs-tethered-shooting.c:1142
+msgid "Copy settings from active to new image"
+msgstr "Kopiera inställningar från aktiv till ny bild"
+
+#: src/rs-tethered-shooting.c:1148
+msgid "Open new images after capture"
+msgstr "Öppna nya bilder efter fotografering"
+
+#: src/rs-tethered-shooting.c:1177
+msgid "Rawstudio Tethered Shooting"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1200
+msgid ""
+"Welcome to Tethered shooting!\n"
+"Make sure your camera is NOT mounted in your operating system.\n"
+msgstr ""
+
+#. FIXME: Get height from gconf
+#: src/rs-toolbox.c:230
+msgid "Histogram"
+msgstr "Histogram"
+
+#: src/rs-toolbox.c:450
+msgid "Reset"
+msgstr "Återställ"
+
+#: src/rs-toolbox.c:451
+msgid ". Click to reset value"
+msgstr ". Klicka för att återställa värde"
+
+#: src/rs-toolbox.c:457
+msgid ". Click to edit value"
+msgstr ". Klicka för att ändra värde"
+
+#: src/rs-toolbox.c:573 src/rs-toolbox.c:712
+msgid "Open curve ..."
+msgstr "Öppna kurva ..."
+
+#: src/rs-toolbox.c:677
+msgid "Select Saved Curve"
+msgstr "Väölj sparad kurva"
+
+#: src/rs-toolbox.c:707
+msgid "Select Action"
+msgstr "Välj aktivitet"
+
+#: src/rs-toolbox.c:718
+msgid "Save curve as ..."
+msgstr "Spara kurva som ..."
+
+#: src/rs-toolbox.c:724
+msgid "Reset curve"
+msgstr "Återställ kurva"
+
+#: src/rs-toolbox.c:729
+msgid "Auto adjust curve ends"
+msgstr "Autojustera kurvändpunkter"
+
+#. ROW HARDCODED TO 0
+#: src/rs-toolbox.c:790
+#, fuzzy
+msgid "Edit Lens"
+msgstr "Redigera objektiv"
+
+#. Pack everything nice
+#: src/rs-toolbox.c:807
+msgid "Basic"
+msgstr "Basal"
+
+#: src/rs-toolbox.c:809
+msgid "Lens Correction"
+msgstr "Objektivkorrektion"
+
+#: src/rs-toolbox.c:854
+msgid "Flip the photo over the x-axis"
+msgstr "Vänd fotot lodrätt"
+
+#: src/rs-toolbox.c:855
+msgid "Mirror the photo over the y-axis"
+msgstr "Vänd fotot vågrätt"
+
+#: src/rs-toolbox.c:856
+msgid "Rotate the photo 90 degrees clockwise"
+msgstr "Rotera fotot 90 grader medsols"
+
+#: src/rs-toolbox.c:857
+msgid "Rotate the photo 90 degrees counter clockwise"
+msgstr "Rotera fotot 90 grader motsols"
+
+#: src/rs-toolbox.c:869
+msgid "Transforms"
+msgstr "Transformera"
+
+#: src/rs-toolbox.c:1043
+msgid "Lens Unknown"
+msgstr "Objektiv okänt"
+
+#: src/rs-toolbox.c:1045
+msgid "Lens Disabled"
+msgstr "Objektiv ej aktiverat"
+
+#: src/rs-toolbox.c:1053
+msgid "No Lens Information"
+msgstr "Ingen objektivinformation"
+
+#: src/rs-toolbox.c:1055
+msgid "Camera Unknown"
+msgstr "Kamera okänd"
+
+#: src/rs-toolbox.c:1060
+msgid "No Photo"
+msgstr "Ingen bild"
+
+#: src/rs-toolbox.c:1272
+msgid "_Previous"
+msgstr "_Föregående"
+
+#: src/rs-toolbox.c:1273
+msgid "_Next"
+msgstr "_Efterföljande"
+
+#~ msgid "Exposure Mask Colorspace:"
+#~ msgstr "Exponeringsmaskens färgrymd"
+
+#~ msgid "Quick export"
+#~ msgstr "Snabb-export"
+
+#~ msgid "White balance"
+#~ msgstr "Vitbalans"
+
+#~ msgid "Channel mixer"
+#~ msgstr "Kanalmixer"
+
+#~ msgid " %s added to batch queue"
+#~ msgstr " %s lägger till processeringskön"
+
+#~ msgid "%s already added to batch queue"
+#~ msgstr "%s redan tillagd i processeringskön"
+
+#~ msgid "Not in batch queue"
+#~ msgstr "Inte i satsprocesseringskön"
+
+#~ msgid "Processing photos"
+#~ msgstr "Bearbetar foton"
+
+#~ msgid "Load 8 bit photos (jpeg, png, etc)"
+#~ msgstr "Ladda 8 bitars foto (jpeg, png, etc)"
+
+#, fuzzy
+#~ msgid "Warmth"
+#~ msgstr "Värme/nyans"
+
+#, fuzzy
+#~ msgid "CA Red"
+#~ msgstr "Färdig"
+
+#~ msgid "Select color profile"
+#~ msgstr "Välj färgprofil"
+
+#~ msgid "Color profiles (icc and icm)"
+#~ msgstr "Färgprofil (icc och icm)"
+
+#~ msgid "Not a valid color profile."
+#~ msgstr "Inte en giltig färgprofil."
+
+#~ msgid ""
+#~ "The file you selected does not appear to be a valid color profile for "
+#~ "this version of Rawstudio."
+#~ msgstr ""
+#~ "Filen du valde verkar inte vara en giltig färgprofilför denna version av "
+#~ "Rawstudio."
+
+#~ msgid "Enable color management (experimental)"
+#~ msgstr "Aktivera färghantering (exprementell)"
+
+#~ msgid "Input profile"
+#~ msgstr "Indata profil"
+
+#~ msgid "BuiltInRGBProfile"
+#~ msgstr "Inbyggd RGB-profilBuiltInRGBProfile"
+
+#~ msgid "sRGB"
+#~ msgstr "sRGB"
+
+#~ msgid "Export profile"
+#~ msgstr "Exportprofil"
+
+#~ msgid "Intent"
+#~ msgstr "Avsikt"
+
+#~ msgid "Perceptual"
+#~ msgstr "Uppfattning"
+
+#~ msgid "Relative colormetric"
+#~ msgstr "Relativ färgmetrisk"
+
+#~ msgid "Absolute colormetric"
+#~ msgstr "Absolut färgmetrisk"
+
+#~ msgid "Colors"
+#~ msgstr "Färger"
+
+#, fuzzy
+#~ msgid "Change this"
+#~ msgstr "Ändra"
+
+#~ msgid "Background renderer active"
+#~ msgstr "Bakgrundsrendering pågår"
+
+#~ msgid "File export canceled"
+#~ msgstr "Filexport avbruten"
+
+#~ msgid "16-bit TIFF (Tagged Image File Format)"
+#~ msgstr "16-bit TIFF (Tagged Image File Format)"
+
+#~ msgid "Rotate the photo 180 degrees"
+#~ msgstr "Rotera fotot 180 grader"
+
+#~ msgid "Reset this setting"
+#~ msgstr "Återställ inställning"
+
+#~ msgid "_Zoom to 100%"
+#~ msgstr "_Zooma till 100%"
+
+#~ msgid "Canon CR2"
+#~ msgstr "Canon CR2"
+
+#~ msgid "Canon CIFF"
+#~ msgstr "Canon CIFF"
+
+#~ msgid "Nikon NEF"
+#~ msgstr "Nikon NEF"
+
+#~ msgid "Minolta raw"
+#~ msgstr "Minolta raw"
+
+#~ msgid "Canon TIFF"
+#~ msgstr "Canon TIFF"
+
+#~ msgid "Sony"
+#~ msgstr "Sony"
+
+#~ msgid "Kodak"
+#~ msgstr "Kodak"
+
+#~ msgid "Sigma"
+#~ msgstr "Sigma"
+
+#~ msgid "Panasonic raw"
+#~ msgstr "Panasonic raw"
+
+#~ msgid "Pentax raw"
+#~ msgstr "Pentax raw"
+
+#~ msgid "Adobe Digital negative"
+#~ msgstr "Adobe Digital negative"
+
+#~ msgid "Hasselblad"
+#~ msgstr "Hasselblad"

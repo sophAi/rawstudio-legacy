@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+libdir=@libdir@
+includedir=${prefix}/include
+plugindir=@RAWSTUDIO_PLUGINS_LIBS_DIR@
+
+Name: rawstudio-legacy
+Description: Rawstudio backend library
+Version: @VERSION@
+Libs: -L${libdir} -lrawstudio-@VERSION@
+Cflags: -I${includedir}/rawstudio-@VERSION@ -I${libdir}/rawstudio-@VERSION@/include
+Requires: gtk+-3.0

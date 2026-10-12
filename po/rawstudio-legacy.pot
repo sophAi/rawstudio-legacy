@@ -1,0 +1,2047 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the rawstudio-legacy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: rawstudio-legacy 2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-12 10:47+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: librawstudio/rs-lens-db-editor.c:361
+msgid "All lenses"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:367
+msgid "Deselect"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:610
+msgid "Rawstudio Lens Library"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:635
+msgid "Lens make"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:639
+msgid "Lens model"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:643
+msgid "Focal"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:647 librawstudio/rs-lens-db-editor.c:913
+#: src/rs-actions.c:1950
+msgid "Aperture"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:651
+msgid "Camera make"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:655
+msgid "Camera model"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:659
+msgid "Enabled"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:664
+msgid "Defish"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:891
+msgid "Rawstudio Lens Editor"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:901
+msgid "Lens Make"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:905
+msgid "Lens Model"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:909
+msgid "Focal Length"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:917
+msgid "Camera Make"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:921
+msgid "Camera Model"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:946
+msgid "Enable this lens"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:947
+msgid "Enable Defish"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:951
+msgid "Set lens"
+msgstr ""
+
+#: librawstudio/rs-lens-db-editor.c:1008
+msgid "Lens Library"
+msgstr ""
+
+#: librawstudio/rs-library.c:261
+#, c-format
+msgid "Could not open database %s"
+msgstr ""
+
+#: librawstudio/rs-library.c:854
+msgid "wideangle"
+msgstr ""
+
+#: librawstudio/rs-library.c:856
+msgid "telephoto"
+msgstr ""
+
+#: librawstudio/rs-library.c:872
+msgid "January"
+msgstr ""
+
+#: librawstudio/rs-library.c:875
+msgid "February"
+msgstr ""
+
+#: librawstudio/rs-library.c:878
+msgid "March"
+msgstr ""
+
+#: librawstudio/rs-library.c:881
+msgid "April"
+msgstr ""
+
+#: librawstudio/rs-library.c:884
+msgid "May"
+msgstr ""
+
+#: librawstudio/rs-library.c:887
+msgid "June"
+msgstr ""
+
+#: librawstudio/rs-library.c:890
+msgid "July"
+msgstr ""
+
+#: librawstudio/rs-library.c:893
+msgid "August"
+msgstr ""
+
+#: librawstudio/rs-library.c:896
+msgid "September"
+msgstr ""
+
+#: librawstudio/rs-library.c:899
+msgid "October"
+msgstr ""
+
+#: librawstudio/rs-library.c:902
+msgid "November"
+msgstr ""
+
+#: librawstudio/rs-library.c:905
+msgid "December"
+msgstr ""
+
+#: librawstudio/rs-metadata.c:545
+#, c-format
+msgid "%dmm "
+msgstr ""
+
+#: librawstudio/rs-metadata.c:547
+#, c-format
+msgid "%.1fs "
+msgstr ""
+
+#: librawstudio/rs-metadata.c:549
+#, c-format
+msgid "1/%.0fs "
+msgstr ""
+
+#: librawstudio/rs-metadata.c:551
+#, c-format
+msgid "F/%.1f "
+msgstr ""
+
+#: librawstudio/rs-metadata.c:553
+#, c-format
+msgid "ISO%d"
+msgstr ""
+
+#: librawstudio/rs-profile-selector.c:238
+msgid "Add profile ..."
+msgstr ""
+
+#: librawstudio/rs-profile-selector.c:242
+msgid "Embedded Profile"
+msgstr ""
+
+#: librawstudio/rs-profile-selector.c:244
+msgid "(Select Profile)"
+msgstr ""
+
+#. TRANSLATORS: "Expos" is short version of "Exposure". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:81
+msgid "Expos"
+msgstr ""
+
+#: librawstudio/rs-settings.c:81
+msgid "Exposure Compensation"
+msgstr ""
+
+#. TRANSLATORS: "Satur" is short version of "Saturation". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:87
+msgid "Satur"
+msgstr ""
+
+#: librawstudio/rs-settings.c:87 src/rs-actions.c:509
+msgid "Saturation"
+msgstr ""
+
+#. TRANSLATORS: You cannot use more than 5 characters for "Hue"
+#: librawstudio/rs-settings.c:93 src/rs-actions.c:510
+msgid "Hue"
+msgstr ""
+
+#: librawstudio/rs-settings.c:93
+msgid "Hue Shift"
+msgstr ""
+
+#. TRANSLATORS: "Contr" is short version of "Contrast". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:99
+msgid "Contr"
+msgstr ""
+
+#: librawstudio/rs-settings.c:99 src/rs-actions.c:511
+msgid "Contrast"
+msgstr ""
+
+#. TRANSLATORS: "Temp" is short version of "Temperature". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:105 librawstudio/rs-settings.c:117
+msgid "Temp"
+msgstr ""
+
+#: librawstudio/rs-settings.c:105 librawstudio/rs-settings.c:117
+msgid "Temperature"
+msgstr ""
+
+#. TRANSLATORS: You cannot use more than 5 characters for "Tint"
+#: librawstudio/rs-settings.c:111 librawstudio/rs-settings.c:123
+msgid "Tint"
+msgstr ""
+
+#: librawstudio/rs-settings.c:111 librawstudio/rs-settings.c:123
+msgid "Tint Shift"
+msgstr ""
+
+#: librawstudio/rs-settings.c:128
+msgid "WBAscii"
+msgstr ""
+
+#. TRANSLATORS: "Sharp" is short version of "Sharpen". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:134
+msgid "Sharp"
+msgstr ""
+
+#: librawstudio/rs-settings.c:134
+msgid "Sharpen Amount"
+msgstr ""
+
+#. TRANSLATORS: "Denoi" is short version of "Denoise". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:140
+msgid "Denoi"
+msgstr ""
+
+#: librawstudio/rs-settings.c:140
+msgid "Light Denoising"
+msgstr ""
+
+#. TRANSLATORS: "ColDn" is short version of "Colour Denoise". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:146
+msgid "ColDn"
+msgstr ""
+
+#: librawstudio/rs-settings.c:146
+msgid "Colour Denoising"
+msgstr ""
+
+#. TRANSLATORS: "CA R" is short version of "Chromatic Aberration Red". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:152
+msgid "CA R"
+msgstr ""
+
+#: librawstudio/rs-settings.c:152
+msgid "Red Chromatic Aberration Correction"
+msgstr ""
+
+#. TRANSLATORS: "CA B" is short version of "Chromatic Aberration Blue". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:158
+msgid "CA B"
+msgstr ""
+
+#: librawstudio/rs-settings.c:158
+msgid "Blue Chromatic Aberration Correction"
+msgstr ""
+
+#. TRANSLATORS: "Vign" is short version of "Vignetting". You cannot use more than 5 characters for this!
+#: librawstudio/rs-settings.c:164
+msgid "Vign"
+msgstr ""
+
+#: librawstudio/rs-settings.c:164
+msgid "Vignetting Correction"
+msgstr ""
+
+#. TRANSLATORS: You cannot use more than 5 characters for "Red"
+#: librawstudio/rs-settings.c:170
+msgid "Red"
+msgstr ""
+
+#: librawstudio/rs-settings.c:170
+msgid "Red Amount Adjustment"
+msgstr ""
+
+#. TRANSLATORS: You cannot use more than 5 characters for "Green"
+#: librawstudio/rs-settings.c:176
+msgid "Green"
+msgstr ""
+
+#: librawstudio/rs-settings.c:176
+msgid "Green Amount Adjustment"
+msgstr ""
+
+#. TRANSLATORS: You cannot use more than 5 characters for "Blue"
+#: librawstudio/rs-settings.c:182
+msgid "Blue"
+msgstr ""
+
+#: librawstudio/rs-settings.c:182
+msgid "Blue Amount Adjustment"
+msgstr ""
+
+#: plugins/colorspace-adobergb/colorspace-adobergb.c:62
+msgid "Print friendly color space, compatible with Adobe RGB (1998)"
+msgstr ""
+
+#: plugins/colorspace-prophoto/colorspace-prophoto.c:62
+msgid "Large gamut color space"
+msgstr ""
+
+#: plugins/output-jpegfile/output-jpegfile.c:85
+#: plugins/output-pngfile/output-pngfile.c:83
+#: plugins/output-tifffile/output-tifffile.c:79
+msgid "Full export path"
+msgstr ""
+
+#: plugins/output-jpegfile/output-jpegfile.c:91
+msgid "JPEG Quality"
+msgstr ""
+
+#: plugins/output-jpegfile/output-jpegfile.c:97
+#: plugins/output-pngfile/output-pngfile.c:88
+#: plugins/output-tifffile/output-tifffile.c:102
+msgid "Color space used for saving"
+msgstr ""
+
+#: plugins/output-jpegfile/output-jpegfile.c:103
+#: plugins/output-tifffile/output-tifffile.c:96
+msgid "Copy Exif metadata"
+msgstr ""
+
+#: plugins/output-jpegfile/output-jpegfile.c:109
+msgid "JPEG (Joint Photographic Experts Group)"
+msgstr ""
+
+#: plugins/output-pngfile/output-pngfile.c:93
+msgid "Save 16 bit linear PNG"
+msgstr ""
+
+#: plugins/output-pngfile/output-pngfile.c:98
+msgid "Copy Exif metadata to XMP"
+msgstr ""
+
+#: plugins/output-pngfile/output-pngfile.c:103
+msgid "Quick export"
+msgstr ""
+
+#: plugins/output-pngfile/output-pngfile.c:109
+msgid "PNG (Portable Network Graphics)"
+msgstr ""
+
+#: plugins/output-tifffile/output-tifffile.c:85
+msgid "Save uncompressed TIFF"
+msgstr ""
+
+#: plugins/output-tifffile/output-tifffile.c:91
+msgid "Save 16 bit TIFF"
+msgstr ""
+
+#: plugins/output-tifffile/output-tifffile.c:108
+msgid "TIFF (Tagged Image File Format)"
+msgstr ""
+
+#: src/filename.c:383
+#, c-format
+msgid "%f - Original Filename"
+msgstr ""
+
+#: src/filename.c:384
+#, c-format
+msgid "%p - Path of Original File"
+msgstr ""
+
+#: src/filename.c:385
+#, c-format
+msgid "%2c - Incremental Counter"
+msgstr ""
+
+#: src/filename.c:386
+#, c-format
+msgid "%s - Setting ID (A, B or C)"
+msgstr ""
+
+#: src/filename.c:387
+#, c-format
+msgid "%d - Date from Exif (YYYY-MM-DD)"
+msgstr ""
+
+#: src/filename.c:388
+msgid "%DY - Year from Exif (YYYY)"
+msgstr ""
+
+#: src/filename.c:389
+msgid "%Dy - Year from Exif (YY)"
+msgstr ""
+
+#: src/filename.c:390
+msgid "%Dm - Month from Exif (MM)"
+msgstr ""
+
+#: src/filename.c:391
+msgid "%DM - Month from Exif (Text)"
+msgstr ""
+
+#: src/filename.c:392
+msgid "%Dd - Date from Exif (DD)"
+msgstr ""
+
+#: src/filename.c:393
+msgid "%DD - Day of Week from Exif"
+msgstr ""
+
+#: src/filename.c:394
+msgid "%t - Time from EXIF (HH:MM:SS)"
+msgstr ""
+
+#: src/filename.c:395
+msgid "%w - Week Number from Exif (Start Sunday)"
+msgstr ""
+
+#: src/filename.c:396
+msgid "%W - Week Number from Exif (Start Monday)"
+msgstr ""
+
+#: src/filename.c:397
+msgid "%Mi - ISO Value of Image"
+msgstr ""
+
+#: src/filename.c:398
+msgid "%Ma - Aperture (2.8)"
+msgstr ""
+
+#: src/filename.c:399
+msgid "%Ms - Shutter Time in Seconds (0.008)"
+msgstr ""
+
+#: src/filename.c:400
+msgid "%MS - Inverted Shutter Time (125)"
+msgstr ""
+
+#: src/filename.c:401
+msgid "%Mf - Focal Length in mm (70)"
+msgstr ""
+
+#: src/gtk-interface.c:197
+msgid "Width"
+msgstr ""
+
+#: src/gtk-interface.c:197
+msgid "Height"
+msgstr ""
+
+#: src/gtk-interface.c:272
+msgid "Opening photo ..."
+msgstr ""
+
+#: src/gtk-interface.c:297
+msgid "Couldn't open photo"
+msgstr ""
+
+#: src/gtk-interface.c:302
+msgid "Image opened"
+msgstr ""
+
+#: src/gtk-interface.c:379
+msgid "Changed photo priority (*)"
+msgstr ""
+
+#: src/gtk-interface.c:381
+msgid "Changed photo priority (D)"
+msgstr ""
+
+#: src/gtk-interface.c:383
+#, c-format
+msgid "Changed photo priority (%d)"
+msgstr ""
+
+#: src/gtk-interface.c:477
+msgid "Unable to locate screen for fullscreen preview"
+msgstr ""
+
+#: src/gtk-interface.c:497
+msgid "Press F10 to return preview to this window"
+msgstr ""
+
+#: src/gtk-interface.c:630
+msgid "Unable to detect more than one monitor. Cannot open fullscreen preview"
+msgstr ""
+
+#: src/gtk-interface.c:646
+msgid "Select screen to open fullscreen preview"
+msgstr ""
+
+#: src/gtk-interface.c:662
+msgid "Select Screen for fullscreen preview"
+msgstr ""
+
+#: src/gtk-interface.c:670
+msgid "Select OK to use this screen for fullscreen preview"
+msgstr ""
+
+#: src/gtk-interface.c:816
+msgid "Directory:"
+msgstr ""
+
+#: src/gtk-interface.c:818 src/rs-batch.c:1033
+msgid "Choose Output Directory"
+msgstr ""
+
+#: src/gtk-interface.c:834 src/rs-batch.c:1044
+msgid "Filename Template:"
+msgstr ""
+
+#: src/gtk-interface.c:847
+msgid "Filename Example:"
+msgstr ""
+
+#: src/gtk-interface.c:858
+msgid "File Type:"
+msgstr ""
+
+#: src/gtk-interface.c:921 src/rs-tethered-shooting.c:1197
+msgid "Preferences"
+msgstr ""
+
+#: src/gtk-interface.c:933
+msgid "Preview Background Color:"
+msgstr ""
+
+#: src/gtk-interface.c:948
+msgid "Histogram Height:"
+msgstr ""
+
+#: src/gtk-interface.c:958
+msgid "Place Cache in Home Directory"
+msgstr ""
+
+#: src/gtk-interface.c:961
+msgid "Cache images when enfusing (speed for memory)"
+msgstr ""
+
+#: src/gtk-interface.c:965
+msgid "Display Colorspace:"
+msgstr ""
+
+#: src/gtk-interface.c:978
+msgid "Histogram, Curve & Exp. Mask:"
+msgstr ""
+
+#: src/gtk-interface.c:1051
+msgid "General"
+msgstr ""
+
+#: src/gtk-interface.c:1053 src/rs-tethered-shooting.c:1181
+msgid "Quick Export"
+msgstr ""
+
+#: src/gtk-interface.c:1384
+msgid "Opening directory..."
+msgstr ""
+
+#: src/gtk-interface.c:1415
+msgid "Rawstudio Client Mode"
+msgstr ""
+
+#: src/gtk-interface.c:1417
+msgid "Rawstudio"
+msgstr ""
+
+#: src/gtk-interface.c:1503
+msgid "Open Recursive"
+msgstr ""
+
+#: src/gtk-interface.c:1511
+msgid "Directory"
+msgstr ""
+
+#: src/gtk-interface.c:1514
+msgid "Tag Search"
+msgstr ""
+
+#: src/gtk-interface.c:1524
+msgid "Tools"
+msgstr ""
+
+#: src/gtk-interface.c:1525
+msgid "Batch"
+msgstr ""
+
+#: src/gtk-interface.c:1526
+msgid "Open"
+msgstr ""
+
+#: src/gtk-interface.c:1569
+msgid "Ready"
+msgstr ""
+
+#: src/gtk-interface.c:1663
+msgid "Rawstudio: Loading Color Profiles"
+msgstr ""
+
+#: src/gtk-progress.c:63 src/gtk-progress.c:100 src/gtk-progress.c:123
+msgid "Progress"
+msgstr ""
+
+#: src/rs-actions.c:177
+msgid "Open directory"
+msgstr ""
+
+#: src/rs-actions.c:257 src/rs-actions.c:435 src/rs-batch.c:508
+msgid "Could not create output directory."
+msgstr ""
+
+#: src/rs-actions.c:261
+msgid "Exporting..."
+msgstr ""
+
+#: src/rs-actions.c:269 src/rs-actions.c:445
+msgid "File exported"
+msgstr ""
+
+#: src/rs-actions.c:274 src/rs-actions.c:297 src/rs-actions.c:450
+msgid "Export failed"
+msgstr ""
+
+#: src/rs-actions.c:304
+msgid "Exporting to GIMP..."
+msgstr ""
+
+#: src/rs-actions.c:309
+msgid "Error exporting"
+msgstr ""
+
+#: src/rs-actions.c:310
+msgid "Error exporting photo to gimp."
+msgstr ""
+
+#: src/rs-actions.c:335 src/rs-actions.c:353
+msgid "Deleting photos"
+msgstr ""
+
+#: src/rs-actions.c:336
+msgid "Your files will be <b>permanently</b> deleted!"
+msgstr ""
+
+#: src/rs-actions.c:338
+msgid "Delete photos"
+msgstr ""
+
+#: src/rs-actions.c:405
+msgid "Waiting for jobs to finish"
+msgstr ""
+
+#: src/rs-actions.c:438
+msgid "Auto exporting..."
+msgstr ""
+
+#: src/rs-actions.c:464
+msgid "Copying image to clipboard"
+msgstr ""
+
+#: src/rs-actions.c:469
+msgid "Image copied to clipboard"
+msgstr ""
+
+#: src/rs-actions.c:471
+msgid "ERROR: Could not copy image to clipboard"
+msgstr ""
+
+#: src/rs-actions.c:507
+msgid "Profile"
+msgstr ""
+
+#: src/rs-actions.c:508
+msgid "Exposure"
+msgstr ""
+
+#: src/rs-actions.c:512
+msgid "White Balance"
+msgstr ""
+
+#: src/rs-actions.c:513
+msgid "Sharpen"
+msgstr ""
+
+#: src/rs-actions.c:514
+msgid "Denoise"
+msgstr ""
+
+#: src/rs-actions.c:515
+msgid "Color Denoise"
+msgstr ""
+
+#: src/rs-actions.c:516 src/rs-toolbox.c:795
+msgid "Channel Mixer"
+msgstr ""
+
+#: src/rs-actions.c:517
+msgid "TCA"
+msgstr ""
+
+#: src/rs-actions.c:518
+msgid "Vignetting"
+msgstr ""
+
+#: src/rs-actions.c:519 src/rs-toolbox.c:797
+msgid "Curve"
+msgstr ""
+
+#: src/rs-actions.c:520
+msgid "Transform"
+msgstr ""
+
+#: src/rs-actions.c:521
+msgid "Time offset (GPS)"
+msgstr ""
+
+#: src/rs-actions.c:522
+msgid "Coordinates"
+msgstr ""
+
+#: src/rs-actions.c:523
+msgid "Select All/None"
+msgstr ""
+
+#: src/rs-actions.c:548
+msgid "Select Settings to Copy"
+msgstr ""
+
+#: src/rs-actions.c:642
+msgid "Copied settings"
+msgstr ""
+
+#: src/rs-actions.c:653
+msgid "Pasting settings to images"
+msgstr ""
+
+#: src/rs-actions.c:743
+msgid "Pasted settings"
+msgstr ""
+
+#: src/rs-actions.c:746
+msgid "Nothing to paste"
+msgstr ""
+
+#: src/rs-actions.c:749
+msgid "Buffer empty"
+msgstr ""
+
+#: src/rs-actions.c:785
+#, c-format
+msgid "Settings saved as default for %s %s"
+msgstr ""
+
+#: src/rs-actions.c:868
+msgid "Adjusting to auto white balance"
+msgstr ""
+
+#: src/rs-actions.c:883
+msgid "No white balance to set from"
+msgstr ""
+
+#: src/rs-actions.c:886
+msgid "Adjusting to camera white balance"
+msgstr ""
+
+#: src/rs-actions.c:1021
+msgid "Tags, separated by spaces:"
+msgstr ""
+
+#: src/rs-actions.c:1026
+msgid "Add Tags to Selected Photo(s)."
+msgstr ""
+
+#: src/rs-actions.c:1091 src/rs-actions.c:1117
+msgid "Slideshow stopped"
+msgstr ""
+
+#: src/rs-actions.c:1114
+msgid "Slideshow running"
+msgstr ""
+
+#: src/rs-actions.c:1195
+msgid "Showing exposure mask"
+msgstr ""
+
+#: src/rs-actions.c:1197
+msgid "Hiding exposure mask"
+msgstr ""
+
+#: src/rs-actions.c:1222
+msgid "Adding images to batch queue"
+msgstr ""
+
+#: src/rs-actions.c:1239 src/rs-actions.c:1322
+#, c-format
+msgid "%d photos added to batch queue"
+msgstr ""
+
+#: src/rs-actions.c:1256 src/rs-batch.c:210
+msgid "A"
+msgstr ""
+
+#: src/rs-actions.c:1257 src/rs-batch.c:213
+msgid "B"
+msgstr ""
+
+#: src/rs-actions.c:1258 src/rs-batch.c:216
+msgid "C"
+msgstr ""
+
+#: src/rs-actions.c:1280
+msgid ""
+"Select which settings to\n"
+"add to batch queue"
+msgstr ""
+
+#: src/rs-actions.c:1343
+msgid "Removing images from batch queue"
+msgstr ""
+
+#: src/rs-actions.c:1358
+#, c-format
+msgid "%d photos removed from batch queue"
+msgstr ""
+
+#: src/rs-actions.c:1409 src/rs-actions.c:1927
+msgid "Add Profile ..."
+msgstr ""
+
+#: src/rs-actions.c:1421
+msgid "All Profiles"
+msgstr ""
+
+#: src/rs-actions.c:1431
+msgid "Camera Profiles (DCP)"
+msgstr ""
+
+#: src/rs-actions.c:1437
+msgid "Color Profiles (ICC and ICM)"
+msgstr ""
+
+#: src/rs-actions.c:1444
+msgid "All files"
+msgstr ""
+
+#: src/rs-actions.c:1495
+msgid "Could not open browser, please go to http://rawstudio.org/documentation"
+msgstr ""
+
+#: src/rs-actions.c:1543
+msgid "A raw image converter for GTK+/GNOME"
+msgstr ""
+
+#: src/rs-actions.c:1665 src/rs-actions.c:1904
+msgid "Enfuse"
+msgstr ""
+
+#: src/rs-actions.c:1665
+msgid "This might take quite some time and will lock up UI until finished..."
+msgstr ""
+
+#: src/rs-actions.c:1668
+msgid "Rawstudio Enfuse"
+msgstr ""
+
+#: src/rs-actions.c:1691
+msgid "Enfuse method"
+msgstr ""
+
+#: src/rs-actions.c:1694
+msgid "Align images (may take a long time)"
+msgstr ""
+
+#: src/rs-actions.c:1697 src/rs-actions.c:1714
+msgid "Extend exposure"
+msgstr ""
+
+#: src/rs-actions.c:1706
+msgid "Extend negative steps"
+msgstr ""
+
+#: src/rs-actions.c:1710
+msgid "Extend positive steps"
+msgstr ""
+
+#: src/rs-actions.c:1852
+msgid "_File"
+msgstr ""
+
+#: src/rs-actions.c:1853
+msgid "_Edit"
+msgstr ""
+
+#: src/rs-actions.c:1854
+msgid "_Photo"
+msgstr ""
+
+#: src/rs-actions.c:1855
+msgid "_Set Priority"
+msgstr ""
+
+#: src/rs-actions.c:1856
+msgid "_White Balance"
+msgstr ""
+
+#: src/rs-actions.c:1857
+msgid "_View"
+msgstr ""
+
+#: src/rs-actions.c:1858
+msgid "_Sort by"
+msgstr ""
+
+#: src/rs-actions.c:1859
+msgid "_Batch"
+msgstr ""
+
+#: src/rs-actions.c:1860
+msgid "_Help"
+msgstr ""
+
+#: src/rs-actions.c:1862
+msgid "_Snapshot"
+msgstr ""
+
+#: src/rs-actions.c:1865
+msgid "_Open Directory"
+msgstr ""
+
+#: src/rs-actions.c:1866
+msgid "_Quick Export"
+msgstr ""
+
+#: src/rs-actions.c:1867
+msgid "_Export As"
+msgstr ""
+
+#: src/rs-actions.c:1868
+msgid "_Export to Gimp"
+msgstr ""
+
+#: src/rs-actions.c:1869
+msgid "_Copy Image to Clipboard"
+msgstr ""
+
+#: src/rs-actions.c:1870
+msgid "_Reload directory"
+msgstr ""
+
+#: src/rs-actions.c:1871
+msgid "_Delete Flagged Photos"
+msgstr ""
+
+#: src/rs-actions.c:1872
+msgid "_Quit"
+msgstr ""
+
+#: src/rs-actions.c:1873
+msgid "_Just Quit"
+msgstr ""
+
+#: src/rs-actions.c:1874
+msgid "Save & _Quit"
+msgstr ""
+
+#: src/rs-actions.c:1877
+msgid "_Revert Settings"
+msgstr ""
+
+#: src/rs-actions.c:1878
+msgid "_Copy Settings"
+msgstr ""
+
+#: src/rs-actions.c:1879
+msgid "_Paste Settings"
+msgstr ""
+
+#: src/rs-actions.c:1880
+msgid "_Reset Settings"
+msgstr ""
+
+#: src/rs-actions.c:1881
+msgid "_Save Camera Default Settings"
+msgstr ""
+
+#: src/rs-actions.c:1882
+msgid "_Preferences"
+msgstr ""
+
+#: src/rs-actions.c:1885
+msgid "_Flag Photo for Deletion"
+msgstr ""
+
+#: src/rs-actions.c:1886
+msgid "_1"
+msgstr ""
+
+#: src/rs-actions.c:1887
+msgid "_2"
+msgstr ""
+
+#: src/rs-actions.c:1888
+msgid "_3"
+msgstr ""
+
+#: src/rs-actions.c:1889
+msgid "_Remove Priority"
+msgstr ""
+
+#: src/rs-actions.c:1890
+msgid "_Auto"
+msgstr ""
+
+#: src/rs-actions.c:1891
+msgid "_Camera"
+msgstr ""
+
+#: src/rs-actions.c:1892
+msgid "_Crop"
+msgstr ""
+
+#: src/rs-actions.c:1893
+msgid "_Uncrop"
+msgstr ""
+
+#: src/rs-actions.c:1894
+msgid "_Straighten"
+msgstr ""
+
+#: src/rs-actions.c:1895
+msgid "_Unstraighten"
+msgstr ""
+
+#: src/rs-actions.c:1896
+msgid "_Group"
+msgstr ""
+
+#: src/rs-actions.c:1897
+msgid "_Ungroup"
+msgstr ""
+
+#: src/rs-actions.c:1898
+msgid "_Auto Group"
+msgstr ""
+
+#: src/rs-actions.c:1899
+msgid "_Tag Photo..."
+msgstr ""
+
+#: src/rs-actions.c:1900
+msgid "Rotate Clockwise"
+msgstr ""
+
+#: src/rs-actions.c:1901
+msgid "Rotate Counterclockwise"
+msgstr ""
+
+#: src/rs-actions.c:1902
+msgid "Flip"
+msgstr ""
+
+#: src/rs-actions.c:1903
+msgid "Mirror"
+msgstr ""
+
+#: src/rs-actions.c:1905 src/rs-toolbox.c:716
+msgid "Auto adjust curve ends"
+msgstr ""
+
+#: src/rs-actions.c:1908
+msgid "_Previous Photo"
+msgstr ""
+
+#: src/rs-actions.c:1909
+msgid "_Next Photo"
+msgstr ""
+
+#: src/rs-actions.c:1910
+msgid "_Play/Stop"
+msgstr ""
+
+#: src/rs-actions.c:1911
+msgid "_Lens Library"
+msgstr ""
+
+#: src/rs-actions.c:1912
+msgid "_Tethered Shooting"
+msgstr ""
+
+#: src/rs-actions.c:1915
+msgid "_Add to Batch Queue"
+msgstr ""
+
+#: src/rs-actions.c:1916
+msgid "_Add View to Queue..."
+msgstr ""
+
+#: src/rs-actions.c:1917
+msgid "_Remove from Batch Queue"
+msgstr ""
+
+#: src/rs-actions.c:1918
+msgid "_Start"
+msgstr ""
+
+#: src/rs-actions.c:1919
+msgid "_Pack selected"
+msgstr ""
+
+#: src/rs-actions.c:1922
+msgid "_Online Documentation"
+msgstr ""
+
+#: src/rs-actions.c:1923
+msgid "_About"
+msgstr ""
+
+#: src/rs-actions.c:1932
+msgid "_Zoom to Fit"
+msgstr ""
+
+#: src/rs-actions.c:1933
+msgid "_Iconbox"
+msgstr ""
+
+#: src/rs-actions.c:1934
+msgid "_Toolbox"
+msgstr ""
+
+#: src/rs-actions.c:1935
+msgid "_Fullscreen"
+msgstr ""
+
+#: src/rs-actions.c:1936
+msgid "_Show Photo on Secondary Monitor"
+msgstr ""
+
+#: src/rs-actions.c:1937
+msgid "Show Filenames in Iconbox"
+msgstr ""
+
+#: src/rs-actions.c:1938
+msgid "Load non-RAW images"
+msgstr ""
+
+#: src/rs-actions.c:1939
+msgid "Do not Load Selected Images"
+msgstr ""
+
+#: src/rs-actions.c:1940
+msgid "_Exposure Mask"
+msgstr ""
+
+#: src/rs-actions.c:1941
+msgid "_Split"
+msgstr ""
+
+#: src/rs-actions.c:1942
+msgid "_Lights Out"
+msgstr ""
+
+#: src/rs-actions.c:1947
+msgid "Name"
+msgstr ""
+
+#: src/rs-actions.c:1948
+msgid "Timestamp"
+msgstr ""
+
+#: src/rs-actions.c:1949
+msgid "ISO"
+msgstr ""
+
+#: src/rs-actions.c:1951
+msgid "Focallength"
+msgstr ""
+
+#: src/rs-actions.c:1952
+msgid "Shutterspeed"
+msgstr ""
+
+#: src/rs-actions.c:1957 src/rs-toolbox.c:206 src/rs-toolbox.c:1250
+msgid " A "
+msgstr ""
+
+#: src/rs-actions.c:1958 src/rs-toolbox.c:207 src/rs-toolbox.c:1251
+msgid " B "
+msgstr ""
+
+#: src/rs-actions.c:1959 src/rs-toolbox.c:208 src/rs-toolbox.c:1252
+msgid " C "
+msgstr ""
+
+#: src/rs-batch.c:424
+msgid "Cancel"
+msgstr ""
+
+#: src/rs-batch.c:429
+msgid "Last image:"
+msgstr ""
+
+#: src/rs-batch.c:456
+#, c-format
+msgid "Time left: %dh %dm %ds"
+msgstr ""
+
+#: src/rs-batch.c:457
+#, c-format
+msgid "Processing Image %d/%d"
+msgstr ""
+
+#: src/rs-batch.c:461
+msgid "Time left: ..."
+msgstr ""
+
+#: src/rs-batch.c:462
+#, c-format
+msgid "Processing Image 1/%d."
+msgstr ""
+
+#: src/rs-batch.c:476
+#, c-format
+msgid "Loading %s ..."
+msgstr ""
+
+#: src/rs-batch.c:552
+#, c-format
+msgid "Saving %s ..."
+msgstr ""
+
+#: src/rs-batch.c:601
+msgid "Could not export photo."
+msgstr ""
+
+#: src/rs-batch.c:661
+msgid "Icon"
+msgstr ""
+
+#: src/rs-batch.c:668
+msgid "Filename"
+msgstr ""
+
+#: src/rs-batch.c:675
+msgid "Setting"
+msgstr ""
+
+#: src/rs-batch.c:768
+msgid "Start"
+msgstr ""
+
+#: src/rs-batch.c:771
+msgid "Remove"
+msgstr ""
+
+#: src/rs-batch.c:774
+msgid "Remove All"
+msgstr ""
+
+#: src/rs-batch.c:884 src/rs-batch.c:1055
+msgid "Edit Output Settings"
+msgstr ""
+
+#: src/rs-batch.c:920
+msgid "Photo Size"
+msgstr ""
+
+#: src/rs-batch.c:928
+msgid "Constant Scale"
+msgstr ""
+
+#: src/rs-batch.c:929
+msgid "Constant Width"
+msgstr ""
+
+#: src/rs-batch.c:930
+msgid "Constant Height"
+msgstr ""
+
+#: src/rs-batch.c:931
+msgid "Maximum Size"
+msgstr ""
+
+#: src/rs-batch.c:944
+msgid "Photo Width:"
+msgstr ""
+
+#: src/rs-batch.c:946
+msgid "Pixels"
+msgstr ""
+
+#: src/rs-batch.c:953
+msgid "Photo Height:"
+msgstr ""
+
+#: src/rs-batch.c:955
+msgid "pixels"
+msgstr ""
+
+#: src/rs-batch.c:962
+msgid "Photo Scale:"
+msgstr ""
+
+#: src/rs-batch.c:964
+msgid "%"
+msgstr ""
+
+#: src/rs-batch.c:1000
+#, c-format
+msgid ""
+"Constant Width:\n"
+"%d"
+msgstr ""
+
+#: src/rs-batch.c:1003
+#, c-format
+msgid ""
+"Constant Height:\n"
+"%d"
+msgstr ""
+
+#: src/rs-batch.c:1006
+#, c-format
+msgid ""
+"Constant Scale:\n"
+"%d"
+msgstr ""
+
+#: src/rs-batch.c:1010
+#, c-format
+msgid ""
+"Maximum Size:\n"
+"%d x %d"
+msgstr ""
+
+#: src/rs-batch.c:1040
+msgid "Output Directory:"
+msgstr ""
+
+#: src/rs-batch.c:1064
+msgid "Change"
+msgstr ""
+
+#: src/rs-batch.c:1069
+msgid "Export Dimensions"
+msgstr ""
+
+#: src/rs-cache.c:58
+msgid ""
+"WARNING: Failed to save image settings! Check you have sufficient rights, "
+"and free space on your device."
+msgstr ""
+
+#: src/rs-camera-db.c:437
+msgid "Camera defaults editor"
+msgstr ""
+
+#: src/rs-camera-db.c:453
+msgid "Model"
+msgstr ""
+
+#: src/rs-preview-widget.c:638
+msgid "Display Navigation"
+msgstr ""
+
+#: src/rs-preview-widget.c:970
+msgid "Light out mode not available"
+msgstr ""
+
+#: src/rs-preview-widget.c:971
+msgid ""
+"Your setup doesn't seem to support RGBA visuals and/or compositing. Consult "
+"your operating system manual for enabling RGBA visuals and compositing."
+msgstr ""
+
+#: src/rs-preview-widget.c:1130
+msgid "Size"
+msgstr ""
+
+#: src/rs-preview-widget.c:1138
+msgid "-"
+msgstr ""
+
+#: src/rs-preview-widget.c:1144
+msgid "Grid"
+msgstr ""
+
+#: src/rs-preview-widget.c:1149
+msgid "None"
+msgstr ""
+
+#: src/rs-preview-widget.c:1150
+msgid "Golden sections"
+msgstr ""
+
+#: src/rs-preview-widget.c:1151
+msgid "Rule of thirds"
+msgstr ""
+
+#: src/rs-preview-widget.c:1152
+msgid "Golden triangles #1"
+msgstr ""
+
+#: src/rs-preview-widget.c:1153
+msgid "Golden triangles #2"
+msgstr ""
+
+#: src/rs-preview-widget.c:1154
+msgid "Harmonious triangles #1"
+msgstr ""
+
+#: src/rs-preview-widget.c:1155
+msgid "Harmonious triangles #2"
+msgstr ""
+
+#: src/rs-preview-widget.c:1164
+msgid "Aspect"
+msgstr ""
+
+#: src/rs-preview-widget.c:1169
+msgid "Freeform"
+msgstr ""
+
+#: src/rs-preview-widget.c:1170
+msgid "Original Aspect"
+msgstr ""
+
+#: src/rs-preview-widget.c:1171
+msgid "ISO paper (A4)"
+msgstr ""
+
+#: src/rs-preview-widget.c:1172
+msgid "3:2 (35mm)"
+msgstr ""
+
+#: src/rs-preview-widget.c:1173
+msgid "4:3"
+msgstr ""
+
+#: src/rs-preview-widget.c:1174
+msgid "10:8 (SXGA)"
+msgstr ""
+
+#: src/rs-preview-widget.c:1175
+msgid "16:10 (Wide XGA)"
+msgstr ""
+
+#: src/rs-preview-widget.c:1176
+msgid "16:9 (HDTV)"
+msgstr ""
+
+#: src/rs-preview-widget.c:1177
+msgid "8:3 (Dualhead XGA)"
+msgstr ""
+
+#: src/rs-preview-widget.c:1178
+msgid "1:1"
+msgstr ""
+
+#: src/rs-preview-widget.c:1179
+msgid "Golden rectangle"
+msgstr ""
+
+#: src/rs-preview-widget.c:1187 src/rs-preview-widget.c:1198
+msgid "Crop"
+msgstr ""
+
+#: src/rs-preview-widget.c:1189
+msgid "Don't crop"
+msgstr ""
+
+#: src/rs-preview-widget.c:1211
+msgid ""
+"Crop: Drag to select cropped area. Right Mouse Button inside cropped area: "
+"Apply Crop; Outside: Cancel crop"
+msgstr ""
+
+#: src/rs-preview-widget.c:1244
+msgid ""
+"Straighten: Draw a line in the image that should be horizontal or vertical. "
+"Right Mouse Button cancels."
+msgstr ""
+
+#: src/rs-save-dialog.c:99 src/rs-toolbox.c:523
+msgid "Export File"
+msgstr ""
+
+#: src/rs-save-dialog.c:284
+msgid "File not saved!"
+msgstr ""
+
+#: src/rs-save-dialog.c:300
+#, c-format
+msgid "Exporting to %s"
+msgstr ""
+
+#: src/rs-save-dialog.c:357
+#, c-format
+msgid ""
+"Could not save file: %s\n"
+"\n"
+"Check that you have write permissions to this folder."
+msgstr ""
+
+#: src/rs-save-dialog.c:383
+msgid "Overwrite File?"
+msgstr ""
+
+#: src/rs-save-dialog.c:384
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"\n"
+"Do you want to overwrite the file?"
+msgstr ""
+
+#: src/rs-save-dialog.c:497
+msgid "Keep aspect"
+msgstr ""
+
+#: src/rs-save-dialog.c:515
+msgid "Width:"
+msgstr ""
+
+#: src/rs-save-dialog.c:517
+msgid "Height:"
+msgstr ""
+
+#: src/rs-save-dialog.c:519
+msgid "Percent:"
+msgstr ""
+
+#: src/rs-store.c:283 src/rs-store.c:997
+#, c-format
+msgid "* <small>(%d)</small>"
+msgstr ""
+
+#: src/rs-store.c:285
+msgid "All photos (excluding deleted)"
+msgstr ""
+
+#: src/rs-store.c:288 src/rs-store.c:998
+#, c-format
+msgid "1 <small>(%d)</small>"
+msgstr ""
+
+#: src/rs-store.c:290
+msgid "Priority 1 photos"
+msgstr ""
+
+#: src/rs-store.c:293 src/rs-store.c:999
+#, c-format
+msgid "2 <small>(%d)</small>"
+msgstr ""
+
+#: src/rs-store.c:295
+msgid "Priority 2 photos"
+msgstr ""
+
+#: src/rs-store.c:298 src/rs-store.c:1000
+#, c-format
+msgid "3 <small>(%d)</small>"
+msgstr ""
+
+#: src/rs-store.c:300
+msgid "Priority 3 photos"
+msgstr ""
+
+#: src/rs-store.c:303 src/rs-store.c:1001
+#, c-format
+msgid "U <small>(%d)</small>"
+msgstr ""
+
+#: src/rs-store.c:305
+msgid "Unprioritized photos"
+msgstr ""
+
+#: src/rs-store.c:308 src/rs-store.c:1002
+#, c-format
+msgid "D <small>(%d)</small>"
+msgstr ""
+
+#: src/rs-store.c:310
+msgid "Deleted photos"
+msgstr ""
+
+#: src/rs-store.c:347
+msgid "Priorities"
+msgstr ""
+
+#: src/rs-store.c:510
+msgid ""
+"NOTE: Iconview Update Disabled. New files will not be loaded! Press <Pause> "
+"to re-enable."
+msgstr ""
+
+#: src/rs-store.c:672
+#, c-format
+msgid ""
+"<big>%s</big>\n"
+"\n"
+msgstr ""
+
+#: src/rs-store.c:675
+#, c-format
+msgid "<b>Make</b>: %s\n"
+msgstr ""
+
+#: src/rs-store.c:677
+#, c-format
+msgid "<b>Model</b>: %s\n"
+msgstr ""
+
+#: src/rs-store.c:680
+#, c-format
+msgid "<b>Focal Length</b>: %dmm\n"
+msgstr ""
+
+#: src/rs-store.c:683
+#, c-format
+msgid "<b>Shutter Speed</b>: %.1fs\n"
+msgstr ""
+
+#: src/rs-store.c:685
+#, c-format
+msgid "<b>Shutter Speed</b>: 1/%.0fs\n"
+msgstr ""
+
+#: src/rs-store.c:688
+#, c-format
+msgid "<b>Aperture</b>: F/%.01f\n"
+msgstr ""
+
+#: src/rs-store.c:691
+#, c-format
+msgid "<b>ISO</b>: %u\n"
+msgstr ""
+
+#: src/rs-store.c:694
+#, c-format
+msgid "<b>Exposure Compensation</b>: %+.1fEV\n"
+msgstr ""
+
+#: src/rs-store.c:697
+#, c-format
+msgid "<b>Time</b>: %s"
+msgstr ""
+
+#: src/rs-store.c:1419
+msgid "* <small>(-)</small>"
+msgstr ""
+
+#: src/rs-store.c:1420
+msgid "1 <small>(-)</small>"
+msgstr ""
+
+#: src/rs-store.c:1421
+msgid "2 <small>(-)</small>"
+msgstr ""
+
+#: src/rs-store.c:1422
+msgid "3 <small>(-)</small>"
+msgstr ""
+
+#: src/rs-store.c:1423
+msgid "U <small>(-)</small>"
+msgstr ""
+
+#: src/rs-store.c:1424
+msgid "D <small>(-)</small>"
+msgstr ""
+
+#: src/rs-tag-gui.c:63
+#, c-format
+msgid "Tag search [%s]"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:123
+msgid "Gphoto2 reported Context Error: \n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:270
+#, c-format
+msgid ""
+"ERROR: Gphoto2 returned error value %d\n"
+"Error message is: %s\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:324
+msgid "Enabling capture mode for Canon cameras.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:348
+msgid "Enabling capture mode for Nikon cameras.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:355
+msgid "Capture Enabled.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:403
+#, c-format
+msgid "The port you specified ('%s') can not be found."
+msgstr ""
+
+#: src/rs-tethered-shooting.c:467
+msgid "Moving file to current directory failed!\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:498
+msgid "Downloading and adding image.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:511
+msgid "Could not open temporary file on disk for writing"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:596
+msgid "Could not open image!\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:622
+msgid "Capturing.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:663
+#, c-format
+msgid ""
+"Monitor recieved error %d, while waiting for camera.\n"
+"Error text is: %s\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:674
+#, c-format
+msgid ""
+"Recieved error %d, while downloading image from camera.\n"
+"Error text is: %s\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:678
+msgid "File Downloaded Succesfully.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:682
+msgid "Camera monitor shutting down.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:700 src/rs-tethered-shooting.c:873
+#, c-format
+msgid ""
+"Recieved error %d, while capturing image.\n"
+"Error text is: %s\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:711
+#, c-format
+msgid ""
+"Warning: It took longer time to capture the image than the set interval\n"
+"It took %.1f seconds to download the image.\n"
+"Consider increasing the interval.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:713
+msgid "Waiting for next image.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:741 src/rs-tethered-shooting.c:1152
+msgid "Start Shooting"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:742
+msgid "Interval shooting shutting down.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:753
+msgid "Disconnecting current camera\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:777
+#, c-format
+msgid "Camera %s on port %s failed to open\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:783
+#, c-format
+msgid ""
+"ERROR: Init camera returned %d.\n"
+"Error text is:%s\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:820
+msgid "Shutting down asynchronous thread\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:833 src/rs-tethered-shooting.c:1252
+#, c-format
+msgid "Found %d cameras\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:851
+msgid "No camera selected - Cannot connect!\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:866
+msgid "Shutting down running thread to enable remote capture.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:911
+msgid "Shutting down already running thread.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:917
+msgid "Starting Monitor Thread.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:922
+msgid "Monitor Thread already running.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:953
+msgid "Shutting down interval capture thread.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:965
+msgid "No camera connected.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:987
+msgid "Staring Interval Shooting Thread.\n"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:990
+msgid "Stop Shooting"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1024
+msgid "Select camera:"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1055
+msgid "Take Photo"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1060
+msgid "Monitor Camera"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1065
+msgid "Disconnect Camera"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1074
+msgid "Status:"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1090
+msgid "Master Control"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1097
+msgid "Filename template:"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1110
+msgid "Filename example:"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1122
+msgid "Tags for new images:"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1135
+msgid "Filename &amp; Tags"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1141
+msgid "Seconds between each shot:"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1160
+msgid "Interval Shooting"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1167
+msgid "Minimize this window after capture"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1171
+msgid "Copy settings from active to new image"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1177
+msgid "Open new images after capture"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1187
+msgid "Add Image to Icon Bar"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1191
+msgid "Blank Screen"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1217
+msgid "Rawstudio Tethered Shooting"
+msgstr ""
+
+#: src/rs-tethered-shooting.c:1240
+msgid ""
+"Welcome to Tethered shooting!\n"
+"Make sure your camera is NOT mounted in your operating system.\n"
+msgstr ""
+
+#: src/rs-toolbox.c:228
+msgid "Histogram"
+msgstr ""
+
+#: src/rs-toolbox.c:444
+msgid "Reset"
+msgstr ""
+
+#: src/rs-toolbox.c:445
+msgid ". Click to reset value"
+msgstr ""
+
+#: src/rs-toolbox.c:451
+msgid ". Click to edit value"
+msgstr ""
+
+#: src/rs-toolbox.c:565 src/rs-toolbox.c:699
+msgid "Open curve ..."
+msgstr ""
+
+#: src/rs-toolbox.c:664
+msgid "Select Saved Curve"
+msgstr ""
+
+#: src/rs-toolbox.c:694
+msgid "Select Action"
+msgstr ""
+
+#: src/rs-toolbox.c:705
+msgid "Save curve as ..."
+msgstr ""
+
+#: src/rs-toolbox.c:711
+msgid "Reset curve"
+msgstr ""
+
+#: src/rs-toolbox.c:777
+msgid "Edit Lens"
+msgstr ""
+
+#: src/rs-toolbox.c:794
+msgid "Basic"
+msgstr ""
+
+#: src/rs-toolbox.c:796
+msgid "Lens Correction"
+msgstr ""
+
+#: src/rs-toolbox.c:841
+msgid "Flip the photo over the x-axis"
+msgstr ""
+
+#: src/rs-toolbox.c:842
+msgid "Mirror the photo over the y-axis"
+msgstr ""
+
+#: src/rs-toolbox.c:843
+msgid "Rotate the photo 90 degrees clockwise"
+msgstr ""
+
+#: src/rs-toolbox.c:844
+msgid "Rotate the photo 90 degrees counter clockwise"
+msgstr ""
+
+#: src/rs-toolbox.c:856
+msgid "Transforms"
+msgstr ""
+
+#: src/rs-toolbox.c:1027
+msgid "Lens Unknown"
+msgstr ""
+
+#: src/rs-toolbox.c:1029
+msgid "Lens Disabled"
+msgstr ""
+
+#: src/rs-toolbox.c:1037
+msgid "No Lens Information"
+msgstr ""
+
+#: src/rs-toolbox.c:1039
+msgid "Camera Unknown"
+msgstr ""
+
+#: src/rs-toolbox.c:1044
+msgid "No Photo"
+msgstr ""
+
+#: src/rs-toolbox.c:1257
+msgid "_Previous"
+msgstr ""
+
+#: src/rs-toolbox.c:1258
+msgid "_Next"
+msgstr ""

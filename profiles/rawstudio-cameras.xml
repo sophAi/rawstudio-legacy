@@ -1,0 +1,1578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     License: CC-BY-SA 3.0
+
+     This work is licensed under a 
+     Creative Commons Attribution-ShareAlike 3.0 Unported License.
+
+     See more at:
+     http://creativecommons.org/licenses/by-sa/3.0/
+-->
+
+<cameras>
+	<camera unique_id="Passthrough Tonecurve sRGB">
+		<exif make="RICOH" model="GXR"/>
+		<exif make="RICOH" model="GR DIGITAL 2"/>
+	</camera>
+
+	<camera unique_id="Ricoh GR DIGITAL 3">
+		<exif make="RICOH" model="GR DIGITAL 3"/>
+	</camera>
+
+	<camera unique_id="Ricoh RICOH GX200">
+		<exif make="RICOH" model="RICOH GX200"/>
+	</camera>
+
+	<camera unique_id="RICOH GR LENS A12 28mm F2.5">
+		<exif make="RICOH" model="GXR A12"/>
+	</camera>
+
+	<camera unique_id="Leica M8">
+		<exif make="Leica Camera AG" model="M8 Digital Camera"/>
+	</camera>
+
+	<camera unique_id="Leica X1">
+		<exif make="LEICA CAMERA AG" model="LEICA X1"/>
+	</camera>
+
+	<camera unique_id="AGFAPHOTO DC-833m">
+		<exif make="AGFAPHOTO DC-833m" model="AGFAPHOTO DC-833m"/>
+	</camera>
+
+	<camera unique_id="Apple QuickTake">
+		<exif make="Apple QuickTake" model="Apple QuickTake"/>
+	</camera>
+
+	<camera unique_id="Canon EOS D2000">
+		<exif make="Canon" model="Canon EOS D2000"/>
+	</camera>
+
+	<camera unique_id="Canon EOS D6000">
+		<exif make="Canon" model="Canon EOS D6000"/>
+	</camera>
+
+	<camera unique_id="Canon EOS D30">
+		<exif make="Canon" model="Canon EOS D30"/>
+	</camera>
+
+	<camera unique_id="Canon EOS D60">
+		<exif make="Canon" model="Canon EOS D60"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 5D Mark II">
+		<exif make="Canon" model="Canon EOS 5D Mark II"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 5D Mark III">
+		<exif make="Canon" model="Canon EOS 5D Mark III"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 5D">
+		<exif make="Canon" model="Canon EOS 5D"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 6D">
+		<exif make="Canon" model="Canon EOS 6D"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 7D">
+		<exif make="Canon" model="Canon EOS 7D"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 10D">
+		<exif make="Canon" model="Canon EOS 10D"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 20Da">
+		<exif make="Canon" model="Canon EOS 20Da"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 20D">
+		<exif make="Canon" model="Canon EOS 20D"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 30D">
+		<exif make="Canon" model="Canon EOS 30D"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 40D">
+		<exif make="Canon" model="Canon EOS 40D"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 50D">
+		<exif make="Canon" model="Canon EOS 50D"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 60D">
+		<exif make="Canon" model="Canon EOS 60D"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 60Da">
+		<exif make="Canon" model="Canon EOS 60Da"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 70D">
+		<exif make="Canon" model="Canon EOS 70D"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 300D">
+		<exif make="Canon" model="Canon EOS DIGITAL REBEL"/>
+		<exif make="Canon" model="Canon EOS 300D"/>
+		<exif make="Canon" model="Canon EOS 300D DIGITAL"/>
+		<exif make="Canon" model="Canon EOS DIGITAL"/>
+		<exif make="Canon" model="Canon EOS Kiss Digital"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 350D">
+		<exif make="Canon" model="Canon EOS 350D"/>
+		<exif make="Canon" model="Canon EOS 350D DIGITAL"/>
+		<exif make="Canon" model="Canon EOS Kiss Digital N"/>
+		<exif make="Canon" model="Canon EOS DIGITAL REBEL XT"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 400D">
+		<exif make="Canon" model="Canon EOS 400D"/>
+		<exif make="Canon" model="Canon EOS 400D DIGITAL"/>
+		<exif make="Canon" model="Canon EOS DIGITAL REBEL XTi"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 450D">
+		<exif make="Canon" model="Canon EOS 450D"/>
+		<exif make="Canon" model="Canon EOS 450D DIGITAL"/>
+		<exif make="Canon" model="Canon EOS DIGITAL REBEL XSi"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 500D">
+		<exif make="Canon" model="Canon EOS 500D"/>
+		<exif make="Canon" model="Canon EOS 500D DIGITAL"/>
+		<exif make="Canon" model="Canon EOS REBEL T1i"/>
+		<exif make="Canon" model="EOS REBEL T1i"/>
+		<exif make="Canon" model="Canon EOS DIGITAL REBEL T1i"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 550D">
+		<exif make="Canon" model="Canon EOS 550D"/>
+		<exif make="Canon" model="Canon EOS 550D DIGITAL"/>
+		<exif make="Canon" model="Canon EOS REBEL T2i"/>
+		<exif make="Canon" model="EOS REBEL T2i"/>
+		<exif make="Canon" model="Canon EOS DIGITAL REBEL T2i"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 600D">
+		<exif make="Canon" model="Canon EOS 600D"/>
+		<exif make="Canon" model="Canon EOS REBEL T3i"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 650D">
+		<exif make="Canon" model="Canon EOS REBEL T4i"/>
+		<exif make="Canon" model="Canon EOS Kiss X6i"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 1000D">
+		<exif make="Canon" model="Canon EOS 1000D"/>
+		<exif make="Canon" model="Canon EOS DIGITAL REBEL XS"/>
+	</camera>
+
+	<camera unique_id="Canon EOS 1100D">
+		<exif make="Canon" model="Canon EOS 1100D"/>
+		<exif make="Canon" model="Canon EOS REBEL T3"/>
+	</camera>
+
+	<camera unique_id="Canon EOS-1Ds Mark III">
+		<exif make="Canon" model="Canon EOS-1Ds Mark III"/>
+	</camera>
+
+	<camera unique_id="Canon EOS-1Ds Mark II">
+		<exif make="Canon" model="Canon EOS-1Ds Mark II"/>
+	</camera>
+
+	<camera unique_id="Canon EOS-1D Mark II N">
+		<exif make="Canon" model="Canon EOS-1D Mark II N"/>
+	</camera>
+
+	<camera unique_id="Canon EOS-1D Mark III">
+		<exif make="Canon" model="Canon EOS-1D Mark III"/>
+	</camera>
+
+	<camera unique_id="Canon EOS-1D Mark IV">
+		<exif make="Canon" model="Canon EOS-1D Mark IV"/>
+	</camera>
+
+	<camera unique_id="Canon EOS-1D Mark II">
+		<exif make="Canon" model="Canon EOS-1D Mark II"/>
+	</camera>
+
+	<camera unique_id="Canon EOS-1DS">
+		<exif make="Canon" model="Canon EOS-1DS"/>
+	</camera>
+
+	<camera unique_id="Canon EOS-1D">
+		<exif make="Canon" model="Canon EOS-1D"/>
+	</camera>
+
+	<camera unique_id="Canon EOS-1D X">
+		<exif make="Canon" model="Canon EOS-1D X"/>
+	</camera>
+
+	<camera unique_id="Canon EOS">
+		<exif make="Canon" model="Canon EOS"/>
+	</camera>
+
+	<camera unique_id="Canon EOS M">
+		<exif make="Canon" model="Canon EOS M"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot A530">
+		<exif make="Canon" model="Canon PowerShot A530"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot A50">
+		<exif make="Canon" model="Canon PowerShot A50"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot A5">
+		<exif make="Canon" model="Canon PowerShot A5"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot G10">
+		<exif make="Canon" model="Canon PowerShot G10"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot G11">
+		<exif make="Canon" model="Canon PowerShot G11"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot G12">
+		<exif make="Canon" model="Canon PowerShot G12"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot G15">
+		<exif make="Canon" model="Canon PowerShot G15"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot G1">
+		<exif make="Canon" model="Canon PowerShot G1"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot G2">
+		<exif make="Canon" model="Canon PowerShot G2"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot G3">
+		<exif make="Canon" model="Canon PowerShot G3"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot G5">
+		<exif make="Canon" model="Canon PowerShot G5"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot G6">
+		<exif make="Canon" model="Canon PowerShot G6"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot G9">
+		<exif make="Canon" model="Canon PowerShot G9"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot Pro1">
+		<exif make="Canon" model="Canon PowerShot Pro1"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot Pro70">
+		<exif make="Canon" model="Canon PowerShot Pro70"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot Pro90">
+		<exif make="Canon" model="Canon PowerShot Pro90"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot S100">
+		<exif make="Canon" model="Canon PowerShot S100"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot S110">
+		<exif make="Canon" model="Canon PowerShot S110"/>
+	</camera>
+	
+	<camera unique_id="Canon PowerShot S30">
+		<exif make="Canon" model="Canon PowerShot S30"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot S40">
+		<exif make="Canon" model="Canon PowerShot S40"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot S45">
+		<exif make="Canon" model="Canon PowerShot S45"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot S50">
+		<exif make="Canon" model="Canon PowerShot S50"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot S60">
+		<exif make="Canon" model="Canon PowerShot S60"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot S90">
+		<exif make="Canon" model="Canon PowerShot S90"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot S95">
+		<exif make="Canon" model="Canon PowerShot S95"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot S70">
+		<exif make="Canon" model="Canon PowerShot S70"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot A470">
+		<exif make="Canon" model="Canon PowerShot A470"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot A610">
+		<exif make="Canon" model="Canon PowerShot A610"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot A620">
+		<exif make="Canon" model="Canon PowerShot A620"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot A630">
+		<exif make="Canon" model="Canon PowerShot A630"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot A640">
+		<exif make="Canon" model="Canon PowerShot A640"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot A650">
+		<exif make="Canon" model="Canon PowerShot A650"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot A720">
+		<exif make="Canon" model="Canon PowerShot A720"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot S3 IS">
+		<exif make="Canon" model="Canon PowerShot S3 IS"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot SX1 IS">
+		<exif make="Canon" model="Canon PowerShot SX1 IS"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot SX110 IS">
+		<exif make="Canon" model="Canon PowerShot SX110 IS"/>
+	</camera>
+
+	<camera unique_id="Canon PowerShot SX50 HS">
+		<exif make="Canon" model="Canon PowerShot SX50 HS"/>
+	</camera>
+
+	<camera unique_id="CASIO EX-S20">
+		<exif make="CASIO EX-S20" model="CASIO EX-S20"/>
+	</camera>
+
+	<camera unique_id="CINE 650">
+		<exif make="CINE 650" model="CINE 650"/>
+	</camera>
+
+	<camera unique_id="CINE 660">
+		<exif make="CINE 660" model="CINE 660"/>
+	</camera>
+
+	<camera unique_id="CINE">
+		<exif make="CINE" model="CINE"/>
+	</camera>
+
+	<camera unique_id="Contax N Digital">
+		<exif make="Contax N Digital" model="Contax N Digital"/>
+	</camera>
+
+	<camera unique_id="EPSON R-D1">
+		<exif make="EPSON R-D1" model="EPSON R-D1"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix E550">
+		<exif make="FUJIFILM" model="FinePix E550"/>
+	</camera>
+
+	<camera unique_id="Fujifilm FinePix HS20EXR">
+		<exif make="FUJIFILM" model="FinePix HS20EXR"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix E900">
+		<exif make="FUJIFILM" model="FinePix E900"/>
+	</camera>
+
+	<camera unique_id="Fujifilm FinePix E810">
+		<exif make="FUJIFILM" model="FinePix E810"/>
+	</camera>
+
+	<camera unique_id="Fujifilm FinePix F550EXR">
+		<exif make="FUJIFILM" model="FinePix F550EXR"/>
+	</camera>
+	<camera unique_id="Fujifilm FinePix F700">
+		<exif make="FUJIFILM" model="FinePix F700"/>
+	</camera>
+
+	<camera unique_id="Fujifilm FinePix F710">
+		<exif make="FUJIFILM" model="FinePix F710"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix F8">
+		<exif make="FUJIFILM" model="FinePix F8"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix F7">
+		<exif make="FUJIFILM" model="FinePix F7"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S100FS">
+		<exif make="FUJIFILM" model="FinePix S100FS"/>
+	</camera>
+
+	<camera unique_id="Fujifilm FinePix S200EXR">
+		<exif make="FUJIFILM" model="FinePix S200EXR"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S20Pro">
+		<exif make="FUJIFILM" model="FinePix S20Pro"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S2Pro">
+		<exif make="FUJIFILM" model="FinePix S2Pro"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S3Pro">
+		<exif make="FUJIFILM" model="FinePix S3Pro"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S5Pro">
+		<exif make="FUJIFILM" model="FinePix S5Pro"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S5000">
+		<exif make="FUJIFILM" model="FinePix S5000"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S5100">
+		<exif make="FUJIFILM" model="FinePix S5100"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S5500">
+		<exif make="FUJIFILM" model="FinePix S5500"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S5200">
+		<exif make="FUJIFILM" model="FinePix S5200"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S5600">
+		<exif make="FUJIFILM" model="FinePix S5600"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S6">
+		<exif make="FUJIFILM" model="FinePix S6"/>
+	</camera>
+
+	<camera unique_id="Fujifilm FinePix F600EXR">
+		<exif make="FUJIFILM" model="FinePix F600EXR"/>
+	</camera>
+
+	<camera unique_id="Fujifilm FinePix F800EXR">
+		<exif make="FUJIFILM" model="FinePix F800EXR"/>
+	</camera>
+	
+	<camera unique_id="FUJIFILM FinePix S6000fd">
+		<exif make="FUJIFILM" model="FinePix S6000fd"/>
+		<exif make="FUJIFILM" model="FinePix S6500fd"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S7000">
+		<exif make="FUJIFILM" model="FinePix S7000"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S9000">
+		<exif make="FUJIFILM" model="FinePix S9000"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S9500">
+		<exif make="FUJIFILM" model="FinePix S9500"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S9100">
+		<exif make="FUJIFILM" model="FinePix S9100"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix S9600">
+		<exif make="FUJIFILM" model="FinePix S9600"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM FinePix X100">
+		<exif make="FUJIFILM" model="FinePix X100"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM X-Pro1">
+		<exif make="FUJIFILM" model="X-Pro1"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM X-E1">
+		<exif make="FUJIFILM" model="X-E1"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM IS-1">
+		<exif make="FUJIFILM" model="IS-1"/>
+	</camera>
+
+	<camera unique_id="FUJIFILM IS Pro">
+		<exif make="FUJIFILM" model="IS Pro"/>
+	</camera>
+
+	<camera unique_id="Imacon Ixpress">
+		<exif make="Imacon Ixpress" model="Imacon Ixpress"/>
+	</camera>
+
+	<camera unique_id="KODAK NC2000">
+		<exif make="EASTMAN KODAK COMPANY" model="NC2000"/>
+	</camera>
+
+	<camera unique_id="Kodak DCS315C">
+		<exif make="Kodak" model="DCS315C"/>
+	</camera>
+
+	<camera unique_id="Kodak DCS330C">
+		<exif make="Kodak" model="DCS330C"/>
+	</camera>
+
+	<camera unique_id="KODAK DCS420">
+		<exif make="EASTMAN KODAK COMPANY" model="DCS420"/>
+	</camera>
+
+	<camera unique_id="KODAK DCS460">
+		<exif make="EASTMAN KODAK COMPANY" model="DCS460"/>
+	</camera>
+
+	<camera unique_id="KODAK EOSDCS1">
+		<exif make="EASTMAN KODAK COMPANY" model="EOSDCS1"/>
+	</camera>
+
+	<camera unique_id="KODAK EOSDCS3B">
+		<exif make="EASTMAN KODAK COMPANY" model="EOSDCS3B"/>
+	</camera>
+
+	<camera unique_id="Kodak DCS520C">
+		<exif make="Kodak" model="DCS520C"/>
+	</camera>
+
+	<camera unique_id="Kodak DCS560C">
+		<exif make="Kodak" model="DCS560C"/>
+	</camera>
+
+	<camera unique_id="Kodak DCS620C">
+		<exif make="Kodak" model="DCS620C"/>
+	</camera>
+
+	<camera unique_id="Kodak DCS620X">
+		<exif make="Kodak" model="DCS620X"/>
+	</camera>
+
+	<camera unique_id="Kodak DCS660C">
+		<exif make="Kodak" model="DCS660C"/>
+	</camera>
+
+	<camera unique_id="Kodak DCS720X">
+		<exif make="Kodak" model="DCS720X"/>
+	</camera>
+
+	<camera unique_id="Kodak DCS760C">
+		<exif make="Kodak" model="DCS760C"/>
+	</camera>
+
+	<camera unique_id="Kodak DCS Pro SLR">
+		<exif make="Kodak" model="DCS Pro SLR"/>
+	</camera>
+
+	<camera unique_id="Kodak DCS Pro 14nx">
+		<exif make="Kodak" model="DCS Pro 14nx"/>
+	</camera>
+
+	<camera unique_id="Kodak DCS Pro 14">
+		<exif make="Kodak" model="DCS Pro 14"/>
+	</camera>
+
+	<camera unique_id="Kodak ProBack645">
+		<exif make="Kodak" model="ProBack645"/>
+	</camera>
+
+	<camera unique_id="Kodak ProBack">
+		<exif make="Kodak" model="ProBack"/>
+	</camera>
+
+	<camera unique_id="KODAK P712">
+		<exif make="EASTMAN KODAK COMPANY" model="P712"/>
+	</camera>
+
+	<camera unique_id="KODAK P850">
+		<exif make="EASTMAN KODAK COMPANY" model="P850"/>
+	</camera>
+
+	<camera unique_id="KODAK P880">
+		<exif make="EASTMAN KODAK COMPANY" model="P880"/>
+	</camera>
+
+	<camera unique_id="KODAK EasyShare Z980">
+		<exif make="EASTMAN KODAK COMPANY" model="EasyShare Z980"/>
+	</camera>
+
+	<camera unique_id="KODAK EASYSHARE Z1015">
+		<exif make="EASTMAN KODAK COMPANY" model="EASYSHARE Z1015"/>
+	</camera>
+	<camera unique_id="Konica Minolta Maxxum 5D">
+        <exif make="KONICA MINOLTA" model="DYNAX 5D"/>
+        <exif make="KONICA MINOLTA" model="MAXXUM 5D"/>
+        <exif make="KONICA MINOLTA" model="ALPHA 5D"/>
+	</camera>
+
+	<camera unique_id="Konica Minolta Maxxum 7D">
+        <exif make="KONICA MINOLTA" model="DYNAX 7D"/>
+        <exif make="KONICA MINOLTA" model="MAXXUM 7D"/>
+        <exif make="KONICA MINOLTA" model="ALPHA 7D"/>
+	</camera>
+
+	<camera unique_id="Konica Minolta DiMAGE A200">
+        <exif make="KONICA MINOLTA" model="DiMAGE A200"/>
+	</camera>
+
+	<camera unique_id="Konica Minolta DiMAGE A2">
+		<exif make="Konica Minolta Camera, Inc." model="DiMAGE A2"/>
+	</camera>
+
+	<camera unique_id="Leaf CMost">
+		<exif make="Leaf CMost" model="Leaf CMost"/>
+	</camera>
+
+	<camera unique_id="Leaf Credo 40">
+		<exif make="Leaf CMost" model="Leaf Credo 40"/>
+	</camera>
+
+	<camera unique_id="Leaf Credo 60">
+		<exif make="Leaf CMost" model="Leaf Credo 60"/>
+	</camera>
+
+	<camera unique_id="Leaf Valeo 6">
+		<exif make="Leaf Valeo 6" model="Leaf Valeo 6"/>
+	</camera>
+
+	<camera unique_id="Leaf Aptus 54S">
+		<exif make="Leaf Aptus 54S" model="Leaf Aptus 54S"/>
+	</camera>
+
+	<camera unique_id="Leaf Aptus 65">
+		<exif make="Leaf Aptus 65" model="Leaf Aptus 65"/>
+	</camera>
+
+	<camera unique_id="Leaf Aptus 75">
+		<exif make="Leaf Aptus 75" model="Leaf Aptus 75"/>
+	</camera>
+
+	<camera unique_id="Leaf">
+		<exif make="Leaf" model="Leaf"/>
+	</camera>
+
+	<camera unique_id="M9 Digital Camera">
+		<exif make="Leica Camera AG" model="M9 Digital Camera"/>
+	</camera>
+
+	<camera unique_id="Leica D-LUX 4">
+		<exif make="LEICA" model="D-LUX 4"/>
+	</camera>
+
+	<camera unique_id="Leica S2">
+		<exif make="Leica Camera AG" model="S2"/>
+	</camera>
+
+	<camera unique_id="Mamiya ZD">
+		<exif make="Mamiya ZD" model="Mamiya ZD"/>
+		<exif make="Mamiya-OP Co.,Ltd." model="MAMIYA ZD"/>
+	</camera>
+
+	<camera unique_id="Micron 2010">
+		<exif make="Micron 2010" model="Micron 2010"/>
+	</camera>
+
+	<camera unique_id="Minolta DiMAGE 5">
+		<exif make="Minolta" model="DiMAGE 5"/>
+		<exif make="Minolta Co., Ltd." model="DiMAGE 5"/>
+	</camera>
+
+	<camera unique_id="Minolta DiMAGE 7Hi">
+		<exif make="Minolta" model="DiMAGE 7Hi"/>
+		<exif make="Minolta Co., Ltd." model="DiMAGE 7Hi"/>
+	</camera>
+
+	<camera unique_id="Minolta DiMAGE 7">
+		<exif make="Minolta" model="DiMAGE 7"/>
+	</camera>
+
+	<camera unique_id="Minolta DiMAGE 7i">
+		<exif make="Minolta" model="DiMAGE 7i"/>
+		<exif make="Minolta Co., Ltd." model="DiMAGE 7i"/>
+	</camera>
+
+	<camera unique_id="Minolta DiMAGE A1">
+		<exif make="Minolta" model="DiMAGE A1"/>
+		<exif make="Minolta Co., Ltd." model="DiMAGE A1"/>
+	</camera>
+
+	<camera unique_id="Minolta DiMAGE Z2">
+		<exif make="Minolta" model="DiMAGE Z2"/>
+	</camera>
+
+	<camera unique_id="MOTOROLA PIXL">
+		<exif make="MOTOROLA PIXL" model="MOTOROLA PIXL"/>
+	</camera>
+
+	<camera unique_id="NIKON 1 J1">
+		<exif make="NIKON CORPORATION" model="NIKON 1 J1"/>
+	</camera>
+
+	<camera unique_id="NIKON 1 J2">
+		<exif make="NIKON CORPORATION" model="NIKON 1 J2"/>
+	</camera>
+
+	<camera unique_id="NIKON 1 V1">
+		<exif make="NIKON CORPORATION" model="NIKON 1 V1"/>
+	</camera>
+
+	<camera unique_id="NIKON D100">
+		<exif make="NIKON CORPORATION" model="NIKON D100"/>
+	</camera>
+
+	<camera unique_id="NIKON D1H">
+		<exif make="NIKON CORPORATION" model="NIKON D1H"/>
+	</camera>
+
+	<camera unique_id="NIKON D1X">
+		<exif make="NIKON CORPORATION" model="NIKON D1X"/>
+	</camera>
+
+	<camera unique_id="NIKON D1">
+		<exif make="NIKON CORPORATION" model="NIKON D1"/>
+	</camera>
+
+	<camera unique_id="NIKON D200">
+		<exif make="NIKON CORPORATION" model="NIKON D200"/>
+	</camera>
+
+	<camera unique_id="NIKON D2H">
+		<exif make="NIKON CORPORATION" model="NIKON D2H"/>
+	</camera>
+
+	<camera unique_id="NIKON D2X">
+		<exif make="NIKON CORPORATION" model="NIKON D2X"/>
+	</camera>
+
+	<camera unique_id="NIKON D3000">
+		<exif make="NIKON CORPORATION" model="NIKON D3000"/>
+	</camera>
+
+	<camera unique_id="NIKON D3100">
+		<exif make="NIKON CORPORATION" model="NIKON D3100"/>
+	</camera>
+
+	<camera unique_id="NIKON D3200">
+		<exif make="NIKON CORPORATION" model="NIKON D3200"/>
+	</camera>
+
+	<camera unique_id="NIKON D300">
+		<exif make="NIKON CORPORATION" model="NIKON D300"/>
+	</camera>
+
+	<camera unique_id="NIKON D300S">
+		<exif make="NIKON CORPORATION" model="NIKON D300S"/>
+	</camera>
+
+	<camera unique_id="NIKON D3X">
+		<exif make="NIKON CORPORATION" model="NIKON D3X"/>
+	</camera>
+
+	<camera unique_id="NIKON D3">
+		<exif make="NIKON CORPORATION" model="NIKON D3"/>
+	</camera>
+
+	<camera unique_id="NIKON D3S">
+		<exif make="NIKON CORPORATION" model="NIKON D3S"/>
+	</camera>
+
+	<camera unique_id="NIKON D4">
+		<exif make="NIKON CORPORATION" model="NIKON D4"/>
+	</camera>
+
+	<camera unique_id="NIKON D40X">
+		<exif make="NIKON CORPORATION" model="NIKON D40X"/>
+	</camera>
+
+	<camera unique_id="NIKON D40">
+		<exif make="NIKON CORPORATION" model="NIKON D40"/>
+	</camera>
+
+	<camera unique_id="NIKON D5000">
+		<exif make="NIKON CORPORATION" model="NIKON D5000"/>
+	</camera>
+
+	<camera unique_id="NIKON D5100">
+		<exif make="NIKON CORPORATION" model="NIKON D5100"/>
+	</camera>
+
+	<camera unique_id="NIKON D5200">
+		<exif make="NIKON CORPORATION" model="NIKON D5200"/>
+	</camera>
+
+	<camera unique_id="NIKON D5300">
+		<exif make="NIKON CORPORATION" model="NIKON D5300"/>
+	</camera>
+
+	<camera unique_id="NIKON D50">
+		<exif make="NIKON CORPORATION" model="NIKON D50"/>
+	</camera>
+
+	<camera unique_id="NIKON D60">
+		<exif make="NIKON CORPORATION" model="NIKON D60"/>
+	</camera>
+
+	<camera unique_id="NIKON D700">
+		<exif make="NIKON CORPORATION" model="NIKON D700"/>
+	</camera>
+
+	<camera unique_id="NIKON D70">
+		<exif make="NIKON CORPORATION" model="NIKON D70"/>
+	</camera>
+
+	<camera unique_id="NIKON D70s">
+		<exif make="NIKON CORPORATION" model="NIKON D70s"/>
+	</camera>
+
+	<camera unique_id="NIKON D7000">
+		<exif make="NIKON CORPORATION" model="NIKON D7000"/>
+	</camera>
+
+	<camera unique_id="NIKON D7100">
+		<exif make="NIKON CORPORATION" model="NIKON D7100"/>
+	</camera>
+
+	<camera unique_id="NIKON D80">
+		<exif make="NIKON CORPORATION" model="NIKON D80"/>
+	</camera>
+
+	<camera unique_id="NIKON D800">
+		<exif make="NIKON CORPORATION" model="NIKON D800"/>
+	</camera>
+
+	<camera unique_id="NIKON D800E">
+		<exif make="NIKON CORPORATION" model="NIKON D800E"/>
+	</camera>
+
+	<camera unique_id="NIKON D90">
+		<exif make="NIKON CORPORATION" model="NIKON D90"/>
+	</camera>
+
+	<camera unique_id="NIKON E950">
+		<exif make="NIKON" model="NIKON E950"/>
+	</camera>
+
+	<camera unique_id="NIKON E995">
+		<exif make="NIKON" model="NIKON E995"/>
+	</camera>
+
+	<camera unique_id="NIKON E2100">
+		<exif make="NIKON" model="NIKON E2100"/>
+	</camera>
+
+	<camera unique_id="NIKON E2500">
+		<exif make="NIKON" model="NIKON E2500"/>
+	</camera>
+
+	<camera unique_id="NIKON E4300">
+		<exif make="NIKON" model="NIKON E4300"/>
+	</camera>
+
+	<camera unique_id="NIKON E4500">
+		<exif make="NIKON" model="NIKON E4500"/>
+	</camera>
+
+	<camera unique_id="NIKON E5000">
+		<exif make="NIKON" model="NIKON E5000"/>
+	</camera>
+
+	<camera unique_id="NIKON E5400">
+		<exif make="NIKON" model="E5400"/>
+	</camera>
+
+	<camera unique_id="NIKON E5700">
+		<exif make="NIKON" model="E5700"/>
+	</camera>
+
+	<camera unique_id="NIKON E8400">
+		<exif make="NIKON" model="E8400"/>
+	</camera>
+
+	<camera unique_id="NIKON E8700">
+		<exif make="NIKON" model="E8700"/>
+	</camera>
+
+	<camera unique_id="NIKON E8800">
+		<exif make="NIKON" model="E8800"/>
+	</camera>
+
+	<camera unique_id="NIKON COOLPIX P6000">
+		<exif make="NIKON" model="COOLPIX P6000"/>
+	</camera>
+
+	<camera unique_id="NIKON COOLPIX P7000">
+		<exif make="NIKON" model="COOLPIX P7000"/>
+	</camera>
+
+	<camera unique_id="NIKON COOLPIX P7100">
+		<exif make="NIKON" model="COOLPIX P7100"/>
+	</camera>
+
+	<camera unique_id="NIKON COOLPIX P7700">
+		<exif make="NIKON" model="COOLPIX P7700"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS C5050">
+		<exif make="OLYMPUS IMAGING CORP." model="C5050"/>
+		<exif make="OLYMPUS OPTICAL CO.,LTD" model="C5050Z"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS C5060">
+		<exif make="OLYMPUS IMAGING CORP.." model="C5060"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS C7070">
+		<exif make="OLYMPUS IMAGING CORP." model="C7070"/>
+		<exif make="OLYMPUS IMAGING CORP." model="C7070WZ"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS C70">
+		<exif make="OLYMPUS IMAGING CORP." model="C70"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS C80">
+		<exif make="OLYMPUS IMAGING CORP." model="C80"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-10">
+		<exif make="OLYMPUS OPTICAL CO.,LTD" model="E-10"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-1">
+		<exif make="OLYMPUS IMAGING CORP." model="E-1"/>
+		<exif make="OLYMPUS CORPORATION" model="E-1"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-20">
+		<exif make="OLYMPUS OPTICAL CO.,LTD." model="E-20"/>
+		<exif make="OLYMPUS OPTICAL CO.,LTD" model="E-20,E-20N,E-20P"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-300">
+		<exif make="OLYMPUS IMAGING CORP." model="E-300"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-330">
+		<exif make="OLYMPUS IMAGING CORP." model="E-330"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-30">
+		<exif make="OLYMPUS IMAGING CORP." model="E-30"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-3">
+		<exif make="OLYMPUS IMAGING CORP." model="E-3"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-400">
+		<exif make="OLYMPUS IMAGING CORP." model="E-400"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-410">
+		<exif make="OLYMPUS IMAGING CORP." model="E-410"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-420">
+		<exif make="OLYMPUS IMAGING CORP." model="E-420"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-450">
+		<exif make="OLYMPUS IMAGING CORP." model="E-450"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-5">
+		<exif make="OLYMPUS IMAGING CORP." model="E-5"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-500">
+		<exif make="OLYMPUS IMAGING CORP." model="E-500"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-510">
+		<exif make="OLYMPUS IMAGING CORP." model="E-510"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-520">
+		<exif make="OLYMPUS IMAGING CORP." model="E-520"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-620">
+		<exif make="OLYMPUS IMAGING CORP." model="E-620"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-M1">
+		<exif make="OLYMPUS IMAGING CORP." model="E-M1"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-P1">
+		<exif make="OLYMPUS IMAGING CORP." model="E-P1"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-P2">
+		<exif make="OLYMPUS IMAGING CORP." model="E-P2"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-P3">
+		<exif make="OLYMPUS IMAGING CORP." model="E-P3"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-PL1">
+		<exif make="OLYMPUS IMAGING CORP." model="E-PL1"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-PL1s">
+		<exif make="OLYMPUS IMAGING CORP." model="E-PL1s"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-PL2">
+		<exif make="OLYMPUS IMAGING CORP." model="E-PL2"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-PL3">
+		<exif make="OLYMPUS IMAGING CORP." model="E-PL3"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-PL5">
+		<exif make="OLYMPUS IMAGING CORP." model="E-PL5"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-PM1">
+		<exif make="OLYMPUS IMAGING CORP." model="E-PM1"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS E-PM2">
+		<exif make="OLYMPUS IMAGING CORP." model="E-PM2"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS SP350">
+		<exif make="OLYMPUS IMAGING CORP." model="SP350"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS SP3">
+		<exif make="OLYMPUS IMAGING CORP." model="SP3"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS SP500UZ">
+		<exif make="OLYMPUS IMAGING CORP." model="SP500UZ"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS SP510UZ">
+		<exif make="OLYMPUS IMAGING CORP." model="SP510UZ"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS SP550UZ">
+		<exif make="OLYMPUS IMAGING CORP." model="SP550UZ"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS SP560UZ">
+		<exif make="OLYMPUS IMAGING CORP." model="SP560UZ"/>
+	</camera>
+
+	<camera unique_id="OLYMPUS SP570UZ">
+		<exif make="OLYMPUS IMAGING CORP." model="SP570UZ"/>
+	</camera>
+
+	<camera unique_id="Olympus XZ-1">
+		<exif make="OLYMPUS IMAGING CORP." model="XZ-1"/>
+	</camera>
+
+	<camera unique_id="Olympus XZ-2">
+		<exif make="OLYMPUS IMAGING CORP." model="XZ-2"/>
+	</camera>
+
+	<camera unique_id="PENTAX *istDL2">
+		<exif make="PENTAX Corporation" model="PENTAX *ist DL2"/>
+	</camera>
+
+	<camera unique_id="PENTAX *istDL">
+		<exif make="PENTAX Corporation" model="PENTAX *ist DL"/>
+	</camera>
+
+	<camera unique_id="PENTAX *istDS2">
+		<exif make="PENTAX Corporation" model="PENTAX *ist DS2"/>
+	</camera>
+
+	<camera unique_id="PENTAX *istDS">
+		<exif make="PENTAX Corporation" model="PENTAX *ist DS"/>
+	</camera>
+
+	<camera unique_id="PENTAX *istD">
+		<exif make="PENTAX Corporation" model="PENTAX *ist D"/>
+	</camera>
+
+	<camera unique_id="PENTAX 645D">
+		<exif make="PENTAX" model="PENTAX 645D"/>
+	</camera>
+
+	<camera unique_id="PENTAX K10D">
+		<exif make="PENTAX Corporation" model="PENTAX K10D"/>
+	</camera>
+
+	<camera unique_id="PENTAX K1">
+		<exif make="PENTAX Corporation" model="PENTAX K1"/>
+	</camera>
+
+	<camera unique_id="PENTAX K-01">
+		<exif make="PENTAX" model="PENTAX K-01"/>
+	</camera>
+
+	<camera unique_id="PENTAX K-30">
+		<exif make="PENTAX" model="PENTAX K-30"/>
+	</camera>
+
+	<camera unique_id="PENTAX K100D">
+		<exif make="PENTAX" model="PENTAX K100D"/>
+		<exif make="PENTAX Corporation" model="PENTAX K100D"/>
+	</camera>
+
+	<camera unique_id="PENTAX K20D">
+		<exif make="PENTAX" model="PENTAX K20D"/>
+		<exif make="PENTAX Corporation" model="PENTAX K20D"/>
+	</camera>
+
+	<camera unique_id="PENTAX K200D">
+		<exif make="PENTAX" model="PENTAX K200D"/>
+		<exif make="PENTAX Corporation" model="PENTAX K200D"/>
+	</camera>
+
+	<camera unique_id="PENTAX K2000">
+		<exif make="PENTAX" model="PENTAX K2000"/>
+	</camera>
+
+	<camera unique_id="PENTAX K-m">
+		<exif make="PENTAX" model="PENTAX K-m"/>
+	</camera>
+
+	<camera unique_id="PENTAX K-r">
+		<exif make="PENTAX" model="PENTAX K-r"/>
+	</camera>
+
+	<camera unique_id="PENTAX K-5">
+		<exif make="PENTAX" model="PENTAX K-5"/>
+	</camera>
+
+	<camera unique_id="PENTAX K-5 II">
+		<exif make="PENTAX" model="PENTAX K-5 II"/>
+	</camera>
+
+	<camera unique_id="PENTAX K-5 II s">
+		<exif make="PENTAX" model="PENTAX K-5 II s"/>
+	</camera>
+
+	<camera unique_id="PENTAX K-7">
+		<exif make="PENTAX" model="PENTAX K-7"/>
+	</camera>
+
+	<camera unique_id="PENTAX K-x">
+		<exif make="PENTAX" model="PENTAX K-x"/>
+	</camera>
+
+	<camera unique_id="PENTAX K-01">
+		<exif make="PENTAX" model="PENTAX K-01"/>
+	</camera>
+
+	<camera unique_id="PENTAX Q">
+		<exif make="PENTAX" model="PENTAX Q"/>
+	</camera>
+
+	<camera unique_id="PENTAX Q10">
+		<exif make="PENTAX" model="PENTAX Q10"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-FZ8">
+		<exif make="Panasonic" model="DMC-FZ8"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-FZ18">
+		<exif make="Panasonic" model="DMC-FZ18"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-FZ28">
+		<exif make="Panasonic" model="DMC-FZ28"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-FZ30">
+		<exif make="Panasonic" model="DMC-FZ30"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-FZ35">
+		<exif make="Panasonic" model="DMC-FZ35"/>
+		<exif make="Panasonic" model="DMC-FZ38"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-FZ40">
+		<exif make="Panasonic" model="DMC-FZ40"/>
+		<exif make="Panasonic" model="DMC-FZ45"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-FZ50">
+		<exif make="Panasonic" model="DMC-FZ50"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-FZ70">
+		<exif make="Panasonic" model="DMC-FZ70"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-FZ100">
+		<exif make="Panasonic" model="DMC-FZ100"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-FZ200">
+		<exif make="Panasonic" model="DMC-FZ200"/>
+	</camera>
+	
+	<camera unique_id="Panasonic DMC-GX1">
+		<exif make="Panasonic" model="DMC-GX1"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-L10">
+		<exif make="Panasonic" model="DMC-L10"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-L1">
+		<exif make="Panasonic" model="DMC-L1"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-LC1">
+		<exif make="Panasonic" model="DMC-LC1"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-LX1">
+		<exif make="Panasonic" model="DMC-LX1"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-LX2">
+		<exif make="Panasonic" model="DMC-LX2"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-LX3">
+		<exif make="Panasonic" model="DMC-LX3"/>
+		<exif make="LEICA" model="D-LUX 4"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-LX5">
+		<exif make="Panasonic" model="DMC-LX5"/>
+		<exif make="LEICA" model="D-LUX 5"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-LX7">
+		<exif make="Panasonic" model="DMC-LX7"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-FX150">
+		<exif make="Panasonic" model="DMC-FX150"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-G1">
+		<exif make="Panasonic" model="DMC-G1"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-G5">
+		<exif make="Panasonic" model="DMC-G5"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-GF1">
+		<exif make="Panasonic" model="DMC-GF1"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-GF2">
+		<exif make="Panasonic" model="DMC-GF2"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-GF3">
+		<exif make="Panasonic" model="DMC-GF3"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-GF5">
+		<exif make="Panasonic" model="DMC-GF5"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-GH1">
+		<exif make="Panasonic" model="DMC-GH1"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-GH2">
+		<exif make="Panasonic" model="DMC-GH2"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-GH3">
+		<exif make="Panasonic" model="DMC-GH3"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-GH4">
+		<exif make="Panasonic" model="DMC-GH4"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-GH5">
+		<exif make="Panasonic" model="DMC-GH5"/>
+		<exif make="Panasonic" model="DC-GH5"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-G10">
+		<exif make="Panasonic" model="DMC-G10"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-G2">
+		<exif make="Panasonic" model="DMC-G2"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-G3">
+		<exif make="Panasonic" model="DMC-G3"/>
+	</camera>
+
+	<camera unique_id="Panasonic DMC-ZS40">
+		<exif make="Panasonic" model="DMC-TZ60"/>
+		<exif make="Panasonic" model="DMC-TZ61"/>
+	</camera>
+
+	<camera unique_id="Phase One H 20">
+		<exif make="Phase One A/S" model="H 20"/>
+	</camera>
+
+	<camera unique_id="Phase One P 2">
+		<exif make="Phase One A/S" model="P 2"/>
+	</camera>
+
+	<camera unique_id="Phase One P 30">
+		<exif make="Phase One A/S" model="P 30"/>
+	</camera>
+
+	<camera unique_id="Phase One P 45">
+		<exif make="Phase One A/S" model="P 45"/>
+	</camera>
+
+	<camera unique_id="Phase One P65">
+		<exif make="Phase One A/S" model="P65"/>
+	</camera>
+
+	<camera unique_id="SAMSUNG EX1">
+		<exif make="SAMSUNG" model="EX1"/>
+	</camera>
+
+		<camera unique_id="SAMSUNG EX2F">
+		<exif make="SAMSUNG" model="EX2F"/>
+	</camera>
+
+	<camera unique_id="SAMSUNG S85">
+		<exif make="SAMSUNG" model="S85"/>
+	</camera>
+
+	<camera unique_id="SAMSUNG GX-1">
+		<exif make="SAMSUNG" model="GX-1"/>
+	</camera>
+
+	<camera unique_id="SAMSUNG GX20">
+		<exif make="SAMSUNG TECHWIN Co." model="SAMSUNG GX20"/>
+	</camera>
+
+	<camera unique_id="SAMSUNG NX10">
+		<exif make="SAMSUNG" model="NX10"/>
+	</camera>
+
+	<camera unique_id="SAMSUNG NX5">
+		<exif make="SAMSUNG" model="NX5"/>
+	</camera>
+
+	<camera unique_id="SAMSUNG NX11">
+		<exif make="SAMSUNG" model="NX11"/>
+	</camera>
+
+	<camera unique_id="SAMSUNG NX100">
+		<exif make="SAMSUNG" model="NX100"/>
+	</camera>
+
+	<camera unique_id="SAMSUNG NX1000">
+		<exif make="SAMSUNG" model="NX1000"/>
+	</camera>
+
+	<camera unique_id="SAMSUNG NX200">
+		<exif make="SAMSUNG" model="NX200"/>
+	</camera>
+
+	<camera unique_id="SAMSUNG NX210">
+		<exif make="SAMSUNG" model="NX210"/>
+	</camera>
+
+	<camera unique_id="SAMSUNG WB2000">
+		<exif make="SAMSUNG" model="WB2000"/>
+	</camera>
+
+	<camera unique_id="Sinar">
+		<exif make="Sinar" model="Sinar"/>
+	</camera>
+
+	<camera unique_id="SONY DSC-F828">
+		<exif make="SONY" model="DSC-F828"/>
+	</camera>
+
+	<camera unique_id="SONY DSC-R1">
+		<exif make="SONY" model="DSC-R1"/>
+	</camera>
+
+	<camera unique_id="SONY DSC-RX1">
+		<exif make="SONY" model="DSC-RX1"/>
+	</camera>
+
+	<camera unique_id="SONY DSC-V3">
+		<exif make="SONY" model="DSC-V3"/>
+	</camera>
+
+	<camera unique_id="SONY DSC-RX100">
+		<exif make="SONY" model="DSC-RX100"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A100">
+		<exif make="SONY" model="DSLR-A100"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A200">
+		<exif make="SONY" model="DSLR-A200"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A230">
+		<exif make="SONY" model="DSLR-A230"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A290">
+		<exif make="SONY" model="DSLR-A290"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A300">
+		<exif make="SONY" model="DSLR-A300"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A330">
+		<exif make="SONY" model="DSLR-A330"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A350">
+		<exif make="SONY" model="DSLR-A350"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A380">
+		<exif make="SONY" model="DSLR-A380"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A390">
+		<exif make="SONY" model="DSLR-A390"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A450">
+		<exif make="SONY" model="DSLR-A450"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A500">
+		<exif make="SONY" model="DSLR-A500"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A550">
+		<exif make="SONY" model="DSLR-A550"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A560">
+		<exif make="SONY" model="DSLR-A560"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A580">
+		<exif make="SONY" model="DSLR-A580"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A700">
+		<exif make="SONY" model="DSLR-A700"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A850">
+		<exif make="SONY" model="DSLR-A850"/>
+	</camera>
+
+	<camera unique_id="SONY DSLR-A900">
+		<exif make="SONY" model="DSLR-A900"/>
+	</camera>
+
+	<camera unique_id="SONY NEX-3">
+		<exif make="SONY" model="NEX-3"/>
+	</camera>
+
+	<camera unique_id="SONY NEX-C3">
+		<exif make="SONY" model="NEX-C3"/>
+	</camera>
+
+	<camera unique_id="SONY NEX-F3">
+		<exif make="SONY" model="NEX-F3"/>
+	</camera>
+
+	<camera unique_id="SONY NEX-5">
+		<exif make="SONY" model="NEX-5"/>
+	</camera>
+
+	<camera unique_id="SONY NEX-5N">
+		<exif make="SONY" model="NEX-5N"/>
+	</camera>
+
+	<camera unique_id="SONY NEX-5R">
+		<exif make="SONY" model="NEX-5R"/>
+	</camera>
+
+	<camera unique_id="SONY NEX-6">
+		<exif make="SONY" model="NEX-6"/>
+	</camera>
+
+	<camera unique_id="SONY SLT-A33">
+		<exif make="SONY" model="SLT-A33"/>
+	</camera>
+
+	<camera unique_id="SONY SLT-A35">
+		<exif make="SONY" model="SLT-A35"/>
+	</camera>
+
+	<camera unique_id="SONY SLT-A37">
+		<exif make="SONY" model="SLT-A37"/>
+	</camera>
+
+	<camera unique_id="SONY SLT-A55V">
+		<exif make="SONY" model="SLT-A55V"/>
+	</camera>
+
+	<camera unique_id="SONY SLT-A65V">
+		<exif make="SONY" model="SLT-A65V"/>
+	</camera>
+
+	<camera unique_id="SONY SLT-A77V">
+		<exif make="SONY" model="SLT-A77V"/>
+	</camera>
+
+	<camera unique_id="SONY SLT-A99V">
+		<exif make="SONY" model="SLT-A99V"/>
+	</camera>
+
+</cameras>

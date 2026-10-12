@@ -1,0 +1,30 @@
+# List of source files containing translatable strings.
+# Generated with this command:
+# cd .. && grep gettext.h * --include=\*.c --include=\*.h -R --exclude-dir=contrib|cut -d":" -f1|sort
+librawstudio/rs-lens-db-editor.c
+librawstudio/rs-library.c
+librawstudio/rs-metadata.c
+librawstudio/rs-profile-selector.c
+librawstudio/rs-settings.c
+plugins/colorspace-adobergb/colorspace-adobergb.c
+plugins/colorspace-prophoto/colorspace-prophoto.c
+plugins/colorspace-srgb/colorspace-srgb.c
+plugins/denoise/denoise.c
+plugins/output-jpegfile/output-jpegfile.c
+plugins/output-pngfile/output-pngfile.c
+plugins/output-tifffile/output-tifffile.c
+src/application.c
+src/filename.c
+src/gtk-helper.c
+src/gtk-interface.c
+src/gtk-progress.c
+src/rs-actions.c
+src/rs-batch.c
+src/rs-cache.c
+src/rs-camera-db.c
+src/rs-preview-widget.c
+src/rs-save-dialog.c
+src/rs-store.c
+src/rs-tag-gui.c
+src/rs-tethered-shooting.c
+src/rs-toolbox.c

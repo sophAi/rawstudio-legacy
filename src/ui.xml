@@ -1,0 +1,153 @@
+<ui>
+ <menubar name="MainMenu">
+  <menu action="FileMenu">
+   <menuitem action="Open" />
+   <menuitem action="QuickExport" />
+   <menuitem action="ExportAs" />
+   <menuitem action="ExportToGimp" />
+   <menuitem action="Reload" />
+   <menuitem action="DeleteFlagged" />
+   <menuitem action="Quit" />
+  </menu>
+  <menu action="EditMenu">
+   <menuitem action="RevertSettings" />
+   <menuitem action="CopySettings" />
+	 <menuitem action="CopyImage" />
+   <menuitem action="PasteSettings" />
+   <menuitem action="ResetSettings" />
+   <menuitem action="SaveDefaultSettings" />
+   <separator />
+   <menuitem action="Preferences" />
+  </menu>
+  <menu action="PhotoMenu">
+   <menuitem action="FlagPhoto" />
+   <menu action="PriorityMenu">
+    <menuitem action="Priority1" />
+    <menuitem action="Priority2" />
+    <menuitem action="Priority3" />
+    <menuitem action="RemovePriority" />
+   </menu>
+   <menu action="WhiteBalanceMenu">
+    <menuitem action="CameraWB" />
+    <menuitem action="AutoWB" />
+   </menu>
+   <menuitem action="Crop" />
+   <menuitem action="Uncrop" />
+   <menuitem action="Straighten" />
+   <menuitem action="Unstraighten" />
+   <menuitem action="Group" />
+   <menuitem action="Ungroup" />
+   <menuitem action="AutoGroup" />
+   <menuitem action="TagPhoto" />
+   <menuitem action="RotateClockwise" />
+   <menuitem action="RotateCounterClockwise" />
+   <menuitem action="Flip" />
+   <menuitem action="Mirror" />
+   <menuitem action="Enfuse" />
+   <menuitem action="AutoAdjustCurveEnds" />
+  </menu>
+  <menu action="ViewMenu">
+   <menuitem action="PreviousPhoto" />
+   <menuitem action="NextPhoto" />
+   <menuitem action="Play" />
+   <menu action="SortByMenu">
+    <menuitem action="SortByName" />
+    <menuitem action="SortByTimestamp" />
+	<menuitem action="SortByISO" />
+	<menuitem action="SortByAperture" />
+	<menuitem action="SortByFocallength" />
+	<menuitem action="SortByShutterspeed" />
+   </menu>
+   <separator />
+   <menuitem action="ZommToFit" />
+   <menu action="SnapshotMenu">
+    <menuitem action="SnapshotA" />
+    <menuitem action="SnapshotB" />
+    <menuitem action="SnapshotC" />
+    <separator />
+    <menuitem action="SnapshotPrevious" />
+    <menuitem action="SnapshotNext" />
+   </menu>
+   <separator />
+   <menuitem action="Iconbox" />
+   <menuitem action="Toolbox" />
+   <menuitem action="Fullscreen" />
+   <menuitem action="FullscreenPreview" />
+   <separator />
+   <menuitem action="LoadSelected" />
+   <menuitem action="ShowFilenames" />
+   <menuitem action="Load8Bit" />
+   <separator />
+   <menuitem action="ExposureMask" />
+   <menuitem action="Split" />
+   <menuitem action="Lightsout" />
+   <menuitem action="LensDbEditor" />
+   <menuitem action="TetheredShooting" />
+  </menu>
+  <menu action="BatchMenu">
+   <menuitem action="AddToBatch" />
+   <menuitem action="AddViewToBatch" />
+   <menuitem action="RemoveFromBatch" />
+   <menuitem action="ProcessBatch" />
+   <menuitem action="PackSelected" />
+  </menu>
+  <menu action="HelpMenu">
+   <menuitem action="OnlineDocumentation" />
+   <separator />
+   <menuitem action="About" />
+  </menu>
+ </menubar>
+ <popup name="PreviewPopup" action="PreviewPopup">
+   <menuitem action="ZommToFit" />
+   <separator />
+  <menuitem action="Crop" />
+  <menuitem action="Uncrop" />
+  <menuitem action="Straighten" />
+  <menuitem action="Unstraighten" />
+   <menu action="WhiteBalanceMenu">
+    <menuitem action="CameraWB" />
+    <menuitem action="AutoWB" />
+   </menu>
+  <menuitem action="TagPhoto" />
+  <separator />
+  <menuitem action="ExposureMask" />
+  <menuitem action="Split" />
+  <menuitem action="Lightsout" />
+ </popup>
+ <popup name="PreviewPopupRight" action="PreviewPopupRight">
+  <menuitem action="RightA" />
+  <menuitem action="RightB" />
+  <menuitem action="RightC" />
+  <separator />
+   <menuitem action="ZommToFit" />
+   <separator />
+  <menuitem action="Crop" />
+  <menuitem action="Uncrop" />
+  <menuitem action="Straighten" />
+  <menuitem action="Unstraighten" />
+  <separator />
+  <menuitem action="ExposureMask" />
+  <menuitem action="Split" />
+ </popup>
+ <popup name="IconviewPopup" action="IconviewPopup">
+  <separator />
+<!--
+  <menuitem action="RenamePhoto" />
+  <menuitem action="AutoRename" />
+  <menuitem action="CopyPhoto" />
+  <separator /> -->
+   <menuitem action="PasteSettings" />
+   <menuitem action="FlagPhoto" />
+   <menu action="PriorityMenu">
+    <menuitem action="Priority1" />
+    <menuitem action="Priority2" />
+    <menuitem action="Priority3" />
+    <menuitem action="RemovePriority" />
+   </menu>
+   <menu action="WhiteBalanceMenu">
+    <menuitem action="CameraWB" />
+    <menuitem action="AutoWB" />
+   </menu>
+  <menuitem action="TagPhoto" />
+ </popup>
+</ui>
