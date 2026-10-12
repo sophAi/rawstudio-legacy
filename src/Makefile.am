@@ -46,7 +46,8 @@ rawstudio_legacy_SOURCES = \
 	rs-tethered-shooting.c rs-tethered-shooting.h \
 	rs-enfuse.c rs-enfuse.h
 
-rawstudio_legacy_LDADD = ../librawstudio/librawstudio.la @PACKAGE_LIBS@ @LENSFUN_LIBS@ @LIBGPHOTO2_LIBS@ @DBUS_LIBS@ @SQLITE3_LIBS@ $(INTLLIBS)
+rawstudio_legacy_LDADD = ../librawstudio/librawstudio-legacy.la @PACKAGE_LIBS@ @LENSFUN_LIBS@ @LIBGPHOTO2_LIBS@ @DBUS_LIBS@ @SQLITE3_LIBS@ $(INTLLIBS)
+rawstudio_legacy_LDFLAGS = -Wl,-rpath,'$$ORIGIN/../lib' -Wl,-rpath,'$(libdir)'
 
 install-exec-hook:
 	cd $(DESTDIR)$(bindir) && rm -f rawstudio && $(LN_S) rawstudio-legacy rawstudio

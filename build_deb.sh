@@ -194,7 +194,7 @@ INSTALLED_SIZE=$(du -sk "${STAGING}/usr" | cut -f1)
 # Dynamically calculate library dependencies using dpkg-shlibdeps
 echo "-> Resolving runtime library dependencies with dpkg-shlibdeps..."
 mkdir -p "${BUILD_WORKSPACE}/debian"
-echo "librawstudio 2.1 ${PACKAGE_NAME}" > "${BUILD_WORKSPACE}/debian/shlibs.local"
+echo "librawstudio-legacy 2.1 ${PACKAGE_NAME}" > "${BUILD_WORKSPACE}/debian/shlibs.local"
 touch "${BUILD_WORKSPACE}/debian/control"
 
 PLUGINS_SO=( "${STAGING}"/usr/lib/rawstudio-legacy/plugins/*.so )
@@ -206,7 +206,7 @@ SHLIB_DEPS=$(
         -l"${STAGING}/usr/lib" \
         -O \
         "${STAGING}/usr/bin/rawstudio-legacy" \
-        "${STAGING}/usr/lib/librawstudio-2.1.so" \
+        "${STAGING}/usr/lib/librawstudio-legacy-2.1.so" \
         "${PLUGINS_SO[@]}" 2>/dev/null \
     | sed -n 's/^shlibs:Depends=//p' \
     | sed "s/${PACKAGE_NAME}, //g; s/, ${PACKAGE_NAME}//g; s/${PACKAGE_NAME}//g"
@@ -260,6 +260,14 @@ if [ "$1" = "configure" ]; then
     fi
     if command -v update-mime-database >/dev/null 2>&1; then
         update-mime-database /usr/share/mime || true
+    fi
+    if [ -f /usr/local/bin/rawstudio ] || [ -f /usr/local/lib/librawstudio-2.1.so ]; then
+        echo "===================================================================="
+        echo "Notice: Detected older Rawstudio files installed in /usr/local/ !"
+        echo "Because /usr/local has higher priority than /usr, please consider"
+        echo "removing stale /usr/local files to prevent conflicts:"
+        echo "  sudo rm -rf /usr/local/bin/rawstudio /usr/local/lib/librawstudio* /usr/local/lib/rawstudio /usr/local/share/rawstudio && sudo ldconfig"
+        echo "===================================================================="
     fi
 fi
 

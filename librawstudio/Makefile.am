@@ -64,8 +64,8 @@ library_include_HEADERS = rawstudio.h rs-types.h rs-macros.h \
 	rs-gui-functions.h \
 	x86-cpu.h
 
-lib_LTLIBRARIES = librawstudio.la
-librawstudio_la_SOURCES = \
+lib_LTLIBRARIES = librawstudio-legacy.la
+librawstudio_legacy_la_SOURCES = \
 	rs-debug.c rs-debug.h \
 	rs-io-job.c rs-io-job.h \
 	rs-io-job-checksum.c rs-io-job-checksum.h \
@@ -115,8 +115,8 @@ librawstudio_la_SOURCES = \
 	rs-gui-functions.c rs-gui-functions.h \
 	rs-stock.c rs-stock.h
 
-librawstudio_la_LIBADD = @PACKAGE_LIBS@ @SQLITE3_LIBS@ @LENSFUN_LIBS@ @EXIV2_LIBS@ $(INTLLIBS)
-librawstudio_la_LDFLAGS = -release $(PACKAGE_VERSION)
+librawstudio_legacy_la_LIBADD = @PACKAGE_LIBS@ @SQLITE3_LIBS@ @LENSFUN_LIBS@ @EXIV2_LIBS@ $(INTLLIBS)
+librawstudio_legacy_la_LDFLAGS = -release $(PACKAGE_VERSION)
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = rawstudio-$(PACKAGE_VERSION).pc
 
@@ -134,5 +134,5 @@ install-exec-hook:
 	rm -f $(DESTDIR)$(libdir)/*.la
 
 uninstall-hook:
-	rm -f $(DESTDIR)$(libdir)/librawstudio-$(PACKAGE_VERSION).so
-	rm -f $(DESTDIR)$(libdir)/librawstudio.a
+	rm -f $(DESTDIR)$(libdir)/librawstudio-legacy-$(PACKAGE_VERSION).so
+	rm -f $(DESTDIR)$(libdir)/librawstudio-legacy.a

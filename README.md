@@ -125,12 +125,32 @@ sudo make install
 | :--- | :--- | :--- |
 | **執行檔** | `/usr/bin/rawstudio-legacy` | 主執行程式（`/usr/bin/rawstudio` 為軟連結） |
 | **外掛模組庫** | `/usr/lib/rawstudio-legacy/plugins/` | 30 個影像處理、解碼與匯出外掛庫 (`.so`) |
-| **後端共享庫** | `/usr/lib/librawstudio-2.1.so` | 核心色彩與影像計算管線庫 |
+| **後端共享庫** | `/usr/lib/librawstudio-legacy-2.1.so` | 核心色彩與影像計算管線庫 |
 | **全域設定與資源**| `/usr/share/rawstudio-legacy/` | 內建色調曲線、相機描述檔及 UI 定義 |
 | **相機中繼資料庫**| `/usr/share/rawspeed/cameras.xml` | 現代相機感光元件定義庫 (2023 版本) |
 | **桌面捷徑** | `/usr/share/applications/rawstudio-legacy.desktop` | 桌面環境啟動入口 |
 | **使用者設定檔** | `~/.config/rawstudio-legacy/preferences` | GKeyFile INI 格式偏好設定 |
 | **照片縮圖與快取**| `~/.rawstudio/` | SQLite 本地影像資料庫與快取 |
+
+---
+
+## ⚠️ 常見問題排查 (Troubleshooting)
+
+### 執行時出現 `libgconf-2.so.4: cannot open shared object file` 錯誤
+
+* **問題根源**：
+  若先前曾透過手動原始碼編譯安裝（如 `make install`），系統的 `/usr/local/lib/` 與 `/usr/local/bin/` 殘留了早期舊版編譯的 `librawstudio-2.1.so` 與 `rawstudio` 執行檔。
+  因為 Linux 動態連結器與 PATH 優先搜尋 `/usr/local/`，導致系統載入到舊版殘留檔而非新版套件庫。
+* **解決方式**：
+  1. 安裝最新打包的 `rawstudio-legacy`（後端函式庫已改名為獨立的 `librawstudio-legacy-2.1.so` 並內嵌 RPATH，完全隔絕舊版干擾）：
+     ```bash
+     sudo dpkg -i rawstudio-legacy_2.1-1~mint22.3_amd64.deb
+     ```
+  2. （選用）徹底清理 `/usr/local` 中已廢棄的舊版殘留檔：
+     ```bash
+     sudo rm -rf /usr/local/bin/rawstudio /usr/local/lib/librawstudio* /usr/local/lib/rawstudio /usr/local/share/rawstudio
+     sudo ldconfig
+     ```
 
 ---
 
