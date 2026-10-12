@@ -2420,7 +2420,7 @@ canvas_draw(RSPreviewWidget *preview, GdkRectangle *rect, gboolean now)
 	{
 		cairo_t *cr = gdk_cairo_create(window);
 
-		if (rect)
+		if (rect && rect->width > 0 && rect->height > 0)
 		{
 			cairo_new_path(cr);
 			cairo_rectangle(cr, rect->x, rect->y, rect->width, rect->height);
@@ -2430,7 +2430,7 @@ canvas_draw(RSPreviewWidget *preview, GdkRectangle *rect, gboolean now)
 	}
 	else
 	{
-		if (rect)
+		if (rect && rect->width > 0 && rect->height > 0)
 			gtk_widget_queue_draw_area(widget, rect->x, rect->y, rect->width, rect->height);
 		else
 			gtk_widget_queue_draw(widget);

@@ -477,10 +477,13 @@ gchar * rs_enfuse(RS_BLOB *rs, GList *files, gboolean quick, gint boundingbox)
 
 gboolean has_enfuse_mp()
 {
-  if (popen("enfuse-mp", "r"))
+  gchar *path = g_find_program_in_path("enfuse-mp");
+  if (path)
+  {
+    g_free(path);
     return TRUE;
-  else
-    return FALSE;
+  }
+  return FALSE;
 }
 
 gboolean rs_has_enfuse (gint major, gint minor)
@@ -497,7 +500,16 @@ gboolean rs_has_enfuse (gint major, gint minor)
   if (cached)
     return retval;
 
-  fp = popen("enfuse -V","r"); /* enfuse 4.0-753b534c819d */
+  gchar *enfuse_path = g_find_program_in_path("enfuse");
+  if (!enfuse_path)
+  {
+    cached = TRUE;
+    retval = FALSE;
+    return FALSE;
+  }
+  g_free(enfuse_path);
+
+  fp = popen("enfuse -V 2>/dev/null", "r"); /* enfuse 4.0-753b534c819d */
   if (fp == NULL)
     {
       cached = TRUE;
@@ -517,7 +529,7 @@ gboolean rs_has_enfuse (gint major, gint minor)
     }
   pclose(fp);
 
-  fp = popen("enfuse -h","r"); /* ==== enfuse, version 3.2 ==== */
+  fp = popen("enfuse -h 2>/dev/null", "r"); /* ==== enfuse, version 3.2 ==== */
   if (fp == NULL)
     {
       cached = TRUE;

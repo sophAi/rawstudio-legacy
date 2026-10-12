@@ -224,6 +224,7 @@ Architecture: ${ARCH}
 Maintainer: Rawstudio Legacy Team <support@rawstudio.org>
 Installed-Size: ${INSTALLED_SIZE}
 Depends: ${SHLIB_DEPS}
+Recommends: enfuse
 Provides: rawstudio (= ${RAW_VERSION})
 Conflicts: rawstudio
 Replaces: rawstudio

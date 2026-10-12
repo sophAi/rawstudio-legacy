@@ -1173,29 +1173,36 @@ ifd_panasonic(RAWFILE *rawfile, guint offset, RSMetadata *meta)
 				break;
 		}
 	}
-	if (meta->thumbnail_start > raw_get_filesize(rawfile))
+	if (meta->thumbnail_start >= raw_get_filesize(rawfile))
 		meta->thumbnail_start = 0;
 	if (!likely_jpeg_at(rawfile, meta->thumbnail_start))
 		meta->thumbnail_start = 0;
 
-	guint thumb_guess =0x1000;
+	guint thumb_guess = 0x1000;
 	/* Thumbnails in Panasonic are always at 0x100 byte boundaries, and never observed start after byte 0x3000, so we play safe */
-	while (meta->thumbnail_start == 0 && thumb_guess < 0x8000)
+	while (meta->thumbnail_start == 0 && thumb_guess < 0x8000 && thumb_guess < raw_get_filesize(rawfile))
 	{
 		if (likely_jpeg_at(rawfile, thumb_guess))
 			meta->thumbnail_start = thumb_guess;
 		thumb_guess += 0x100;
 	}
 	/* Find end of image */
-	if (meta->thumbnail_start)
+	if (meta->thumbnail_start && meta->thumbnail_start < raw_get_filesize(rawfile))
 	{
-		thumb_guess = 0;
+		guint max_len = raw_get_filesize(rawfile) - meta->thumbnail_start;
+		/* Limit thumbnail search to at most 2MB or max_len */
+		if (max_len > 2000000)
+			max_len = 2000000;
 		guchar* image = raw_get_map(rawfile) + meta->thumbnail_start;
-		do {
+		for (thumb_guess = 0; thumb_guess + 1 < max_len; thumb_guess++)
+		{
 			/* 0xff, 0xd9 is the JPEG "end of image" marker */ 
 			if (image[thumb_guess] == 0xff && image[thumb_guess+1] == 0xd9)
-				meta->thumbnail_length = thumb_guess+2;
-		} while (thumb_guess++ < raw_get_filesize(rawfile) - meta->thumbnail_start + 1);
+			{
+				meta->thumbnail_length = thumb_guess + 2;
+				break;
+			}
+		}
 	}
 	return TRUE;
 }

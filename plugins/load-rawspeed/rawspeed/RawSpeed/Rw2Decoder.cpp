@@ -227,6 +227,8 @@ void Rw2Decoder::decodeMetaDataInternal(CameraMetaData *meta) {
     const int blackRed = raw->getEntry((TiffTag)0x1c)->getInt() + 15;
     const int blackGreen = raw->getEntry((TiffTag)0x1d)->getInt() + 15;
     const int blackBlue = raw->getEntry((TiffTag)0x1e)->getInt() + 15;
+    if (mRaw->cfa.size.area() == 0)
+      mRaw->cfa.setCFA(iPoint2D(2,2), CFA_BLUE, CFA_GREEN, CFA_GREEN2, CFA_RED);
 
     for(int i = 0; i < 2; i++) {
       for(int j = 0; j < 2; j++) {
@@ -237,6 +239,7 @@ void Rw2Decoder::decodeMetaDataInternal(CameraMetaData *meta) {
             mRaw->blackLevelSeparate[k] = blackRed;
             break;
           case CFA_GREEN:
+          case CFA_GREEN2:
             mRaw->blackLevelSeparate[k] = blackGreen;
             break;
           case CFA_BLUE:

@@ -34,12 +34,16 @@ rs_plugin_manager_load_all_plugins()
 	GDir *dir;
 	const gchar *filename;
 	GTimer *gt = g_timer_new();
+	const gchar *plugin_dir = g_getenv("RAWSTUDIO_PLUGIN_DIR");
+
+	if (!plugin_dir || !*plugin_dir)
+		plugin_dir = PACKAGE_LIBRARY_DIR;
 
 	g_assert(g_module_supported());
 
-	RS_DEBUG(PLUGINS, "Loading modules from %s", PACKAGE_LIBRARY_DIR);
+	RS_DEBUG(PLUGINS, "Loading modules from %s", plugin_dir);
 
-	dir = g_dir_open(PACKAGE_LIBRARY_DIR, 0, NULL);
+	dir = g_dir_open(plugin_dir, 0, NULL);
 
 	while(dir && (filename = g_dir_read_name(dir)))
 	{
@@ -49,7 +53,7 @@ rs_plugin_manager_load_all_plugins()
 			gchar *path;
 
 			/* Load the plugin */
-			path = g_build_filename(PACKAGE_LIBRARY_DIR, filename, NULL);
+			path = g_build_filename(plugin_dir, filename, NULL);
 			plugin = rs_plugin_new(path);
 			g_free(path);
 
