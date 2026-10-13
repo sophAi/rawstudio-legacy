@@ -394,9 +394,8 @@ ACTION(quit)
 	if (rs->photo)
 		rs_photo_close(rs->photo);
 	rs_conf_set_integer(CONF_LAST_PRIORITY_PAGE, rs_store_get_current_page(rs->store));
-	rs_io_idle_cancel_class(METADATA_CLASS);
-	rs_io_idle_cancel_class(PRELOAD_CLASS);
-	rs_io_idle_cancel_class(RESTORE_TAGS_CLASS);
+	rs_io_idle_unpause();
+	rs_io_idle_cancel_all();
 	
 	RS_PROGRESS *progress;
 	gint total_items = rs_io_get_jobs_left();
@@ -405,13 +404,16 @@ ACTION(quit)
 		progress = gui_progress_new(_("Waiting for jobs to finish"), total_items);
 		gtk_widget_hide(rs->window);
 		gint items = total_items;
-		while (items > 0)
+		gint wait_count = 0;
+		while (items > 0 && wait_count < 20) /* Wait at most 2 seconds for in-flight jobs */
 		{
 			g_usleep(100*1000);
+			wait_count++;
 			items = rs_io_get_jobs_left();
 			gui_progress_set_current(progress, total_items-items);
-			GUI_CATCHUP();
+			GTK_CATCHUP();
 		}
+		gui_progress_free(progress);
 	}
 	gtk_main_quit();
 }

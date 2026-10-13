@@ -1920,6 +1920,8 @@ tiff_load_meta(const gchar *service, RAWFILE *rawfile, guint offset, RSMetadata 
 		meta->lens_max_aperture = (gdouble) meta->aperture;
 	}
 
+	rs_io_unlock();
+
 	rs_metadata_normalize_wb(meta);
 	return (!!meta->make) || (meta->make_ascii);
 }

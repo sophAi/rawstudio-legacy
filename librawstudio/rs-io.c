@@ -297,6 +297,25 @@ rs_io_idle_cancel(RSIoJob *job)
 }
 
 /**
+ * Cancel all pending idle requests in queue
+ */
+void
+rs_io_idle_cancel_all(void)
+{
+	RSIoJob *current_job;
+
+	if (!queue)
+		return;
+
+	g_async_queue_lock(queue);
+	while ((current_job = g_async_queue_try_pop_unlocked(queue)))
+	{
+		/* Discard all queued jobs */
+	}
+	g_async_queue_unlock(queue);
+}
+
+/**
  * Aquire the IO lock
  */
 void

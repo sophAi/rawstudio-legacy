@@ -55,6 +55,11 @@
 * **智慧自動綁定與校正啟用**：新載入 RAW 照片時，於 `rs-lens.c` 自動根據相機機型與鏡頭識別碼比對 Lensfun 資料庫，自動配對並啟用光學修正。
 * **完整保留 Lensfun 色差 (TCA) 與暗角校正資料**：修正 `plugins/lensfun/lensfun.c`，當使用者手動微調滑桿為 0 時不再錯誤清除 Lensfun 資料庫中內建的色差與 20 組暗角校正多項式參數，確保畸變、色差、暗角三項修正全效發揮作用。
 
+### 12. 解決初次載入切換照片凍結與關閉卡頓問題 (I/O Lock & Shutdown Clean Exit)
+* **消除切換照片凍結 (I/O Lock 死鎖修復)**：修復 `plugins/meta-tiff/tiff-meta.c` 在讀取 EXIF 元數據時遺漏的 `rs_io_unlock()`，防止所有背景縮圖/中繼資料執行緒在 `io_lock` 互斥鎖永久死鎖，讓初次開啟未建立快取目錄時切換照片依然流暢靈敏。
+* **徹底解決關閉時卡在進度條問題**：新增 `rs_io_idle_cancel_all()` 函式並重構 `src/rs-actions.c` 之 `ACTION(quit)`，程式退出時立即安全取消所有未執行的背景 I/O 佇列，搭配 GTK 迴圈刷新與逾時機制，杜絕退出時卡在「Waiting for jobs to finish」進度條。
+* **修復 Lensfun 模組記憶體毀損與重覆解構**：修正 `plugins/lensfun/lensfun.c`，使用標準 `lf_lens_destroy()` 取代錯誤的 `lf_free()`、修復 Mounts 記憶體結構分配，並消除多執行緒暗角計算後的重覆計數解構問題。
+
 ---
 
 ## 🚀 軟體功能特性
@@ -77,7 +82,7 @@
 
 ```bash
 cd /home/xanadu/rsync_data/geminicli/rawstudio-legacy
-sudo apt install ./rawstudio-legacy_2.1-4~mint22.3_amd64.deb
+sudo apt install ./rawstudio-legacy_2.1-5~mint22.3_amd64.deb
 ```
 
 安裝後可於應用程式選單的「**影音與圖形 (Graphics)**」類別中找到 **Rawstudio Legacy**，或直接於終端機執行：

@@ -125,6 +125,11 @@ finalize(GObject *object)
 	lensfun->ldb = NULL;
 	g_free(lensfun->model);
 	g_free(lensfun->make);
+	if (lensfun->selected_lens)
+	{
+		lf_lens_destroy(lensfun->selected_lens);
+		lensfun->selected_lens = NULL;
+	}
 	if (lensfun->lens)
 		g_object_unref(lensfun->lens);
 }
@@ -492,7 +497,10 @@ get_image(RSFilter *filter, const RSFilterRequest *request)
 	if(lensfun->DIRTY)
 	{
 		if (lensfun->selected_lens)
-			lf_free(lensfun->selected_lens);
+		{
+			lf_lens_destroy(lensfun->selected_lens);
+			lensfun->selected_lens = NULL;
+		}
 
 		const lfCamera **cameras = NULL;
 		const lfLens **lenses = NULL;
@@ -545,15 +553,18 @@ get_image(RSFilter *filter, const RSFilterRequest *request)
 				g_object_unref(input);
 				return response;
 			}
+			if (lensfun->selected_lens)
+				lf_lens_destroy(lensfun->selected_lens);
 			lfLens* lens = lf_lens_new ();
-			lens->Model = lensfun->model;
+			lens->Model = g_strdup(lensfun->model ? lensfun->model : "generic");
 			lens->MinFocal = 10.0;
 			lens->MaxFocal = 1000.0;
 			lens->MinAperture = 1.0;
 			lens->MaxAperture = 50.0;
+			lens->Mounts = g_new0(char*, 2);
+			lens->Mounts[0] = g_strdup("generic");
+			lens->Mounts[1] = NULL;
 			lensfun->selected_lens = lens;
-			/* FIXME: It doesn't really seem to use this, at least we'll know when it does ;)*/
-			lens->Mounts = (char**)1;
 		}
 
 		lensfun->DIRTY = FALSE;
@@ -717,6 +728,12 @@ get_image(RSFilter *filter, const RSFilterRequest *request)
 				for(i = 0; i < threads; i++)
 					g_thread_join(t[i].threadid);
 			}
+			else if (effective_flags & LF_MODIFY_VIGNETTING)
+			{
+				/* input is already a copy modified by vignetting phase */
+				output = input;
+				input = NULL;
+			}
 			else
 			{
 				output = rs_image16_copy(input, TRUE);
@@ -740,7 +757,8 @@ get_image(RSFilter *filter, const RSFilterRequest *request)
 		g_free(roi);
 	g_free(vign_roi);
 
-	g_object_unref(input);
+	if (input)
+		g_object_unref(input);
 	return response;
 }
 

@@ -98,6 +98,12 @@ void
 rs_io_idle_cancel(RSIoJob *job);
 
 /**
+ * Cancel all pending idle requests in queue
+ */
+void
+rs_io_idle_cancel_all(void);
+
+/**
  * Pause the worker threads
  */
 void
