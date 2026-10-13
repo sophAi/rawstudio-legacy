@@ -165,7 +165,7 @@ sudo make install
 * **解決方式**：
   1. 安裝最新打包的 `rawstudio-legacy`（後端函式庫已改名為獨立的 `librawstudio-legacy-2.1.so` 並內嵌 RPATH，完全隔絕舊版干擾）：
      ```bash
-     sudo dpkg -i rawstudio-legacy_2.1-2~mint22.3_amd64.deb
+     sudo dpkg -i rawstudio-legacy_2.1-5~mint22.3_amd64.deb
      ```
   2. （選用）徹底清理 `/usr/local` 中已廢棄的舊版殘留檔：
      ```bash
@@ -179,4 +179,5 @@ sudo make install
 
 * **Rawstudio Legacy** 基於 **GNU General Public License v2.0 or later (GPL-2.0-or-later)** 釋出。
 * 詳細授權資訊請參閱根目錄的 [`COPYING`](file:///home/xanadu/rsync_data/geminicli/rawstudio-legacy/COPYING) 檔案。
+* 現代化適配與維護倉庫：[sophAi/rawstudio-legacy](https://github.com/sophAi/rawstudio-legacy)
 * 上游專案原作者：Anders Brander, Anders Kvist, Klaus Post 及開源貢獻者社群。
