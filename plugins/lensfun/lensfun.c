@@ -600,10 +600,6 @@ get_image(RSFilter *filter, const RSFilterRequest *request)
 			    tca.Terms[1] = 1.0f/(((lensfun->tca_kb/100))+1);
 			}
 			lf_lens_add_calib_tca((lfLens *) lensfun->selected_lens, (lfLensCalibTCA *) &tca);
-		} else
-		{
-			lf_lens_remove_calib_tca(lensfun->selected_lens, 0);
-			lf_lens_remove_calib_tca(lensfun->selected_lens, 1);
 		}
 
 		/* Set vignetting */
@@ -621,11 +617,6 @@ get_image(RSFilter *filter, const RSFilterRequest *request)
 			vignetting.Terms[1] = vign * 0.03;
 			vignetting.Terms[2] = vign * 0.005;
 			lf_lens_add_calib_vignetting((lfLens *) lensfun->selected_lens, &vignetting);
-		} else
-		{
-			lf_lens_remove_calib_vignetting(lensfun->selected_lens, 0);
-			lf_lens_remove_calib_vignetting(lensfun->selected_lens, 1);
-			lf_lens_remove_calib_vignetting(lensfun->selected_lens, 2);
 		}
 
 		lfModifier *mod = lf_modifier_new (lensfun->selected_lens, lensfun->selected_camera->CropFactor, input->w, input->h);

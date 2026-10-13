@@ -18,6 +18,11 @@
  */
 
 #include <rawstudio.h>
+#if __has_include(<lensfun/lensfun.h>)
+#include <lensfun/lensfun.h>
+#else
+#include <lensfun.h>
+#endif
 
 struct _RSLens {
 	GObject parent;
@@ -162,6 +167,17 @@ dispose(GObject *object)
 	{
 		g_free(lens->lensfun_make);
 		g_free(lens->lensfun_model);
+		g_free(lens->identifier);
+		g_free(lens->camera_make);
+		g_free(lens->camera_model);
+		g_free(lens->description);
+
+		lens->lensfun_make = NULL;
+		lens->lensfun_model = NULL;
+		lens->identifier = NULL;
+		lens->camera_make = NULL;
+		lens->camera_model = NULL;
+		lens->description = NULL;
 
 		lens->dispose_has_run = TRUE;
 	}
@@ -277,7 +293,7 @@ rs_lens_new_from_medadata(RSMetadata *metadata)
 {
 	g_return_val_if_fail(RS_IS_METADATA(metadata), NULL);
 
-	return g_object_new(RS_TYPE_LENS,
+	RSLens *lens = g_object_new(RS_TYPE_LENS,
 		"identifier", metadata->lens_identifier,
 		"min-focal", metadata->lens_min_focal,
 		"max-focal", metadata->lens_max_focal,
@@ -286,6 +302,47 @@ rs_lens_new_from_medadata(RSMetadata *metadata)
 		"camera-make", metadata->make_ascii,
 		"camera-model", metadata->model_ascii,
 		NULL);
+
+	/* Try auto-detecting lens from Lensfun if not yet set */
+	if (metadata->lens_identifier && metadata->make_ascii)
+	{
+		lfDatabase *lensdb = lf_db_new();
+		if (lensdb)
+		{
+			lf_db_load(lensdb);
+			const lfCamera *camera = NULL;
+			if (metadata->model_ascii)
+			{
+				const lfCamera **cameras = lf_db_find_cameras(lensdb, metadata->make_ascii, metadata->model_ascii);
+				if (cameras)
+					camera = cameras[0];
+			}
+			const lfLens **lenses = lf_db_find_lenses_hd(lensdb, camera, metadata->make_ascii, metadata->lens_identifier, 0);
+			if (!lenses && camera)
+				lenses = lf_db_find_lenses_hd(lensdb, camera, NULL, metadata->lens_identifier, 0);
+
+			if (lenses && lenses[0])
+			{
+				rs_lens_set_lensfun_make(lens, (gchar *) lf_mlstr_get(lenses[0]->Maker));
+				rs_lens_set_lensfun_model(lens, (gchar *) lf_mlstr_get(lenses[0]->Model));
+				rs_lens_set_lensfun_enabled(lens, TRUE);
+
+				if (lens->min_focal <= 0.0 && lenses[0]->MinFocal > 0.0)
+					lens->min_focal = lenses[0]->MinFocal;
+				if (lens->max_focal <= 0.0 && lenses[0]->MaxFocal > 0.0)
+					lens->max_focal = lenses[0]->MaxFocal;
+				if (lens->min_aperture <= 0.0 && lenses[0]->MinAperture > 0.0)
+					lens->min_aperture = lenses[0]->MinAperture;
+				if (lens->max_aperture <= 0.0 && lenses[0]->MaxAperture > 0.0)
+					lens->max_aperture = lenses[0]->MaxAperture;
+
+				lf_free(lenses);
+			}
+			lf_db_destroy(lensdb);
+		}
+	}
+
+	return lens;
 }
 
 /**
@@ -353,19 +410,21 @@ rs_lens_get_description(RSLens *lens)
 }
 
 void
-rs_lens_set_lensfun_make(RSLens *lens, gchar *make)
+rs_lens_set_lensfun_make(RSLens *lens, const gchar *make)
 {
 	g_return_if_fail(RS_IS_LENS(lens));
 
-	lens->lensfun_make = make;
+	g_free(lens->lensfun_make);
+	lens->lensfun_make = g_strdup(make);
 }
 
 void
-rs_lens_set_lensfun_model(RSLens *lens, gchar *model)
+rs_lens_set_lensfun_model(RSLens *lens, const gchar *model)
 {
 	g_return_if_fail(RS_IS_LENS(lens));
 
-	lens->lensfun_model = model;
+	g_free(lens->lensfun_model);
+	lens->lensfun_model = g_strdup(model);
 }
 
 void

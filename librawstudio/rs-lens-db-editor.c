@@ -59,12 +59,15 @@ typedef struct {
 	SingleLensData *single_lens_data;
 } lens_data;
 
-static gint lf_lens_sort_by_model_func(gconstpointer *a, gconstpointer *b)
+static gint lf_lens_sort_by_model_func(gconstpointer a, gconstpointer b)
 {
-	lfLens *first = (lfLens *) ((GPtrArray *) a)->pdata;
-	lfLens *second = (lfLens *) ((GPtrArray *) b)->pdata;
+	const lfLens *first = *(const lfLens **) a;
+	const lfLens *second = *(const lfLens **) b;
 
-	return g_strcmp0(first->Model, second->Model);
+	if (!first || !second)
+		return 0;
+
+	return g_strcmp0(lf_mlstr_get(first->Model), lf_mlstr_get(second->Model));
 }
 
 const lfLens **lf_lens_sort_by_model(const lfLens *const *array)
@@ -85,20 +88,34 @@ const lfLens **lf_lens_sort_by_model(const lfLens *const *array)
 
 static void lens_set (lens_data *data, const lfLens *lens)
 {
-	if (data->single_lens_data && lens)
+	if (data->single_lens_data)
 	{
-		/* Set Maker and Model to the selected RSLens */
-		rs_lens_set_lensfun_make(data->single_lens_data->lens, lens->Maker);
-		rs_lens_set_lensfun_model(data->single_lens_data->lens, lens->Model);
-		rs_lens_set_lensfun_enabled(data->single_lens_data->lens, TRUE);
+		if (lens)
+		{
+			/* Set Maker and Model to the selected RSLens */
+			rs_lens_set_lensfun_make(data->single_lens_data->lens, (gchar *) lf_mlstr_get(lens->Maker));
+			rs_lens_set_lensfun_model(data->single_lens_data->lens, (gchar *) lf_mlstr_get(lens->Model));
+			rs_lens_set_lensfun_enabled(data->single_lens_data->lens, TRUE);
 
-		gtk_label_set_text(GTK_LABEL(data->single_lens_data->lensfun_make), lens->Maker);
-		gtk_label_set_text(GTK_LABEL(data->single_lens_data->lensfun_model), lens->Model);
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(data->single_lens_data->checkbutton_enabled), TRUE);
+			gtk_label_set_text(GTK_LABEL(data->single_lens_data->lensfun_make), lf_mlstr_get(lens->Maker));
+			gtk_label_set_text(GTK_LABEL(data->single_lens_data->lensfun_model), lf_mlstr_get(lens->Model));
+			gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(data->single_lens_data->checkbutton_enabled), TRUE);
 
-		gtk_widget_show(data->single_lens_data->lensfun_make);
-		gtk_widget_show(data->single_lens_data->lensfun_model);
-		gtk_widget_hide(data->single_lens_data->button);
+			gtk_widget_show(data->single_lens_data->lensfun_make);
+			gtk_widget_show(data->single_lens_data->lensfun_model);
+			gtk_widget_hide(data->single_lens_data->button);
+		}
+		else
+		{
+			/* Deselect */
+			rs_lens_set_lensfun_make(data->single_lens_data->lens, NULL);
+			rs_lens_set_lensfun_model(data->single_lens_data->lens, NULL);
+			rs_lens_set_lensfun_enabled(data->single_lens_data->lens, FALSE);
+
+			gtk_widget_hide(data->single_lens_data->lensfun_make);
+			gtk_widget_hide(data->single_lens_data->lensfun_model);
+			gtk_widget_show(data->single_lens_data->button);
+		}
 
 		RSLensDb *lens_db = rs_lens_db_get_default();
 
@@ -110,21 +127,24 @@ static void lens_set (lens_data *data, const lfLens *lens)
 
 		return;
 	}
-    if (!rs_lens_get_lensfun_model(data->single_lens_data->lens))
-        return;
 
 	GtkTreeSelection *selection = gtk_tree_view_get_selection(data->tree_view);
 	GtkTreeModel *model = NULL;
 	GtkTreeIter iter;
 
-	gtk_tree_selection_get_selected(selection, &model, &iter);
+	if (!gtk_tree_selection_get_selected(selection, &model, &iter))
+	{
+		if (data)
+			g_free(data);
+		return;
+	}
 
 	/* Set Maker and Model to the tree view */
 	if (lens)
 	{
 		gtk_list_store_set (GTK_LIST_STORE(model), &iter,
-					RS_LENS_DB_EDITOR_LENS_MAKE, lens->Maker,
-					RS_LENS_DB_EDITOR_LENS_MODEL, lens->Model,
+					RS_LENS_DB_EDITOR_LENS_MAKE, lf_mlstr_get(lens->Maker),
+					RS_LENS_DB_EDITOR_LENS_MODEL, lf_mlstr_get(lens->Model),
 					RS_LENS_DB_EDITOR_ENABLED_ACTIVATABLE, TRUE,
 					RS_LENS_DB_EDITOR_ENABLED, TRUE,
 					RS_LENS_DB_EDITOR_DEFISH, FALSE,
@@ -149,8 +169,8 @@ static void lens_set (lens_data *data, const lfLens *lens)
 	/* Set Maker and Model to the selected RSLens */
 	if (lens)
 	{
-		rs_lens_set_lensfun_make(rs_lens, lens->Maker);
-		rs_lens_set_lensfun_model(rs_lens, lens->Model);
+		rs_lens_set_lensfun_make(rs_lens, (gchar *) lf_mlstr_get(lens->Maker));
+		rs_lens_set_lensfun_model(rs_lens, (gchar *) lf_mlstr_get(lens->Model));
 		rs_lens_set_lensfun_enabled(rs_lens, TRUE);
 		rs_lens_set_lensfun_defish(rs_lens, FALSE);
 	}
@@ -166,6 +186,9 @@ static void lens_set (lens_data *data, const lfLens *lens)
 
 	/* Force save of RSLensDb */
 	rs_lens_db_save(lens_db);
+
+	if (data)
+		g_free(data);
 }
 
 
@@ -403,24 +426,33 @@ static void row_clicked (GtkTreeView *tree_view, GtkTreePath *path, GtkTreeViewC
 			    RS_LENS_DB_EDITOR_LENS, &rs_lens,
 			    -1);
 
-	gchar *camera_make;
-	gchar *camera_model;
-	gdouble min_focal;
-	gdouble max_focal;
+	gchar *camera_make = NULL;
+	gchar *camera_model = NULL;
+	gchar *identifier = NULL;
+	gdouble min_focal = -1.0;
+	gdouble max_focal = -1.0;
 
 	g_assert(RS_IS_LENS(rs_lens));
 	g_object_get(rs_lens,
+		     "identifier", &identifier,
 		     "camera-make", &camera_make,
 		     "camera-model", &camera_model,
 		     "min-focal", &min_focal,
 		     "max-focal", &max_focal,
 		     NULL);
 
-	gchar *lens_search;
-	if (min_focal == max_focal)
-	 lens_search = g_strdup_printf("%.0fmm", min_focal);
-	else
-	 lens_search = g_strdup_printf("%.0f-%.0f", min_focal, max_focal);
+	gchar *lens_search = NULL;
+	if (min_focal > 0.0 && max_focal > 0.0)
+	{
+		if (min_focal == max_focal)
+			lens_search = g_strdup_printf("%.0fmm", min_focal);
+		else
+			lens_search = g_strdup_printf("%.0f-%.0f", min_focal, max_focal);
+	}
+	else if (identifier && identifier[0] != '\0')
+	{
+		lens_search = g_strdup(identifier);
+	}
 
 	cameras = lf_db_find_cameras(lensdb, camera_make, camera_model);
 	if (cameras)
@@ -428,29 +460,47 @@ static void row_clicked (GtkTreeView *tree_view, GtkTreePath *path, GtkTreeViewC
 
 	if (camera)
 	{
-		const lfLens **lenslist = lf_db_find_lenses_hd (
-			lensdb, camera, NULL, lens_search, 0);
+		const lfLens **lenslist = lens_search ? lf_db_find_lenses_hd (
+			lensdb, camera, NULL, lens_search, 0) : NULL;
 		const lfLens **full_lenslist = lf_db_find_lenses_hd (
 			lensdb, camera, NULL, NULL, 0);
 
 		if (!lenslist && !full_lenslist)
+		{
+			g_free(lens_search);
+			g_free(identifier);
+			g_free(camera_make);
+			g_free(camera_model);
 			return;
+		}
 
 		lens_menu_fill (data, lenslist, full_lenslist);
-		lf_free (lenslist);
+		if (lenslist)
+			lf_free (lenslist);
 	}
 	else
 	{
-		const lfLens **lenslist = lf_db_find_lenses_hd (
-			lensdb, NULL, NULL, lens_search, 0);
+		const lfLens **lenslist = lens_search ? lf_db_find_lenses_hd (
+			lensdb, NULL, NULL, lens_search, 0) : NULL;
 		const lfLens *const *full_lenslist = lf_db_get_lenses (lensdb);
 
-		if (!lenslist)
+		if (!lenslist && !full_lenslist)
+		{
+			g_free(lens_search);
+			g_free(identifier);
+			g_free(camera_make);
+			g_free(camera_model);
 			return;
+		}
 		lens_menu_fill (data, lenslist, full_lenslist);
+		if (lenslist)
+			lf_free (lenslist);
 	}
 
 	g_free(lens_search);
+	g_free(identifier);
+	g_free(camera_make);
+	g_free(camera_model);
 
 	gtk_menu_popup (GTK_MENU (data->LensMenu), NULL, NULL, NULL, NULL,
 			0, gtk_get_current_event_time ());
@@ -780,24 +830,33 @@ static void set_lens (GtkButton *button, SingleLensData *single_lens_data)
 
 	RSLens *rs_lens = RS_LENS(single_lens_data->lens);
 
-	gchar *camera_make;
-	gchar *camera_model;
-	gdouble min_focal;
-	gdouble max_focal;
+	gchar *camera_make = NULL;
+	gchar *camera_model = NULL;
+	gchar *identifier = NULL;
+	gdouble min_focal = -1.0;
+	gdouble max_focal = -1.0;
 
 	g_assert(RS_IS_LENS(rs_lens));
 	g_object_get(rs_lens,
+		     "identifier", &identifier,
 		     "camera-make", &camera_make,
 		     "camera-model", &camera_model,
 		     "min-focal", &min_focal,
 		     "max-focal", &max_focal,
 		     NULL);
 
-	gchar *lens_search;
-	if (min_focal == max_focal)
-	 lens_search = g_strdup_printf("%.0fmm", min_focal);
-	else
-	 lens_search = g_strdup_printf("%.0f-%.0f", min_focal, max_focal);
+	gchar *lens_search = NULL;
+	if (min_focal > 0.0 && max_focal > 0.0)
+	{
+		if (min_focal == max_focal)
+			lens_search = g_strdup_printf("%.0fmm", min_focal);
+		else
+			lens_search = g_strdup_printf("%.0f-%.0f", min_focal, max_focal);
+	}
+	else if (identifier && identifier[0] != '\0')
+	{
+		lens_search = g_strdup(identifier);
+	}
 
 	cameras = lf_db_find_cameras(lensdb, camera_make, camera_model);
 	if (cameras)
@@ -805,29 +864,47 @@ static void set_lens (GtkButton *button, SingleLensData *single_lens_data)
 
 	if (camera)
 	{
-		const lfLens **lenslist = lf_db_find_lenses_hd (
-			lensdb, camera, NULL, lens_search, 0);
+		const lfLens **lenslist = lens_search ? lf_db_find_lenses_hd (
+			lensdb, camera, NULL, lens_search, 0) : NULL;
 		const lfLens **full_lenslist = lf_db_find_lenses_hd (
 			lensdb, camera, NULL, NULL, 0);
 
 		if (!lenslist && !full_lenslist)
+		{
+			g_free(lens_search);
+			g_free(identifier);
+			g_free(camera_make);
+			g_free(camera_model);
 			return;
+		}
 
 		lens_menu_fill (data, lenslist, full_lenslist);
-		lf_free (lenslist);
+		if (lenslist)
+			lf_free (lenslist);
 	}
 	else
 	{
-		const lfLens **lenslist = lf_db_find_lenses_hd (
-			lensdb, NULL, NULL, lens_search, 0);
+		const lfLens **lenslist = lens_search ? lf_db_find_lenses_hd (
+			lensdb, NULL, NULL, lens_search, 0) : NULL;
 		const lfLens *const *full_lenslist = lf_db_get_lenses (lensdb);
 
-		if (!lenslist)
+		if (!lenslist && !full_lenslist)
+		{
+			g_free(lens_search);
+			g_free(identifier);
+			g_free(camera_make);
+			g_free(camera_model);
 			return;
+		}
 		lens_menu_fill (data, lenslist, full_lenslist);
+		if (lenslist)
+			lf_free (lenslist);
 	}
 
 	g_free(lens_search);
+	g_free(identifier);
+	g_free(camera_make);
+	g_free(camera_model);
 
 	gtk_menu_popup (GTK_MENU (data->LensMenu), NULL, NULL, NULL, NULL,
 			0, gtk_get_current_event_time ());

@@ -49,6 +49,12 @@
 ### 10. TIFF 元數據縮圖緩衝區溢位修復
 * 修正 `plugins/meta-tiff/tiff-meta.c` 在搜尋 Panasonic 嵌入式縮圖 JPEG EOI (`0xFFD9`) 時越界讀取記憶體引發的 Segmentation Fault (SIGSEGV) 當機問題。
 
+### 11. Lensfun 鏡頭資料庫自動辨識與光學校正修復
+* **Panasonic / Micro 4/3 鏡頭焦距與光圈解析**：修正 `plugins/meta-tiff/tiff-meta.c` 與 `rs-metadata.c`，自動從 `fixed_lens_identifier`（如 `LUMIX G 20/F1.7`）或 EXIF 解析最小/最大焦距與光圈值，消除焦距未設定之問題。
+* **解決鏡頭選單 `"-1mm"` 搜尋 Bug**：修正 `rs-lens-db-editor.c` 在焦距未設定時錯誤產生 `"-1mm"` 查詢字串，導致 Lensfun 鏡頭庫過濾失敗、無法列出 Lumix G 20mm f/1.7 Asph. 等鏡頭的缺陷。
+* **智慧自動綁定與校正啟用**：新載入 RAW 照片時，於 `rs-lens.c` 自動根據相機機型與鏡頭識別碼比對 Lensfun 資料庫，自動配對並啟用光學修正。
+* **完整保留 Lensfun 色差 (TCA) 與暗角校正資料**：修正 `plugins/lensfun/lensfun.c`，當使用者手動微調滑桿為 0 時不再錯誤清除 Lensfun 資料庫中內建的色差與 20 組暗角校正多項式參數，確保畸變、色差、暗角三項修正全效發揮作用。
+
 ---
 
 ## 🚀 軟體功能特性
@@ -71,7 +77,7 @@
 
 ```bash
 cd /home/xanadu/rsync_data/geminicli/rawstudio-legacy
-sudo apt install ./rawstudio-legacy_2.1-3~mint22.3_amd64.deb
+sudo apt install ./rawstudio-legacy_2.1-4~mint22.3_amd64.deb
 ```
 
 安裝後可於應用程式選單的「**影音與圖形 (Graphics)**」類別中找到 **Rawstudio Legacy**，或直接於終端機執行：

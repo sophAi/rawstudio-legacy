@@ -1079,6 +1079,44 @@ makernote_panasonic(RAWFILE *rawfile, guint offset, RSMetadata *meta)
 		{
 			case 81: /* Lens type */
 				meta->fixed_lens_identifier = raw_strdup(rawfile, ifd.value_offset, ifd.count);
+				if (meta->fixed_lens_identifier)
+				{
+					gfloat fmin = 0, fmax = 0, amin = 0, amax = 0;
+					const gchar *slash = strchr(meta->fixed_lens_identifier, '/');
+					if (slash)
+					{
+						const gchar *p = slash - 1;
+						while (p > meta->fixed_lens_identifier && (*p == '.' || (*p >= '0' && *p <= '9') || *p == '-'))
+							p--;
+						if (p < slash)
+						{
+							if (*p != '.' && (*p < '0' || *p > '9') && *p != '-')
+								p++;
+							if (sscanf(p, "%f-%f", &fmin, &fmax) == 2)
+							{
+								meta->lens_min_focal = fmin;
+								meta->lens_max_focal = fmax;
+							}
+							else if (sscanf(p, "%f", &fmin) == 1)
+							{
+								meta->lens_min_focal = fmin;
+								meta->lens_max_focal = fmin;
+							}
+						}
+						const gchar *ap = slash + 1;
+						if (*ap == 'F' || *ap == 'f') ap++;
+						if (sscanf(ap, "%f-%f", &amin, &amax) == 2)
+						{
+							meta->lens_min_aperture = amin;
+							meta->lens_max_aperture = amax;
+						}
+						else if (sscanf(ap, "%f", &amin) == 1)
+						{
+							meta->lens_min_aperture = amin;
+							meta->lens_max_aperture = amin;
+						}
+					}
+				}
 				break;
 			case 82: /* Lens serial number */
 				if (!meta->fixed_lens_identifier)
@@ -1871,7 +1909,16 @@ tiff_load_meta(const gchar *service, RAWFILE *rawfile, guint offset, RSMetadata 
 		offset = next;
 	} while (next>0);
 
-	rs_io_unlock();
+	if (meta->lens_min_focal <= 0.0 && meta->focallength > 0)
+	{
+		meta->lens_min_focal = (gdouble) meta->focallength;
+		meta->lens_max_focal = (gdouble) meta->focallength;
+	}
+	if (meta->lens_min_aperture <= 0.0 && meta->aperture > 0.0)
+	{
+		meta->lens_min_aperture = (gdouble) meta->aperture;
+		meta->lens_max_aperture = (gdouble) meta->aperture;
+	}
 
 	rs_metadata_normalize_wb(meta);
 	return (!!meta->make) || (meta->make_ascii);
