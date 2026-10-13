@@ -163,12 +163,61 @@ void store_set_members(GtkListStore *store, GtkTreeIter *iter, GList *members);
 void got_metadata(RSMetadata *metadata, gpointer user_data);
 static gboolean button(GtkWidget *widget, GdkEventButton *event, RSStore *store);
 
+static void
+rs_store_show_all(GtkWidget *widget)
+{
+	RSStore *store = RS_STORE(widget);
+	gtk_widget_show(widget);
+	GList *children = gtk_container_get_children(GTK_CONTAINER(widget));
+	for (GList *l = children; l != NULL; l = l->next)
+	{
+		GtkWidget *child = GTK_WIDGET(l->data);
+		if (child == GTK_WIDGET(store->notebook))
+		{
+			gtk_widget_show(child);
+			gint current = gtk_notebook_get_current_page(store->notebook);
+			if (current < 0) current = 0;
+			GtkWidget *page = gtk_notebook_get_nth_page(store->notebook, current);
+			if (page)
+				gtk_widget_show_all(page);
+		}
+		else
+		{
+			gtk_widget_show_all(child);
+		}
+	}
+	g_list_free(children);
+}
+
+static void
+rs_store_map(GtkWidget *widget)
+{
+	GtkAllocation alloc;
+	gtk_widget_get_allocation(widget, &alloc);
+	if (alloc.width <= 1 || alloc.height <= 1)
+	{
+		gtk_widget_set_mapped(widget, TRUE);
+		GList *children = gtk_container_get_children(GTK_CONTAINER(widget));
+		for (GList *l = children; l != NULL; l = l->next)
+		{
+			GtkWidget *child = GTK_WIDGET(l->data);
+			if (gtk_widget_get_visible(child) && !gtk_widget_get_mapped(child))
+				gtk_widget_map(child);
+		}
+		g_list_free(children);
+		return;
+	}
+	GTK_WIDGET_CLASS(rs_store_parent_class)->map(widget);
+}
+
 /**
  * Class initializer
  */
 static void
 rs_store_class_init(RSStoreClass *klass)
 {
+	GTK_WIDGET_CLASS(klass)->show_all = rs_store_show_all;
+	GTK_WIDGET_CLASS(klass)->map = rs_store_map;
 
 	signals[THUMB_ACTIVATED_SIGNAL] = g_signal_new ("thumb-activated",
 		G_TYPE_FROM_CLASS (klass),
@@ -411,6 +460,8 @@ switch_page(GtkNotebook *notebook, gpointer page, guint page_num, gpointer data)
 
 	store->current_iconview = store->iconview[page_num];
 	store->current_priority = priorities[page_num];
+	if (page)
+		gtk_widget_show_all(GTK_WIDGET(page));
 	return;
 }
 
@@ -1575,12 +1626,13 @@ rs_store_set_selected_name(RSStore *store, const gchar *filename, gboolean desel
 		gtk_tree_path_free(path);
 
 		/* Select the icon */
-		gtk_icon_view_select_path(GTK_ICON_VIEW(store->current_iconview), iconpath);
-		gtk_icon_view_set_cursor(GTK_ICON_VIEW(store->current_iconview), iconpath, NULL, FALSE);
-
-		/* Free the iconview path */
-		gtk_tree_path_free(iconpath);
-		ret = TRUE;
+		if (iconpath)
+		{
+			gtk_icon_view_select_path(GTK_ICON_VIEW(store->current_iconview), iconpath);
+			gtk_icon_view_set_cursor(GTK_ICON_VIEW(store->current_iconview), iconpath, NULL, FALSE);
+			gtk_tree_path_free(iconpath);
+			ret = TRUE;
+		}
 	}
 	return ret;
 }
@@ -2000,6 +2052,8 @@ rs_store_get_sort_method(RSStore *store)
 void
 cairo_draw_thumbnail(cairo_t *cr, GdkPixbuf *pixbuf, gint x, gint y, gint width, gint height, gdouble alpha)
 {
+	if (width <= 2 || height <= 2)
+		return;
 	gdouble greyvalue = 0.9;
 
 	cairo_set_source_rgba(cr, greyvalue, greyvalue, greyvalue, 1.0);

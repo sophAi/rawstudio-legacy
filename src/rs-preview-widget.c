@@ -933,9 +933,12 @@ lightsout_window_on_draw(GtkWidget *widget, cairo_t *cairo_context, RSPreviewWid
 			x = origin_x - root_origin_x + rect.x;
 			y = origin_y - root_origin_y + rect.y;
 
-			cairo_set_source_rgba(cairo_context, 0.0, 0.0, 0.0, 0.0);
-			cairo_rectangle (cairo_context, x, y, rect.width, rect.height);
-			cairo_fill (cairo_context);
+			if (rect.width > 0 && rect.height > 0)
+			{
+				cairo_set_source_rgba(cairo_context, 0.0, 0.0, 0.0, 0.0);
+				cairo_rectangle (cairo_context, x, y, rect.width, rect.height);
+				cairo_fill (cairo_context);
+			}
 		}
 	}
 
@@ -1288,26 +1291,34 @@ rs_preview_widget_quick_end(RSPreviewWidget *preview)
 void 
 rs_preview_widget_blank(RSPreviewWidget *preview)
 {
-  preview->photo_blank_stored = preview->photo;
-  preview->photo = NULL;
-  GtkWidget *widget = GTK_WIDGET(preview->canvas);
-  GdkWindow *window = gtk_widget_get_window(widget);
-	GdkRectangle rect;
 	g_return_if_fail (RS_IS_PREVIEW_WIDGET(preview));
 
-	if (gtk_widget_get_realized(GTK_WIDGET(preview->canvas)))
-		gtk_widget_get_allocation(GTK_WIDGET(preview->canvas), &rect);
-  
-  gdk_window_begin_paint_rect(window, &rect);
-  
-  cairo_t *cr = gdk_cairo_create(window);
-  cairo_rectangle(cr, 0.0, 0.0, rect.width, rect.height);
-  cairo_set_source_rgb(cr, preview->bgcolor.red/65535.0, preview->bgcolor.green/65535.0, preview->bgcolor.blue/65535.0);
-  cairo_fill(cr);
-  cairo_destroy(cr);
+	preview->photo_blank_stored = preview->photo;
+	preview->photo = NULL;
+	GtkWidget *widget = GTK_WIDGET(preview->canvas);
+	if (!widget || !gtk_widget_get_realized(widget))
+		return;
 
-  gdk_window_end_paint(window);
-  GUI_CATCHUP_DISPLAY(preview->display);
+	GdkWindow *window = gtk_widget_get_window(widget);
+	if (!window)
+		return;
+
+	GdkRectangle rect = {0, 0, 0, 0};
+	gtk_widget_get_allocation(widget, &rect);
+
+	if (rect.width <= 0 || rect.height <= 0)
+		return;
+
+	gdk_window_begin_paint_rect(window, &rect);
+
+	cairo_t *cr = gdk_cairo_create(window);
+	cairo_rectangle(cr, 0.0, 0.0, rect.width, rect.height);
+	cairo_set_source_rgb(cr, preview->bgcolor.red/65535.0, preview->bgcolor.green/65535.0, preview->bgcolor.blue/65535.0);
+	cairo_fill(cr);
+	cairo_destroy(cr);
+
+	gdk_window_end_paint(window);
+	GUI_CATCHUP_DISPLAY(preview->display);
 }
 
 void 

@@ -57,6 +57,7 @@ protected:
   virtual void decodeThreaded(RawDecoderThread* t);
 private:
   void DecodeRw2();
+  void parseCFA();
   std::string guessMode();
   ByteStream* input_start;
   uint32 load_flags;

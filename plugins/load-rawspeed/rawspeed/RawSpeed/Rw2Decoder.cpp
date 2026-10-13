@@ -195,8 +195,30 @@ void Rw2Decoder::checkSupportInternal(CameraMetaData *meta) {
     this->checkCameraSupported(meta, make, model, "");
 }
 
+void Rw2Decoder::parseCFA() {
+  int cfa_pattern = 4;
+  if (mRootIFD->hasEntryRecursive(PANASONIC_CFAPATTERN)) {
+    cfa_pattern = mRootIFD->getEntryRecursive(PANASONIC_CFAPATTERN)->getInt();
+  }
+  switch (cfa_pattern) {
+    case 1:
+      mRaw->cfa.setCFA(iPoint2D(2, 2), CFA_RED, CFA_GREEN, CFA_GREEN2, CFA_BLUE);
+      break;
+    case 2:
+      mRaw->cfa.setCFA(iPoint2D(2, 2), CFA_GREEN, CFA_RED, CFA_BLUE, CFA_GREEN2);
+      break;
+    case 3:
+      mRaw->cfa.setCFA(iPoint2D(2, 2), CFA_GREEN, CFA_BLUE, CFA_RED, CFA_GREEN2);
+      break;
+    case 4:
+    default:
+      mRaw->cfa.setCFA(iPoint2D(2, 2), CFA_BLUE, CFA_GREEN, CFA_GREEN2, CFA_RED);
+      break;
+  }
+}
+
 void Rw2Decoder::decodeMetaDataInternal(CameraMetaData *meta) {
-  mRaw->cfa.setCFA(iPoint2D(2,2), CFA_BLUE, CFA_GREEN, CFA_GREEN2, CFA_RED);
+  this->parseCFA();
   vector<TiffIFD*> data = mRootIFD->getIFDsWithTag(MODEL);
 
   if (data.empty())
@@ -228,7 +250,7 @@ void Rw2Decoder::decodeMetaDataInternal(CameraMetaData *meta) {
     const int blackGreen = raw->getEntry((TiffTag)0x1d)->getInt() + 15;
     const int blackBlue = raw->getEntry((TiffTag)0x1e)->getInt() + 15;
     if (mRaw->cfa.size.area() == 0)
-      mRaw->cfa.setCFA(iPoint2D(2,2), CFA_BLUE, CFA_GREEN, CFA_GREEN2, CFA_RED);
+      this->parseCFA();
 
     for(int i = 0; i < 2; i++) {
       for(int j = 0; j < 2; j++) {

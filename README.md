@@ -39,6 +39,16 @@
 * 應用程式二進位檔更名為 `rawstudio-legacy`，並提供相容符號連結 `rawstudio`。
 * 桌面捷徑為 `Rawstudio Legacy`，獨立運作且不與發行版既有套件衝突。
 
+### 8. Panasonic RW2 Bayer CFA 解碼色彩偏差修復（消除紫色/洋紅色偏）
+* **問題**：舊版 RawSpeed 引擎在 `Rw2Decoder.cpp` 中將 Bayer 矩陣硬編碼為 BGGR，導致 Panasonic 相機（如 DMC-GX1、GF 系列等）照片之綠色通道被誤判為藍/紅通道，解碼後照片呈現全片深紫/洋紅色偏差。
+* **解決方案**：依據 RW2 EXIF 標頭之 TIFF Tag `0x0009` (`PANASONIC_CFAPATTERN`) 動態判斷真實 Bayer 陣列排列（如 DMC-GX1 之 `GRBG`），校正 Demosaic 去馬賽克演算法，使色彩還原真實自然。
+
+### 9. 預覽畫布邊界安全與 Pixman 警告消除
+* 解決 GTK+ 3 畫布在初次初始化或未分配尺寸時繪製空白背景引發的 `pixman_region32_init_rect: Invalid rectangle passed` 警告與效能損耗。
+
+### 10. TIFF 元數據縮圖緩衝區溢位修復
+* 修正 `plugins/meta-tiff/tiff-meta.c` 在搜尋 Panasonic 嵌入式縮圖 JPEG EOI (`0xFFD9`) 時越界讀取記憶體引發的 Segmentation Fault (SIGSEGV) 當機問題。
+
 ---
 
 ## 🚀 軟體功能特性
@@ -61,7 +71,7 @@
 
 ```bash
 cd /home/xanadu/rsync_data/geminicli/rawstudio-legacy
-sudo apt install ./rawstudio-legacy_2.1-2~mint22.3_amd64.deb
+sudo apt install ./rawstudio-legacy_2.1-3~mint22.3_amd64.deb
 ```
 
 安裝後可於應用程式選單的「**影音與圖形 (Graphics)**」類別中找到 **Rawstudio Legacy**，或直接於終端機執行：

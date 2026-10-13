@@ -30,7 +30,7 @@ if [ -f /etc/os-release ]; then
     fi
 fi
 
-VERSION="${RAW_VERSION}-2~${DIST_TAG}"
+VERSION="${RAW_VERSION}-3~${DIST_TAG}"
 ARCH="$(dpkg --print-architecture 2>/dev/null || uname -m | sed 's/x86_64/amd64/')"
 OUTPUT_DEB="${1:-${SCRIPT_DIR}/${PACKAGE_NAME}_${VERSION}_${ARCH}.deb}"
 BUILD_WORKSPACE="${SCRIPT_DIR}/build_deb_workspace"
@@ -249,6 +249,9 @@ Description: RAW digital camera image processor (Legacy Edition)
  JPEG, PNG, or TIFF.
  .
  This legacy edition has been modernized for Linux Mint / Ubuntu:
+  - Fixed Panasonic RW2 Bayer CFA decoding (Tag 0x0009) fixing magenta/purple tint.
+  - Fixed Pixman/Cairo invalid rectangle errors during preview rendering.
+  - Fixed TIFF metadata parsing buffer overrun on Panasonic RW2 thumbnails.
   - Replaced obsolete GConf dependency with GLib GKeyFile configuration.
   - Fixed liblensfun 0.3.x header detection and calibration formulas.
   - Upgraded camera database with 2023 camera profiles from Darktable RawSpeed.

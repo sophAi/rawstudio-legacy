@@ -1208,6 +1208,8 @@ gui_window_make(RS_BLOB *rs)
 	rs_conf_get_boolean_with_default(CONF_MAIN_WINDOW_MAXIMIZED, &maximized, DEFAULT_CONF_MAIN_WINDOW_MAXIMIZED);
 
 	rawstudio_window = GTK_WINDOW(gtk_window_new (GTK_WINDOW_TOPLEVEL));
+	gtk_window_set_default_size(rawstudio_window, width > 0 ? width : DEFAULT_CONF_MAIN_WINDOW_WIDTH,
+	                                               height > 0 ? height : DEFAULT_CONF_MAIN_WINDOW_HEIGHT);
 	if (!maximized)
 	{
 //		gtk_window_set_position((GtkWindow *) rawstudio_window, GTK_WIN_POS_NONE);
@@ -1446,7 +1448,6 @@ gui_init(int argc, char **argv, RS_BLOB *rs)
 	
 	gtk_window_set_default_icon_from_file(PACKAGE_DATA_DIR G_DIR_SEPARATOR_S "icons" G_DIR_SEPARATOR_S PACKAGE ".png", NULL);
 	rs->window = gui_window_make(rs);
-	gtk_widget_show(rs->window);
 
 	/* Build status bar */
 	statusbar = GTK_STATUSBAR(gtk_statusbar_new());
