@@ -30,7 +30,7 @@ if [ -f /etc/os-release ]; then
     fi
 fi
 
-VERSION="${RAW_VERSION}-1~${DIST_TAG}"
+VERSION="${RAW_VERSION}-2~${DIST_TAG}"
 ARCH="$(dpkg --print-architecture 2>/dev/null || uname -m | sed 's/x86_64/amd64/')"
 OUTPUT_DEB="${1:-${SCRIPT_DIR}/${PACKAGE_NAME}_${VERSION}_${ARCH}.deb}"
 BUILD_WORKSPACE="${SCRIPT_DIR}/build_deb_workspace"
@@ -169,6 +169,17 @@ cp -a COPYING "${DOC_DIR}/copyright" 2>/dev/null || true
 RFC_DATE="$(date -R)"
 cat << EOF > "${DOC_DIR}/changelog.Debian"
 ${PACKAGE_NAME} (${VERSION}) ${DIST_TAG}; urgency=medium
+
+  * Fix Segmentation fault when parsing Panasonic RW2 thumbnail JPEG markers.
+  * Fix RawSpeed CFA filter array overwrite when cameras.xml lacks CFA definition.
+  * Support RawSpeed CFA_GREEN2 green pixel in RW2 black levels decoding.
+  * Use g_find_program_in_path to check for enfuse without stderr errors.
+  * Validate preview redraw rectangle dimensions to eliminate Pixman warnings.
+  * Add RAWSTUDIO_PLUGIN_DIR environment variable support for portable plugin loading.
+
+ -- Rawstudio Legacy Packager <support@rawstudio.org>  ${RFC_DATE}
+
+${PACKAGE_NAME} (${RAW_VERSION}-1~${DIST_TAG}) ${DIST_TAG}; urgency=medium
 
   * Modernized Rawstudio legacy release for Linux Mint 22.3 / Ubuntu 24.04.
   * Replaced deprecated GConf dependency with GLib GKeyFile configuration.

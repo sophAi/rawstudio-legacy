@@ -61,7 +61,7 @@
 
 ```bash
 cd /home/xanadu/rsync_data/geminicli/rawstudio-legacy
-sudo apt install ./rawstudio-legacy_2.1-1~mint22.3_amd64.deb
+sudo apt install ./rawstudio-legacy_2.1-2~mint22.3_amd64.deb
 ```
 
 安裝後可於應用程式選單的「**影音與圖形 (Graphics)**」類別中找到 **Rawstudio Legacy**，或直接於終端機執行：
@@ -144,7 +144,7 @@ sudo make install
 * **解決方式**：
   1. 安裝最新打包的 `rawstudio-legacy`（後端函式庫已改名為獨立的 `librawstudio-legacy-2.1.so` 並內嵌 RPATH，完全隔絕舊版干擾）：
      ```bash
-     sudo dpkg -i rawstudio-legacy_2.1-1~mint22.3_amd64.deb
+     sudo dpkg -i rawstudio-legacy_2.1-2~mint22.3_amd64.deb
      ```
   2. （選用）徹底清理 `/usr/local` 中已廢棄的舊版殘留檔：
      ```bash
