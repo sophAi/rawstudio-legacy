@@ -338,6 +338,10 @@ rs_preview_widget_init(RSPreviewWidget *preview)
 	preview->exposure_mask = FALSE;
 	preview->crop_near = CROP_NEAR_NOTHING;
 	preview->keep_quick_enabled = FALSE;
+	preview->bgcolor.red = 0.0;
+	preview->bgcolor.green = 0.0;
+	preview->bgcolor.blue = 0.0;
+	preview->bgcolor.alpha = 1.0;
 
 	gchar* name;
 	preview->display_color_space = NULL;
@@ -1313,11 +1317,12 @@ rs_preview_widget_blank(RSPreviewWidget *preview)
 
 	cairo_t *cr = gdk_cairo_create(window);
 	cairo_rectangle(cr, 0.0, 0.0, rect.width, rect.height);
-	cairo_set_source_rgb(cr, preview->bgcolor.red/65535.0, preview->bgcolor.green/65535.0, preview->bgcolor.blue/65535.0);
+	cairo_set_source_rgb(cr, preview->bgcolor.red, preview->bgcolor.green, preview->bgcolor.blue);
 	cairo_fill(cr);
 	cairo_destroy(cr);
 
 	gdk_window_end_paint(window);
+	gtk_widget_queue_draw(widget);
 	GUI_CATCHUP_DISPLAY(preview->display);
 }
 
@@ -2438,6 +2443,7 @@ canvas_draw(RSPreviewWidget *preview, GdkRectangle *rect, gboolean now)
 			cairo_clip(cr);
 		}
 		canvas_draw_handler(widget, cr, preview);
+		cairo_destroy(cr);
 	}
 	else
 	{
@@ -2469,6 +2475,10 @@ canvas_draw_handler(GtkWidget *widget, cairo_t *cr, RSPreviewWidget *preview)
 		dirty_area.width = rect.width;
 		dirty_area.height = rect.height;
 	}
+
+	/* Fill canvas background */
+	cairo_set_source_rgb(cr, preview->bgcolor.red, preview->bgcolor.green, preview->bgcolor.blue);
+	cairo_paint(cr);
 
 #define CAIRO_LINE(cr, x1, y1, x2, y2) do { \
 	cairo_move_to((cr), (x1), (y1)); \

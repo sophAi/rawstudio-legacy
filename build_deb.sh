@@ -30,7 +30,7 @@ if [ -f /etc/os-release ]; then
     fi
 fi
 
-VERSION="${RAW_VERSION}-5~${DIST_TAG}"
+VERSION="${RAW_VERSION}-6~${DIST_TAG}"
 ARCH="$(dpkg --print-architecture 2>/dev/null || uname -m | sed 's/x86_64/amd64/')"
 OUTPUT_DEB="${1:-${SCRIPT_DIR}/${PACKAGE_NAME}_${VERSION}_${ARCH}.deb}"
 BUILD_WORKSPACE="${SCRIPT_DIR}/build_deb_workspace"

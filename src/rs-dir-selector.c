@@ -80,6 +80,8 @@ rs_dir_selector_init(RSDirSelector *selector)
 
 	g_object_set (G_OBJECT (selector), "hadjustment", NULL, "vadjustment", NULL, NULL);
 	gtk_scrolled_window_set_policy (scroller, GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
+	gtk_scrolled_window_set_min_content_height(scroller, 200);
+	gtk_widget_set_vexpand(GTK_WIDGET(selector), TRUE);
 
 	selector->view = gtk_tree_view_new();
 	col = gtk_tree_view_column_new();

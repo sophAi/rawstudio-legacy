@@ -60,6 +60,10 @@
 * **徹底解決關閉時卡在進度條問題**：新增 `rs_io_idle_cancel_all()` 函式並重構 `src/rs-actions.c` 之 `ACTION(quit)`，程式退出時立即安全取消所有未執行的背景 I/O 佇列，搭配 GTK 迴圈刷新與逾時機制，杜絕退出時卡在「Waiting for jobs to finish」進度條。
 * **修復 Lensfun 模組記憶體毀損與重覆解構**：修正 `plugins/lensfun/lensfun.c`，使用標準 `lf_lens_destroy()` 取代錯誤的 `lf_free()`、修復 Mounts 記憶體結構分配，並消除多執行緒暗角計算後的重覆計數解構問題。
 
+### 13. GTK+ 3 預覽畫布背景顏色即時繪製與側邊欄目錄瀏覽區域展開修復
+* **預覽背景顏色即時生效**：修正 `src/rs-preview-widget.c`，在 GTK+ 3 繪製信號處理器 (`canvas_draw_handler`) 中補齊 `preview->bgcolor` 畫布底色繪製，並修正 `rs_preview_widget_blank()` 中除以 65535 的二次重複縮放錯誤，使偏好設定 (Preferences -> General) 中的「預覽背景顏色 (Preview Background Color)」能即時且正確地反映在主畫布與邊界背景中。
+* **側邊欄目錄瀏覽區域高度自適應展開**：修正 `src/gtk-interface.c` 與 `src/rs-dir-selector.c`，為右側面板「開啟 (Open)」分頁中的目錄樹狀檢視區設定垂直延展 (`vexpand = TRUE`) 與最小高度限制，解決 GTK+ 3 `GtkExpander` 容器下子視窗高度未展開、被過度壓縮至僅數十像素的顯示缺陷，使其自動延展並填滿面板可用高度。
+
 ---
 
 ## 🚀 軟體功能特性
@@ -82,7 +86,7 @@
 
 ```bash
 cd /home/xanadu/rsync_data/geminicli/rawstudio-legacy
-sudo apt install ./rawstudio-legacy_2.1-5~mint22.3_amd64.deb
+sudo apt install ./rawstudio-legacy_2.1-6~mint22.3_amd64.deb
 ```
 
 安裝後可於應用程式選單的「**影音與圖形 (Graphics)**」類別中找到 **Rawstudio Legacy**，或直接於終端機執行：
@@ -165,7 +169,7 @@ sudo make install
 * **解決方式**：
   1. 安裝最新打包的 `rawstudio-legacy`（後端函式庫已改名為獨立的 `librawstudio-legacy-2.1.so` 並內嵌 RPATH，完全隔絕舊版干擾）：
      ```bash
-     sudo dpkg -i rawstudio-legacy_2.1-5~mint22.3_amd64.deb
+     sudo dpkg -i rawstudio-legacy_2.1-6~mint22.3_amd64.deb
      ```
   2. （選用）徹底清理 `/usr/local` 中已廢棄的舊版殘留檔：
      ```bash

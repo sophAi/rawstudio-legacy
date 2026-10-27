@@ -1508,14 +1508,18 @@ gui_init(int argc, char **argv, RS_BLOB *rs)
 	gtk_box_pack_start (GTK_BOX(dir_selector_vbox), checkbox_recursive, FALSE, TRUE, 0);
 	gtk_box_pack_start (GTK_BOX(dir_selector_vbox), dir_selector_separator, FALSE, TRUE, 0);
 	gtk_box_pack_start (GTK_BOX(dir_selector_vbox), dir_selector, TRUE, TRUE, 0);
+	gtk_widget_set_vexpand(dir_selector, TRUE);
+	gtk_widget_set_vexpand(dir_selector_vbox, TRUE);
 
 	directory_expander = gui_box(_("Directory"), dir_selector_vbox, "OPEN_DIRECTORY_EXPANDER", TRUE);
+	gtk_widget_set_vexpand(directory_expander, TRUE);
 
 	library_vbox = rs_tag_gui_toolbox_new(rs_library_get_singleton(), rs->store);
 	library_expander = gui_box(_("Tag Search"), library_vbox, "OPEN_LIBRARY_SEARCH_EXPANDER", TRUE);
 
 	gtk_box_pack_start (GTK_BOX(open_box), library_expander, FALSE, TRUE, 0);
 	gtk_box_pack_start (GTK_BOX(open_box), directory_expander, TRUE, TRUE, 0);
+	gtk_widget_set_vexpand(open_box, TRUE);
 
 	if (client_mode)
 		rs->toolbox = tools;
