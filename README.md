@@ -67,9 +67,13 @@
 ### 14. 內建 GTK 佈景主題動態切換選單與自繪元件 Oxygen 風格深度融合
 * **偏好設定內建 GTK 佈景主題動態切換**：在「偏好設定 -> 一般 (General)」中新增「GTK 佈景主題 (GTK Theme)」下拉選單，自動掃描系統已安裝之所有 GTK 3 主題（包含 `Oxygen-Mint`、`Mint-Y` 系列等）與「系統預設 (System Default)」選項。選取後立即動態套用並持久化儲存，無需重啟程式。
 * **自繪元件外框與背景風格深度融合**：
-  * **RGB 直方圖**：直方圖改以沉穩微漸層暗色背板渲染，RGB 三色通道與亮度（Luma）波形色彩更加清晰鮮明；外層以 `GtkFrame` (內凹邊框) 嵌合，與 Oxygen-Mint 風格完美協調；並支援在偏好設定調整高度時即時縮放。
   * **色調曲線編輯器**：加上 1px 細緻外框與 `GtkFrame` 內凹邊框，告別過去貼邊生硬的視覺感。
   * **縮圖導航膠卷與主預覽畫布**：頂部縮圖列與主預覽畫布外層啟用 `GTK_SHADOW_IN` 內凹質感邊框，將工作區與選單/工具列自然分割，呈現經典 Oxygen 沉穩、精緻的整體視覺美感。
+
+### 15. 照片庫優先級分頁、滑桿點擊步進手感與直方圖中灰背景修復 (v2.1-8)
+* **照片庫優先級分頁顯示修復 (Priorities Tabs 1, 2, 3, U, D & *)**：修正 `src/rs-store.c` 容器走訪邏輯，確保所有 6 個分頁與標籤元件（`*`, `1`, `2`, `3`, `U`, `D`）正確初始化與設定為可見，徹底修復原本只顯示 `*` 分頁、其餘分頁隱形的缺陷。
+* **滑桿點擊步進/步減手感還原 (Slider Click Stepping)**：停用 GTK3 預設的滑軌左鍵瞬移跳轉（`gtk-primary-button-warps-slider = FALSE`），完整還原原版點擊滑塊右側單步步進、點擊左側單步步減與長按連續步進的經典微調手感。
+* **直方圖經典中灰背景與藍色通道辨識度強化**：修正 `src/rs-histogram.c`，還原直方圖為與原版截圖 `toolbox.png` 100% 吻合的經典中灰底色 `#999999`（`0.6, 0.6, 0.6`），垂直刻度線為 `0.46, 0.46, 0.46`，使 50% 半透明的深藍色直方圖通道呈現清晰明亮的矢車菊藍，大幅提升肉眼辨識度。
 
 ---
 
@@ -93,7 +97,7 @@
 
 ```bash
 cd /home/xanadu/rsync_data/geminicli/rawstudio-legacy
-sudo apt install ./rawstudio-legacy_2.1-7~mint22.3_amd64.deb
+sudo apt install ./rawstudio-legacy_2.1-8~mint22.3_amd64.deb
 ```
 
 安裝後可於應用程式選單的「**影音與圖形 (Graphics)**」類別中找到 **Rawstudio Legacy**，或直接於終端機執行：
@@ -176,7 +180,7 @@ sudo make install
 * **解決方式**：
   1. 安裝最新打包的 `rawstudio-legacy`（後端函式庫已改名為獨立的 `librawstudio-legacy-2.1.so` 並內嵌 RPATH，完全隔絕舊版干擾）：
      ```bash
-     sudo dpkg -i rawstudio-legacy_2.1-7~mint22.3_amd64.deb
+     sudo dpkg -i rawstudio-legacy_2.1-8~mint22.3_amd64.deb
      ```
   2. （選用）徹底清理 `/usr/local` 中已廢棄的舊版殘留檔：
      ```bash
