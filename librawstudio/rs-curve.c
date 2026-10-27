@@ -817,6 +817,9 @@ rs_curve_widget_draw(RSCurveWidget *curve, cairo_t *cr)
 
 	if (gtk_widget_get_visible(widget) && gtk_widget_get_realized(widget))
 	{
+		GtkAllocation alloc;
+		gtk_widget_get_allocation(widget, &alloc);
+
 		/* Draw the background */
 		rs_curve_draw_background(widget, cr);
 
@@ -825,7 +828,14 @@ rs_curve_widget_draw(RSCurveWidget *curve, cairo_t *cr)
 
 		/* Draw the curve */
 		rs_curve_draw_spline(widget, cr);
+
+		/* Draw frame border */
+		cairo_set_line_width(cr, 1.0);
+		cairo_set_source_rgba(cr, 0.0, 0.0, 0.0, 0.25);
+		cairo_rectangle(cr, 0.5, 0.5, alloc.width - 1.0, alloc.height - 1.0);
+		cairo_stroke(cr);
 	}
+	return FALSE;
 }
   
 static gboolean

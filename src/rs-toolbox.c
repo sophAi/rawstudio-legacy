@@ -225,7 +225,7 @@ rs_toolbox_init (RSToolbox *self)
 	if (!rs_conf_get_integer(CONF_HISTHEIGHT, &height))
 		height = 70;
 	gtk_widget_set_size_request(self->histogram, 64, height); /* FIXME: Get height from gconf */
-	gtk_box_pack_start(self->toolbox, gui_box(_("Histogram"), self->histogram, "show_histogram", TRUE), FALSE, FALSE, 0);
+	gtk_box_pack_start(self->toolbox, gui_box(_("Histogram"), gui_framed(self->histogram, NULL, GTK_SHADOW_IN), "show_histogram", TRUE), FALSE, FALSE, 0);
 
 #ifdef WITH_GCONF
 	/* Watch out for gconf-changes */
@@ -794,7 +794,7 @@ new_snapshot_page(RSToolbox *toolbox, const gint snapshot)
 	gtk_box_pack_start(GTK_BOX(vbox), gui_box(_("Basic"), GTK_WIDGET(table), "show_basic", TRUE), FALSE, FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(vbox), gui_box(_("Channel Mixer"), GTK_WIDGET(channelmixertable), "show_channelmixer", TRUE), FALSE, FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(vbox), gui_box(_("Lens Correction"), GTK_WIDGET(lenstable), "show_lens", TRUE), FALSE, FALSE, 0);
-	gtk_box_pack_start(GTK_BOX(vbox), gui_box(_("Curve"), toolbox->curve[snapshot], "show_curve", TRUE), FALSE, FALSE, 0);
+	gtk_box_pack_start(GTK_BOX(vbox), gui_box(_("Curve"), gui_framed(toolbox->curve[snapshot], NULL, GTK_SHADOW_IN), "show_curve", TRUE), FALSE, FALSE, 0);
 
 	return vbox;
 }
@@ -1208,6 +1208,14 @@ void
 rs_toolbox_set_selected_snapshot(RSToolbox *toolbox, const gint snapshot)
 {
 	gtk_notebook_set_current_page(GTK_NOTEBOOK(toolbox->notebook), snapshot);
+}
+
+void
+rs_toolbox_set_histogram_height(RSToolbox *toolbox, gint height)
+{
+	g_return_if_fail(RS_IS_TOOLBOX(toolbox));
+	if (toolbox->histogram)
+		gtk_widget_set_size_request(toolbox->histogram, 64, height);
 }
 
 void rs_toolbox_set_histogram_input(RSToolbox * toolbox, RSFilter *input, RSColorSpace *display_color_space)

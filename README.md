@@ -64,6 +64,13 @@
 * **預覽背景顏色即時生效**：修正 `src/rs-preview-widget.c`，在 GTK+ 3 繪製信號處理器 (`canvas_draw_handler`) 中補齊 `preview->bgcolor` 畫布底色繪製，並修正 `rs_preview_widget_blank()` 中除以 65535 的二次重複縮放錯誤，使偏好設定 (Preferences -> General) 中的「預覽背景顏色 (Preview Background Color)」能即時且正確地反映在主畫布與邊界背景中。
 * **側邊欄目錄瀏覽區域高度自適應展開**：修正 `src/gtk-interface.c` 與 `src/rs-dir-selector.c`，為右側面板「開啟 (Open)」分頁中的目錄樹狀檢視區設定垂直延展 (`vexpand = TRUE`) 與最小高度限制，解決 GTK+ 3 `GtkExpander` 容器下子視窗高度未展開、被過度壓縮至僅數十像素的顯示缺陷，使其自動延展並填滿面板可用高度。
 
+### 14. 內建 GTK 佈景主題動態切換選單與自繪元件 Oxygen 風格深度融合
+* **偏好設定內建 GTK 佈景主題動態切換**：在「偏好設定 -> 一般 (General)」中新增「GTK 佈景主題 (GTK Theme)」下拉選單，自動掃描系統已安裝之所有 GTK 3 主題（包含 `Oxygen-Mint`、`Mint-Y` 系列等）與「系統預設 (System Default)」選項。選取後立即動態套用並持久化儲存，無需重啟程式。
+* **自繪元件外框與背景風格深度融合**：
+  * **RGB 直方圖**：直方圖改以沉穩微漸層暗色背板渲染，RGB 三色通道與亮度（Luma）波形色彩更加清晰鮮明；外層以 `GtkFrame` (內凹邊框) 嵌合，與 Oxygen-Mint 風格完美協調；並支援在偏好設定調整高度時即時縮放。
+  * **色調曲線編輯器**：加上 1px 細緻外框與 `GtkFrame` 內凹邊框，告別過去貼邊生硬的視覺感。
+  * **縮圖導航膠卷與主預覽畫布**：頂部縮圖列與主預覽畫布外層啟用 `GTK_SHADOW_IN` 內凹質感邊框，將工作區與選單/工具列自然分割，呈現經典 Oxygen 沉穩、精緻的整體視覺美感。
+
 ---
 
 ## 🚀 軟體功能特性
@@ -86,7 +93,7 @@
 
 ```bash
 cd /home/xanadu/rsync_data/geminicli/rawstudio-legacy
-sudo apt install ./rawstudio-legacy_2.1-6~mint22.3_amd64.deb
+sudo apt install ./rawstudio-legacy_2.1-7~mint22.3_amd64.deb
 ```
 
 安裝後可於應用程式選單的「**影音與圖形 (Graphics)**」類別中找到 **Rawstudio Legacy**，或直接於終端機執行：
@@ -169,7 +176,7 @@ sudo make install
 * **解決方式**：
   1. 安裝最新打包的 `rawstudio-legacy`（後端函式庫已改名為獨立的 `librawstudio-legacy-2.1.so` 並內嵌 RPATH，完全隔絕舊版干擾）：
      ```bash
-     sudo dpkg -i rawstudio-legacy_2.1-6~mint22.3_amd64.deb
+     sudo dpkg -i rawstudio-legacy_2.1-7~mint22.3_amd64.deb
      ```
   2. （選用）徹底清理 `/usr/local` 中已廢棄的舊版殘留檔：
      ```bash

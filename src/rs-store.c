@@ -803,6 +803,7 @@ make_iconview(GtkWidget *iconview, RSStore *store, gint prio)
 	scroller = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroller),
 		GTK_POLICY_AUTOMATIC, GTK_POLICY_NEVER);
+	gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scroller), GTK_SHADOW_IN);
 
 	/* Handle scroll events not handled by scroller to allow scrolling in horizontal iconview */
 	g_signal_connect_after(scroller, "scroll-event", G_CALLBACK(scroll_event), NULL);

@@ -225,21 +225,26 @@ draw(GtkWidget *widget, cairo_t *cr)
 	/* Draw histogram if we got everything needed */
 	if (histogram->input && gtk_widget_get_visible(widget) && gtk_widget_get_realized(widget))
 	{
-		/* Reset background to a nice grey */
-		cairo_set_source_rgb(cr, 0.6, 0.6, 0.6);
+		/* Draw dark slate gradient background to make RGB and Luma curves vivid */
+		cairo_pattern_t *pat = cairo_pattern_create_linear(0, 0, 0, histogram->height);
+		cairo_pattern_add_color_stop_rgb(pat, 0.0, 0.28, 0.30, 0.32);
+		cairo_pattern_add_color_stop_rgb(pat, 1.0, 0.20, 0.22, 0.24);
+		cairo_set_source(cr, pat);
 		cairo_paint(cr);
+		cairo_pattern_destroy(pat);
 
-		/* Draw vertical lines */
-		cairo_set_source_rgb(cr, 0.46, 0.46, 0.46);
+		/* Draw vertical guide lines with subtle semi-transparent lines */
+		cairo_set_source_rgba(cr, 1.0, 1.0, 1.0, 0.12);
+		cairo_set_line_width(cr, 1.0);
 
-		cairo_move_to(cr, histogram->width * 0.25, 0);
-		cairo_line_to(cr, histogram->width * 0.25, histogram->height - 1);
+		cairo_move_to(cr, (gint)(histogram->width * 0.25) + 0.5, 0);
+		cairo_line_to(cr, (gint)(histogram->width * 0.25) + 0.5, histogram->height - 1);
 
-		cairo_move_to(cr, histogram->width * 0.50, 0);
-		cairo_line_to(cr, histogram->width * 0.50, histogram->height - 1);
+		cairo_move_to(cr, (gint)(histogram->width * 0.50) + 0.5, 0);
+		cairo_line_to(cr, (gint)(histogram->width * 0.50) + 0.5, histogram->height - 1);
 
-		cairo_move_to(cr, histogram->width * 0.75, 0);
-		cairo_line_to(cr, histogram->width * 0.75, histogram->height - 1);
+		cairo_move_to(cr, (gint)(histogram->width * 0.75) + 0.5, 0);
+		cairo_line_to(cr, (gint)(histogram->width * 0.75) + 0.5, histogram->height - 1);
 
 		cairo_stroke(cr);
 
@@ -338,6 +343,26 @@ draw(GtkWidget *widget, cairo_t *cr)
 				cairo_stroke (cr);
 			}
 		}
+
+		/* Draw subtle frame border matching theme */
+		cairo_set_line_width(cr, 1.0);
+		cairo_set_source_rgba(cr, 0.0, 0.0, 0.0, 0.25);
+		cairo_rectangle(cr, 0.5, 0.5, histogram->width - 1.0, histogram->height - 1.0);
+		cairo_stroke(cr);
+	}
+	else
+	{
+		cairo_pattern_t *pat = cairo_pattern_create_linear(0, 0, 0, histogram->height);
+		cairo_pattern_add_color_stop_rgb(pat, 0.0, 0.28, 0.30, 0.32);
+		cairo_pattern_add_color_stop_rgb(pat, 1.0, 0.20, 0.22, 0.24);
+		cairo_set_source(cr, pat);
+		cairo_paint(cr);
+		cairo_pattern_destroy(pat);
+
+		cairo_set_line_width(cr, 1.0);
+		cairo_set_source_rgba(cr, 0.0, 0.0, 0.0, 0.25);
+		cairo_rectangle(cr, 0.5, 0.5, histogram->width - 1.0, histogram->height - 1.0);
+		cairo_stroke(cr);
 	}
 
 	return TRUE;

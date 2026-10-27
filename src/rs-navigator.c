@@ -396,6 +396,13 @@ redraw(RSNavigator *navigator)
 		gdk_cairo_rectangle(cr, &rect);
 		cairo_stroke (cr);
 
+		/* Draw frame border matching theme */
+		cairo_identity_matrix(cr);
+		cairo_set_line_width(cr, 1.0);
+		cairo_set_source_rgba(cr, 0.0, 0.0, 0.0, 0.25);
+		cairo_rectangle(cr, 0.5, 0.5, navigator->widget_width - 1.0, navigator->widget_height - 1.0);
+		cairo_stroke(cr);
+
 		g_object_unref(pixbuf);
 		g_object_unref(response);
 		cairo_destroy(cr);

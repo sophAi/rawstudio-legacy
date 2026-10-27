@@ -327,6 +327,80 @@ gui_preview_bg_color_changed(GtkColorButton *widget, RS_BLOB *rs)
 	return;
 }
 
+static gchar *rs_original_system_theme = NULL;
+
+static GList *
+gui_get_installed_gtk_themes(void)
+{
+	GList *themes = NULL;
+	GHashTable *seen = g_hash_table_new_full(g_str_hash, g_str_equal, g_free, NULL);
+
+	gchar *user_themes = g_build_filename(g_get_home_dir(), ".themes", NULL);
+	gchar *user_data_themes = g_build_filename(g_get_user_data_dir(), "themes", NULL);
+	const gchar *dirs[] = {
+		user_themes,
+		user_data_themes,
+		"/usr/share/themes",
+		"/usr/local/share/themes",
+		NULL
+	};
+
+	gint i;
+	for (i = 0; dirs[i] != NULL; i++)
+	{
+		const gchar *dir_path = dirs[i];
+		if (!dir_path || !g_file_test(dir_path, G_FILE_TEST_IS_DIR))
+			continue;
+
+		GDir *gdir = g_dir_open(dir_path, 0, NULL);
+		if (!gdir)
+			continue;
+
+		const gchar *name;
+		while ((name = g_dir_read_name(gdir)))
+		{
+			if (g_str_has_prefix(name, "."))
+				continue;
+
+			if (g_hash_table_contains(seen, name))
+				continue;
+
+			gchar *gtk3_dir = g_build_filename(dir_path, name, "gtk-3.0", NULL);
+			if (g_file_test(gtk3_dir, G_FILE_TEST_IS_DIR))
+			{
+				g_hash_table_add(seen, g_strdup(name));
+				themes = g_list_prepend(themes, g_strdup(name));
+			}
+			g_free(gtk3_dir);
+		}
+		g_dir_close(gdir);
+	}
+
+	g_free(user_themes);
+	g_free(user_data_themes);
+	g_hash_table_destroy(seen);
+
+	themes = g_list_sort(themes, (GCompareFunc) g_utf8_collate);
+	return themes;
+}
+
+static void
+gui_gtk_theme_changed(GtkComboBox *combo, RS_BLOB *rs)
+{
+	const gchar *theme_id = gtk_combo_box_get_active_id(combo);
+	if (!theme_id || g_strcmp0(theme_id, "_system_default") == 0)
+	{
+		if (rs_original_system_theme && strlen(rs_original_system_theme) > 0)
+			g_object_set(gtk_settings_get_default(), "gtk-theme-name", rs_original_system_theme, NULL);
+		rs_conf_set_string(CONF_GTK_THEME, "_system_default");
+	}
+	else
+	{
+		g_object_set(gtk_settings_get_default(), "gtk-theme-name", theme_id, NULL);
+		rs_conf_set_string(CONF_GTK_THEME, theme_id);
+	}
+}
+
 
 /**
  * Change priority on all selected and currently opened photos
@@ -449,6 +523,8 @@ gui_histogram_height_changed(GtkAdjustment *caller, RS_BLOB *rs)
 {
 	const gint newheight = (gint) gtk_adjustment_get_value(caller);
 	rs_conf_set_integer(CONF_HISTHEIGHT, newheight);
+	if (rs && rs->tools)
+		rs_toolbox_set_histogram_height(RS_TOOLBOX(rs->tools), newheight);
 	return(FALSE);
 }
 
@@ -929,6 +1005,41 @@ gui_make_preference_window(RS_BLOB *rs)
 
 	preview_page = gtk_vbox_new(FALSE, 4);
 	gtk_container_set_border_width (GTK_CONTAINER (preview_page), 6);
+
+	/* GTK Theme selection */
+	GtkWidget *theme_hbox = gtk_hbox_new(FALSE, 0);
+	GtkWidget *theme_label = gtk_label_new(_("GTK Theme:"));
+	gtk_misc_set_alignment(GTK_MISC(theme_label), 0.0, 0.5);
+
+	GtkWidget *theme_combo = gtk_combo_box_text_new();
+	gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(theme_combo), "_system_default", _("System Default"));
+
+	GList *theme_list = gui_get_installed_gtk_themes();
+	GList *tl;
+	for (tl = theme_list; tl != NULL; tl = tl->next)
+	{
+		const gchar *tname = (const gchar *) tl->data;
+		gtk_combo_box_text_append(GTK_COMBO_BOX_TEXT(theme_combo), tname, tname);
+	}
+	g_list_free_full(theme_list, g_free);
+
+	gchar *current_theme = rs_conf_get_string(CONF_GTK_THEME);
+	if (current_theme && g_strcmp0(current_theme, "_system_default") != 0 && strlen(current_theme) > 0)
+	{
+		gtk_combo_box_set_active_id(GTK_COMBO_BOX(theme_combo), current_theme);
+		g_free(current_theme);
+	}
+	else
+	{
+		gtk_combo_box_set_active_id(GTK_COMBO_BOX(theme_combo), "_system_default");
+		if (current_theme) g_free(current_theme);
+	}
+
+	g_signal_connect(theme_combo, "changed", G_CALLBACK(gui_gtk_theme_changed), rs);
+	gtk_box_pack_start (GTK_BOX (theme_hbox), theme_label, TRUE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (theme_hbox), theme_combo, FALSE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (preview_page), theme_hbox, FALSE, TRUE, 0);
+
 	colorsel_hbox = gtk_hbox_new(FALSE, 0);
 	colorsel_label = gtk_label_new(_("Preview Background Color:"));
 	gtk_misc_set_alignment(GTK_MISC(colorsel_label), 0.0, 0.5);
@@ -1447,6 +1558,24 @@ gui_init(int argc, char **argv, RS_BLOB *rs)
 
 	
 	gtk_window_set_default_icon_from_file(PACKAGE_DATA_DIR G_DIR_SEPARATOR_S "icons" G_DIR_SEPARATOR_S PACKAGE ".png", NULL);
+
+	/* Save original system theme before applying any user preference */
+	if (!rs_original_system_theme)
+	{
+		gchar *sys_theme = NULL;
+		g_object_get(gtk_settings_get_default(), "gtk-theme-name", &sys_theme, NULL);
+		rs_original_system_theme = sys_theme;
+	}
+
+	/* Apply saved GTK theme if configured */
+	gchar *configured_theme = rs_conf_get_string(CONF_GTK_THEME);
+	if (configured_theme)
+	{
+		if (g_strcmp0(configured_theme, "_system_default") != 0 && strlen(configured_theme) > 0)
+			g_object_set(gtk_settings_get_default(), "gtk-theme-name", configured_theme, NULL);
+		g_free(configured_theme);
+	}
+
 	rs->window = gui_window_make(rs);
 
 	/* Build status bar */
@@ -1554,6 +1683,7 @@ gui_init(int argc, char **argv, RS_BLOB *rs)
 	/* Split pane below iconbox */
 	pane = gtk_hpaned_new ();
 	frame_preview_toolbox = gtk_frame_new(NULL);
+	gtk_frame_set_shadow_type(GTK_FRAME(frame_preview_toolbox), GTK_SHADOW_IN);
 	gtk_container_add(GTK_CONTAINER(frame_preview_toolbox), rs->preview);
 	g_signal_connect_after(G_OBJECT(pane), "notify::position", G_CALLBACK(pane_position), NULL);
 	gtk_paned_pack1 (GTK_PANED (pane), frame_preview_toolbox, TRUE, TRUE);

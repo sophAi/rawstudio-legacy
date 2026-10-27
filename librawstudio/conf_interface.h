@@ -58,6 +58,7 @@
 #define CONF_SHOW_TOOLBOX_TRANSFORM "show_toolbox_transform"
 #define CONF_SHOW_TOOLBOX_HIST "show_toolbox_hist"
 #define CONF_TOOLBOX_WIDTH "toolbox_width"
+#define CONF_GTK_THEME "gtk_theme_name"
 #define CONF_SPLIT_CONTINUOUS "split_continuous"
 #define CONF_LAST_PRIORITY_PAGE "last_priority_page"
 #define CONF_STORE_SORT_METHOD "store_sort_method"

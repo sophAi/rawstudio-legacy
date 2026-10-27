@@ -60,6 +60,9 @@ extern void
 rs_toolbox_set_selected_snapshot(RSToolbox *toolbox, const gint snapshot);
 
 extern void
+rs_toolbox_set_histogram_height(RSToolbox *toolbox, gint height);
+
+extern void
 rs_toolbox_set_histogram_input(RSToolbox *toolbox, RSFilter *input, RSColorSpace *display_color_space);
 
 extern void
