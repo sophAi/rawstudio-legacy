@@ -639,6 +639,7 @@ main(int argc, char **argv)
 #endif
 
 	gtk_init(&argc, &argv);
+	g_object_set(gtk_settings_get_default(), "gtk-primary-button-warps-slider", FALSE, NULL);
 	check_install();
 
 	rs_filetype_init();

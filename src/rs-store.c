@@ -175,6 +175,16 @@ rs_store_show_all(GtkWidget *widget)
 		if (child == GTK_WIDGET(store->notebook))
 		{
 			gtk_widget_show(child);
+			gint n_pages = gtk_notebook_get_n_pages(store->notebook);
+			for (gint i = 0; i < n_pages; i++)
+			{
+				GtkWidget *page = gtk_notebook_get_nth_page(store->notebook, i);
+				GtkWidget *tab_label = gtk_notebook_get_tab_label(store->notebook, page);
+				if (page)
+					gtk_widget_show(page);
+				if (tab_label)
+					gtk_widget_show_all(tab_label);
+			}
 			gint current = gtk_notebook_get_current_page(store->notebook);
 			if (current < 0) current = 0;
 			GtkWidget *page = gtk_notebook_get_nth_page(store->notebook, current);
@@ -369,7 +379,10 @@ rs_store_init(RSStore *store)
 		gtk_misc_set_alignment(GTK_MISC(store->label[n]), 0.0, 0.5);
 
 		/* Add everything to the notebook */
-		gtk_notebook_append_page(store->notebook, make_iconview(store->iconview[n], store, priorities[n]), label_tt[n]);
+		GtkWidget *view = make_iconview(store->iconview[n], store, priorities[n]);
+		gtk_widget_show(view);
+		gtk_widget_show_all(label_tt[n]);
+		gtk_notebook_append_page(store->notebook, view, label_tt[n]);
 	}
 
 	/* Load show filenames state from config */
